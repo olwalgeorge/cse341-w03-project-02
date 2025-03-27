@@ -1,0 +1,47 @@
+{
+  "name": "smart-farm-api",
+  "version": "1.0.0",
+  "description": "API for a smart farm application",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "swagger-gen": "node src/config/swagger.js",
+    "debug": "nodemon --inspect src/server.js"
+  },
+  "keywords": [
+    "smart",
+    "farm",
+    "api",
+    "node.js",
+    "express",
+    "mongodb"
+  ],
+  "author": "George Olwal",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-async-handler": "^1.2.0",
+    "express-session": "^1.17.3",
+    "express-validator": "^7.0.1",
+    "mongoose": "^8.0.3",
+    "morgan": "^1.10.0",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.0",
+    "winston": "^3.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^10.1.1",
+    "nodemon": "^3.0.2",
+    "prettier": "^3.1.1"
+  }
+}

@@ -5,7 +5,7 @@
     "description": "API documentation for the Smart Farm project",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "localhost:3000/api",
   "basePath": "/",
   "schemes": [
     "http"
@@ -43,19 +43,6 @@
                 "properties": {
                   "type": "object",
                   "properties": {
-                    "user_id": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "number"
-                        },
-                        "required": {
-                          "type": "boolean",
-                          "example": true
-                        }
-                      }
-                    },
                     "username": {
                       "type": "object",
                       "properties": {
@@ -82,47 +69,20 @@
                         }
                       }
                     },
-                    "avatar_url": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        }
-                      }
-                    },
-                    "first_name": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        }
-                      }
-                    },
-                    "last_name": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        }
-                      }
-                    },
-                    "joined_date": {
+                    "password": {
                       "type": "object",
                       "properties": {
                         "type": {
                           "type": "string",
                           "example": "string"
                         },
-                        "format": {
-                          "type": "string",
-                          "example": "date"
+                        "required": {
+                          "type": "boolean",
+                          "example": true
                         }
                       }
                     },
-                    "last_login_ip": {
+                    "fullName": {
                       "type": "object",
                       "properties": {
                         "type": {
@@ -139,7 +99,60 @@
         ],
         "responses": {
           "201": {
-            "description": "User created successfully"
+            "description": "User created successfully",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "object"
+                },
+                "properties": {
+                  "type": "object",
+                  "properties": {
+                    "_id": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "example": "string"
+                        }
+                      }
+                    },
+                    "username": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "example": "string"
+                        }
+                      }
+                    },
+                    "email": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "example": "string"
+                        }
+                      }
+                    },
+                    "fullName": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "example": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
           },
           "400": {
             "description": "Validation failed",
@@ -335,6 +348,10 @@
                         "type": {
                           "type": "string",
                           "example": "string"
+                        },
+                        "required": {
+                          "type": "boolean",
+                          "example": true
                         }
                       }
                     },
@@ -344,50 +361,27 @@
                         "type": {
                           "type": "string",
                           "example": "string"
+                        },
+                        "required": {
+                          "type": "boolean",
+                          "example": true
                         }
                       }
                     },
-                    "avatar_url": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        }
-                      }
-                    },
-                    "first_name": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        }
-                      }
-                    },
-                    "last_name": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        }
-                      }
-                    },
-                    "joined_date": {
+                    "password": {
                       "type": "object",
                       "properties": {
                         "type": {
                           "type": "string",
                           "example": "string"
                         },
-                        "format": {
-                          "type": "string",
-                          "example": "date"
+                        "required": {
+                          "type": "boolean",
+                          "example": true
                         }
                       }
                     },
-                    "last_login_ip": {
+                    "fullName": {
                       "type": "object",
                       "properties": {
                         "type": {

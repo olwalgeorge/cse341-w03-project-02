@@ -1,0 +1,38 @@
+### User Registration
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "username": "testuser2",
+  "email": "test2@example.com",
+  "password": "testpassword",
+  "fullName": "Test1 User1"
+}
+
+### User Login
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "testpassword"
+}
+
+### Get User Profile (Requires Authentication)
+GET http://localhost:3000/api/users/profile
+Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
+
+### Update User Profile (Requires Authentication)
+PUT http://localhost:3000/api/users/profile
+Content-Type: application/json
+Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
+
+{
+  "username": "updateduser",
+  "email": "updated@example.com",
+  "fullName": "Updated User"
+}
+
+### User Logout (Requires Authentication)
+GET http://localhost:3000/api/users/logout
+Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN

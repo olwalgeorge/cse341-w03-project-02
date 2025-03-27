@@ -8,7 +8,6 @@ module.exports = {
   port: process.env.PORT || 3000,
   sessionSecret: process.env.SESSION_SECRET || "your-development-secret",
   db: {
-    uri: process.env.MONGO_URI
-      
+    uri: process.env.MONGO_URI,
   },
 };

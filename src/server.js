@@ -12,7 +12,7 @@ const startServer = () => {
   try {
     app.listen(config.port, () => {
       logger.info(
-        `Server running on at http://localhost:${config.port} in ${config.env} mode`
+        `Server running on at http://localhost:${config.port}/api in ${config.env} mode`
       );
     });
   } catch (error) {

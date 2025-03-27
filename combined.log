@@ -57,3 +57,169 @@
 {"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 13:54:47"}
 {"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-03-27 13:55:10"}
 {"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 13:55:13"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-03-27 14:11:22"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 14:11:26"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-03-27 15:13:35"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 15:13:38"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-03-27 15:25:14"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-03-27 15:25:19"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-03-27 15:25:23"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 15:25:27"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-03-27 15:27:14"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 15:27:17"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-03-27 15:29:47"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-03-27 15:29:53"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 15:30:00"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-03-27 15:30:49"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-03-27 15:30:55"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 15:30:58"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-03-27 15:34:46"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 15:34:49"}
+{"level":"info","message":"Server running on at http://localhost:3000/ in development mode","service":"smart-farm-api","timestamp":"2025-03-27 15:36:09"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 15:36:18"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 15:36:21"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 15:43:10"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 15:43:14"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 15:48:52"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 15:48:56"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 15:49:24"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 15:49:27"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 15:49:39"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 15:49:42"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 15:51:33"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 15:51:36"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 16:00:20"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 16:00:25"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 16:00:29"}
+{"level":"error","message":"Error: ENOENT: no such file or directory, stat 'C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\src\\public\\index.html'","service":"smart-farm-api","timestamp":"2025-03-27 16:00:55"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 16:01:20"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 16:01:24"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 16:05:09"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 16:05:13"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 16:08:59"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 16:09:03"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-03-27 16:09:27"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 16:09:31"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-03-27 16:12:24"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 16:12:28"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 16:12:44"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 16:12:52"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 16:16:18"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 16:16:25"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 16:16:29"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 16:27:14"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 16:27:17"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 16:27:36"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 16:27:39"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 16:28:01"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 16:28:05"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 16:34:27"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 16:34:30"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 16:44:02"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 16:44:06"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 16:47:52"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 16:47:56"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:04:19"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:04:23"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:11:14"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:11:23"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:13:34"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:13:38"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:13:57"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:14:01"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:14:48"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:14:53"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:15:48"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:15:52"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:19:14"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:19:17"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:19:44"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:19:47"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:23:02"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:23:22"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:23:25"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:26:24"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:26:28"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:28:57"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:29:01"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:29:21"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:29:24"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:29:51"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:29:54"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:31:28"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:31:32"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:32:03"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:32:10"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:32:14"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:32:28"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:32:31"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:33:34"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:33:38"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:38:02"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:38:06"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:38:47"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:38:51"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:39:06"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:39:10"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:39:18"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:39:22"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:40:14"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:40:18"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:41:18"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:41:29"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:41:33"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:41:43"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 17:42:04"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 17:42:08"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:01:07"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:01:21"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 18:01:25"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:09:30"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 18:09:33"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:09:56"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 18:09:59"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:11:01"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 18:11:05"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:11:10"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 18:11:14"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:13:47"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:14:00"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 18:14:03"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:15:09"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 18:15:12"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:15:43"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 18:15:47"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:15:55"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 18:15:59"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:16:08"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:19:45"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 18:19:48"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:22:49"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 18:22:53"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:24:14"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 18:24:17"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:26:17"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 18:26:20"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:28:48"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 18:28:52"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:35:08"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 18:35:12"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 18:52:02"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 18:52:05"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-27 19:11:16"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-27 19:11:26"}
+{"level":"info","message":"registerUser called","service":"smart-farm-api","timestamp":"2025-03-27 19:11:32"}
+{"email":"test@example.com","fullName":"Test User","level":"debug","message":"req.body:","password":"testpassword","service":"smart-farm-api","timestamp":"2025-03-27 19:11:32","username":"testuser"}
+{"0":"t","1":"e","10":"l","11":"e","12":".","13":"c","14":"o","15":"m","2":"s","3":"t","4":"@","5":"e","6":"x","7":"a","8":"m","9":"p","level":"debug","message":"Checking if user exists with email:","service":"smart-farm-api","timestamp":"2025-03-27 19:11:32"}
+{"email":"test@example.com","fullName":"Test User","level":"debug","message":"Creating user:","password":"testpassword","service":"smart-farm-api","timestamp":"2025-03-27 19:11:33","username":"testuser"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User created successfully:","service":"smart-farm-api","timestamp":"2025-03-27 19:11:33","username":"testuser"}
+{"level":"info","message":"registerUser called","service":"smart-farm-api","timestamp":"2025-03-27 19:20:59"}
+{"email":"test2@example.com","fullName":"Test1 User1","level":"debug","message":"req.body:","password":"testpassword","service":"smart-farm-api","timestamp":"2025-03-27 19:20:59","username":"testuser2"}
+{"0":"t","1":"e","10":"p","11":"l","12":"e","13":".","14":"c","15":"o","16":"m","2":"s","3":"t","4":"2","5":"@","6":"e","7":"x","8":"a","9":"m","level":"debug","message":"Checking if user exists with email:","service":"smart-farm-api","timestamp":"2025-03-27 19:20:59"}
+{"email":"test2@example.com","fullName":"Test1 User1","level":"debug","message":"Creating user:","password":"testpassword","service":"smart-farm-api","timestamp":"2025-03-27 19:20:59","username":"testuser2"}
+{"_id":"67e57aeb60fb0d0879b05e8f","email":"test2@example.com","fullName":"Test1 User1","level":"info","message":"User created successfully:","service":"smart-farm-api","timestamp":"2025-03-27 19:20:59","username":"testuser2"}
+{"level":"info","message":"registerUser called","service":"smart-farm-api","timestamp":"2025-03-27 19:21:05"}
+{"email":"test2@example.com","fullName":"Test1 User1","level":"debug","message":"req.body:","password":"testpassword","service":"smart-farm-api","timestamp":"2025-03-27 19:21:05","username":"testuser2"}
+{"0":"t","1":"e","10":"p","11":"l","12":"e","13":".","14":"c","15":"o","16":"m","2":"s","3":"t","4":"2","5":"@","6":"e","7":"x","8":"a","9":"m","level":"debug","message":"Checking if user exists with email:","service":"smart-farm-api","timestamp":"2025-03-27 19:21:05"}
+{"level":"warn","message":"User already exists","service":"smart-farm-api","timestamp":"2025-03-27 19:21:05"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-27 19:23:04","username":"testuser"}

@@ -7,12 +7,13 @@ const {
   updateSensor,
   deleteSensor,
   getSensorsByType,
-} = require("../controllers/sensors.controller.js");
-const validate = require("../middlewares/validation.middleware.js");
+} = require("../../controllers/sensors.controller.js");
+const validate = require("../../middlewares/validation.middleware.js");
+const protect = require("../../middlewares/auth.middleware.js");
 const {
   sensorValidationRules,
   sensorUpdateValidationRules,
-} = require("../validators/sensor.validator.js");
+} = require("../../validators/sensor.validator.js");
 
 const router = express.Router();
 
@@ -21,6 +22,7 @@ const router = express.Router();
 
 router.get(
   "/",
+  protect,
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to retrieve all sensors' */
   /* #swagger.responses[200] = { description: 'Sensors retrieved successfully' } */
@@ -30,6 +32,7 @@ router.get(
 
 router.get(
   "/:id",
+  protect,
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to retrieve a sensor by id' */
   /* #swagger.parameters['id'] = { in: 'path', description: 'Sensor ID', required: true, type: 'string' } */
@@ -41,6 +44,7 @@ router.get(
 
 router.post(
   "/",
+  protect,
   validate(sensorValidationRules()),
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to create a new sensor' */
@@ -53,6 +57,7 @@ router.post(
 
 router.put(
   "/:id",
+  protect,
   validate(sensorUpdateValidationRules()),
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to update a sensor' */
@@ -67,6 +72,7 @@ router.put(
 
 router.delete(
   "/:id",
+  protect,
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to delete a sensor' */
   /* #swagger.parameters['id'] = { in: 'path', description: 'Sensor ID', required: true, type: 'string' } */
@@ -78,6 +84,7 @@ router.delete(
 
 router.get(
   "/type/:sensor_type",
+  protect,
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to retrieve sensors by type' */
   /* #swagger.parameters['sensor_type'] = { in: 'path', description: 'Sensor type', required: true, type: 'string', enum: ['temperature', 'humidity', 'light', 'soil moisture'] } */
@@ -88,4 +95,5 @@ router.get(
 );
 
 module.exports = router;
+
 

@@ -36,3 +36,43 @@ Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 ### User Logout (Requires Authentication)
 GET http://localhost:3000/api/users/logout
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
+
+### Get All Sensors (Requires Authentication)
+GET http://localhost:3000/api/sensors
+Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
+
+### Get Sensor By ID (Requires Authentication)
+GET http://localhost:3000/api/sensors/:id
+Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
+
+### Create Sensor (Requires Authentication)
+POST http://localhost:3000/api/sensors
+Content-Type: application/json
+Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
+
+{
+  "sensor_name": "Light Sensor 3",
+  "sensor_type": "light",
+  "unit": "Lux",
+  "location": "Greenhouse",
+  "zone_id": "5fc2a3a6f0f37d0017e5a3a6"
+}
+
+### Update Sensor (Requires Authentication)
+PUT http://localhost:3000/api/sensors/:id
+Content-Type: application/json
+Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
+
+{
+  "sensor_name": "Updated Sensor",
+  "sensor_type": "soil moisture",
+  "unit": "%"
+}
+
+### Delete Sensor (Requires Authentication)
+DELETE http://localhost:3000/api/sensors/:id
+Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
+
+### Get Sensors By Type (Requires Authentication)
+GET http://localhost:3000/api/sensors/type/:sensor_type
+Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN

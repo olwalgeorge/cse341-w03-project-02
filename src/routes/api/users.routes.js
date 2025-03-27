@@ -5,13 +5,13 @@ const {
   getUserProfile,
   logoutUser,
   updateUserProfile,
-} = require("../controllers/users.controller.js");
-const validate = require("../middlewares/validation.middleware.js");
-const protect = require("../middlewares/auth.middleware.js");
+} = require("../../controllers/users.controller.js");
+const validate = require("../../middlewares/validation.middleware.js");
+const protect = require("../../middlewares/auth.middleware.js");
 const {
   userValidationRules,
   userUpdateValidationRules,
-} = require("../validators/user.validator.js");
+} = require("../../validators/user.validator.js");
 
 const router = express.Router();
 

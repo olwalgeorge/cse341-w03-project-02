@@ -23,10 +23,7 @@
     },
     "/users/": {
       "post": {
-        "tags": [
-          "Users"
-        ],
-        "description": "Endpoint to create a new user",
+        "description": "",
         "parameters": [
           {
             "name": "body",
@@ -36,60 +33,55 @@
             "schema": {
               "type": "object",
               "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "object"
-                },
-                "properties": {
+                "username": {
                   "type": "object",
                   "properties": {
-                    "username": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "required": {
-                          "type": "boolean",
-                          "example": true
-                        }
-                      }
+                    "type": {
+                      "type": "string",
+                      "example": "string"
                     },
-                    "email": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "required": {
-                          "type": "boolean",
-                          "example": true
-                        }
-                      }
+                    "example": {
+                      "type": "string",
+                      "example": "john_doe"
+                    }
+                  }
+                },
+                "email": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "example": "string"
                     },
-                    "password": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "required": {
-                          "type": "boolean",
-                          "example": true
-                        }
-                      }
+                    "example": {
+                      "type": "string",
+                      "example": "john@example.com"
+                    }
+                  }
+                },
+                "password": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "example": "string"
                     },
-                    "fullName": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        }
-                      }
+                    "example": {
+                      "type": "string",
+                      "example": "securePassword123"
+                    }
+                  }
+                },
+                "fullName": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "example": "string"
+                    },
+                    "example": {
+                      "type": "string",
+                      "example": "John Doe"
                     }
                   }
                 }
@@ -98,153 +90,47 @@
           }
         ],
         "responses": {
-          "201": {
-            "description": "User created successfully",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "object"
-                },
-                "properties": {
-                  "type": "object",
-                  "properties": {
-                    "_id": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        }
-                      }
-                    },
-                    "username": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        }
-                      }
-                    },
-                    "email": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        }
-                      }
-                    },
-                    "fullName": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "400": {
-            "description": "Validation failed",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "object"
-                },
-                "properties": {
-                  "type": "object",
-                  "properties": {
-                    "message": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        }
-                      }
-                    },
-                    "errors": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "object"
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "500": {
-            "description": "Failed to create user"
+          "default": {
+            "description": ""
           }
         }
       }
     },
     "/users/login": {
       "post": {
-        "tags": [
-          "Users"
-        ],
-        "description": "Endpoint to login a user",
+        "description": "",
         "parameters": [
           {
             "name": "body",
             "in": "body",
-            "description": "User data",
+            "description": "Login credentials",
             "required": true,
             "schema": {
               "type": "object",
               "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "object"
-                },
-                "properties": {
+                "username": {
                   "type": "object",
                   "properties": {
-                    "username": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "required": {
-                          "type": "boolean",
-                          "example": true
-                        }
-                      }
+                    "type": {
+                      "type": "string",
+                      "example": "string"
                     },
-                    "password": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "required": {
-                          "type": "boolean",
-                          "example": true
-                        }
-                      }
+                    "example": {
+                      "type": "string",
+                      "example": "john_doe"
+                    }
+                  }
+                },
+                "password": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "example": "string"
+                    },
+                    "example": {
+                      "type": "string",
+                      "example": "securePassword123"
                     }
                   }
                 }
@@ -253,142 +139,67 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "User logged in successfully"
-          },
-          "400": {
-            "description": "Validation failed",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "object"
-                },
-                "properties": {
-                  "type": "object",
-                  "properties": {
-                    "message": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        }
-                      }
-                    },
-                    "errors": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "object"
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "401": {
-            "description": "User not found or incorrect password"
-          },
-          "500": {
-            "description": "Failed to login user"
+          "default": {
+            "description": ""
           }
         }
       }
     },
     "/users/profile": {
       "get": {
-        "tags": [
-          "Users"
-        ],
-        "description": "Endpoint to retrieve a user profile",
+        "description": "",
         "responses": {
-          "200": {
-            "description": "User profile retrieved successfully"
-          },
-          "404": {
-            "description": "User not found"
-          },
-          "500": {
-            "description": "Failed to retrieve user profile"
+          "default": {
+            "description": ""
           }
         }
       },
       "put": {
-        "tags": [
-          "Users"
-        ],
-        "description": "Endpoint to update a user profile",
+        "description": "",
         "parameters": [
           {
             "name": "body",
             "in": "body",
             "description": "Updated user data",
-            "required": true,
             "schema": {
               "type": "object",
               "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "object"
-                },
-                "properties": {
+                "username": {
                   "type": "object",
                   "properties": {
-                    "username": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "required": {
-                          "type": "boolean",
-                          "example": true
-                        }
-                      }
+                    "type": {
+                      "type": "string",
+                      "example": "string"
                     },
-                    "email": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "required": {
-                          "type": "boolean",
-                          "example": true
-                        }
-                      }
+                    "example": {
+                      "type": "string",
+                      "example": "new_john_doe"
+                    }
+                  }
+                },
+                "email": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "example": "string"
                     },
-                    "password": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "required": {
-                          "type": "boolean",
-                          "example": true
-                        }
-                      }
+                    "example": {
+                      "type": "string",
+                      "example": "new_john@example.com"
+                    }
+                  }
+                },
+                "fullName": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string",
+                      "example": "string"
                     },
-                    "fullName": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        }
-                      }
+                    "example": {
+                      "type": "string",
+                      "example": "New John Doe"
                     }
                   }
                 }
@@ -397,71 +208,18 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "User profile updated successfully"
-          },
-          "400": {
-            "description": "Validation failed",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "object"
-                },
-                "properties": {
-                  "type": "object",
-                  "properties": {
-                    "message": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        }
-                      }
-                    },
-                    "errors": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "object"
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "404": {
-            "description": "User not found"
-          },
-          "500": {
-            "description": "Failed to update user profile"
+          "default": {
+            "description": ""
           }
         }
       }
     },
     "/users/logout": {
       "get": {
-        "tags": [
-          "Users"
-        ],
-        "description": "Endpoint to logout a user",
+        "description": "",
         "responses": {
-          "200": {
-            "description": "User logged out successfully"
-          },
-          "401": {
-            "description": "User not logged in"
-          },
-          "500": {
-            "description": "Failed to logout user"
+          "default": {
+            "description": ""
           }
         }
       }

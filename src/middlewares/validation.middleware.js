@@ -1,4 +1,5 @@
 // src/middlewares/validation.middleware.js
+
 const { validationResult } = require("express-validator");
 const sendResponse = require("../utils/response.js");
 const logger = require("../utils/logger.js");
@@ -22,4 +23,3 @@ const validate = (validations) => {
 };
 
 module.exports = validate;
-

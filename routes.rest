@@ -42,7 +42,7 @@ GET http://localhost:3000/api/sensors
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get Sensor By ID (Requires Authentication)
-GET http://localhost:3000/api/sensors/:id
+GET http://localhost:3000/api/sensors/67e5af3a60fb0d0879b05e
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Create Sensor (Requires Authentication)

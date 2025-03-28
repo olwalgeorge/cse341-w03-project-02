@@ -292,6 +292,9 @@
           "200": {
             "description": "Sensor retrieved successfully"
           },
+          "400": {
+            "description": "Invalid sensor ID format"
+          },
           "404": {
             "description": "Sensor not found"
           },
@@ -319,7 +322,7 @@
             "description": "Sensor updated successfully"
           },
           "400": {
-            "description": "Validation error"
+            "description": "Invalid sensor ID format or validation error"
           },
           "404": {
             "description": "Sensor not found"
@@ -362,6 +365,9 @@
         "responses": {
           "200": {
             "description": "Sensor deleted successfully"
+          },
+          "400": {
+            "description": "Invalid sensor ID format"
           },
           "404": {
             "description": "Sensor not found"

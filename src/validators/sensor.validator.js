@@ -1,5 +1,7 @@
 // src/validators/sensor.validator.js
+
 const { check } = require("express-validator");
+// const { isValidObjectId } = require("mongoose"); // Removed unused import as it's used via .isMongoId()
 
 const sensorValidationRules = () => {
   return [
@@ -12,7 +14,9 @@ const sensorValidationRules = () => {
       "soil moisture",
     ]),
     check("zone_id", "Zone ID is required").notEmpty(),
-    check("zone_id", "Invalid Zone ID").isMongoId(), // Validate if it's a valid MongoDB ObjectId
+    check("zone_id")
+      .isMongoId()
+      .withMessage("Invalid Zone ID format"),
   ];
 };
 
@@ -26,6 +30,11 @@ const sensorUpdateValidationRules = () => {
       "light",
       "soil moisture",
     ]),
+   // zone id
+    check("zone_id")
+      .optional() // Make it optional for updates
+      .isMongoId()
+      .withMessage("Invalid Zone ID format"),
   ];
 };
 

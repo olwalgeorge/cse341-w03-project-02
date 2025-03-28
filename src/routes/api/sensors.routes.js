@@ -49,6 +49,7 @@ router.get(
 router.post(
   "/",
   protect,
+
   validate(sensorCreateValidationRules()),
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to create a new sensor' */

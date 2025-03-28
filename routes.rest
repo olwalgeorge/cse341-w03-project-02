@@ -51,12 +51,12 @@ Content-Type: application/json
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 {
-  "sensor_id": "sen_1001",
-  "sensor_name": "Light Sensor 3",
-  "sensor_type": "light",
-  "unit": "Lux",
+  "sensor_id": "sen_1002",
+  "sensor_name": "Light Sensor 4",
+  "sensor_type": "light3",
+  "unit": "Lux4",
   "location": "Greenhouse",
-  "zone_id": "5fc2a3a6f0f37d0017e5a3a6"
+  
 }
 
 ### Update Sensor (Requires Authentication)

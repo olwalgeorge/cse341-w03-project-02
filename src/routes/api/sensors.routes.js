@@ -13,24 +13,13 @@ const {
 const validate = require("../../middlewares/validation.middleware.js");
 const protect = require("../../middlewares/auth.middleware.js");
 const {
-  sensorValidationRules,
+  sensorValidateId,
+  sensorValidateSensorId,
+  sensorCreateValidationRules,
   sensorUpdateValidationRules,
 } = require("../../validators/sensor.validator.js");
-const { isValidObjectId } = require("mongoose");
-const sendResponse = require("../../utils/response.js"); // Import sendResponse for direct use in middleware
 
 const router = express.Router();
-
-/* #swagger.tags = ['Sensors'] */
-/* #swagger.description = 'Routes for managing sensors' */
-
-// Middleware to validate if the ID is a valid ObjectId
-const validateObjectId = (req, res, next) => {
-  if (!isValidObjectId(req.params.id)) {
-    return sendResponse(res, 400, "Invalid sensor ID format");
-  }
-  next();
-};
 
 router.get(
   "/",
@@ -45,7 +34,8 @@ router.get(
 router.get(
   "/:id",
   protect,
-  validateObjectId, // Validate ID format
+  validate(sensorValidateSensorId()),
+
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to retrieve a sensor by id' */
   /* #swagger.parameters['id'] = { in: 'path', description: 'Sensor ID', required: true, type: 'string' } */
@@ -59,7 +49,7 @@ router.get(
 router.post(
   "/",
   protect,
-  validate(sensorValidationRules()),
+  validate(sensorCreateValidationRules()),
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to create a new sensor' */
   /* #swagger.requestBody = { required: true, description: 'Sensor data to create a new sensor', schema: { $ref: '#/definitions/Sensor' } } */
@@ -72,7 +62,6 @@ router.post(
 router.put(
   "/:id",
   protect,
-  validateObjectId, // Validate ID format
   validate(sensorUpdateValidationRules()),
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to update a sensor' */
@@ -88,7 +77,7 @@ router.put(
 router.delete(
   "/:id",
   protect,
-  validateObjectId, // Validate ID format
+  validate(sensorValidateId()),
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to delete a sensor' */
   /* #swagger.parameters['id'] = { in: 'path', description: 'Sensor ID', required: true, type: 'string' } */

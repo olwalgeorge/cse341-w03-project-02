@@ -14,5 +14,5 @@ module.exports = {
   sessionSecret: process.env.SESSION_SECRET,
   db: {
     uri: process.env.MONGO_URI,
-  }
+  },
 };

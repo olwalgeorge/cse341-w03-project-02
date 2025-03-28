@@ -1,5 +1,5 @@
 // src/middlewares/auth.middleware.js
-const sendResponse = require('../utils/response.js');
+const sendResponse = require("../utils/response.js");
 
 const protect = (req, res, next) => {
   if (req.isAuthenticated()) {
@@ -7,7 +7,7 @@ const protect = (req, res, next) => {
     return next();
   } else {
     // User is not authenticated
-    return sendResponse(res, 401, 'Not authenticated');
+    return sendResponse(res, 401, "Not authenticated");
   }
 };
 

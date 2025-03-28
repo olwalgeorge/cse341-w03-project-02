@@ -32,11 +32,11 @@ const registerUser = asyncHandler(async (req, res) => {
   });
 
   if (user) {
-    logger.info("User created successfully:", { 
-      _id: user._id, 
-      username: user.username, 
-      email: user.email, 
-      fullName: user.fullName 
+    logger.info("User created successfully:", {
+      _id: user._id,
+      username: user.username,
+      email: user.email,
+      fullName: user.fullName,
     });
     return sendResponse(res, 201, "User registered successfully", {
       _id: user._id,
@@ -68,11 +68,11 @@ const loginUser = (req, res, next) => {
         logger.error("Session creation error:", err);
         return next(err);
       }
-      logger.info("User logged in successfully:", { 
-        _id: user._id, 
-        username: user.username, 
-        email: user.email, 
-        fullName: user.fullName 
+      logger.info("User logged in successfully:", {
+        _id: user._id,
+        username: user.username,
+        email: user.email,
+        fullName: user.fullName,
       });
       return sendResponse(res, 200, "Logged in successfully", {
         _id: user._id,
@@ -127,7 +127,7 @@ const logoutUser = (req, res) => {
 // @access  Private
 const updateUserProfile = asyncHandler(async (req, res) => {
   const { username, email, fullName } = req.body;
-  
+
   try {
     const user = await User.findById(req.user._id);
 

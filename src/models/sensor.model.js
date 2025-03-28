@@ -27,12 +27,7 @@ const sensorSchema = new mongoose.Schema(
     location: {
       type: String,
       trim: true,
-    },
-    zone_id: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Zone",
-      required: [true, "Zone ID is required"],
-    },
+    }    
   },
   {
     timestamps: true,
@@ -42,4 +37,3 @@ const sensorSchema = new mongoose.Schema(
 const Sensor = mongoose.model("Sensor", sensorSchema);
 
 module.exports = Sensor;
-

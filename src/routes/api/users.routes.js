@@ -49,11 +49,7 @@ router.post(
   loginUser
 );
 
-router.get(
-  "/profile",
-  protect,
-  getUserProfile
-);
+router.get("/profile", protect, getUserProfile);
 
 router.put(
   "/profile",
@@ -71,10 +67,6 @@ router.put(
   updateUserProfile
 );
 
-router.get(
-  "/logout",
-  protect,
-  logoutUser
-);
+router.get("/logout", protect, logoutUser);
 
 module.exports = router;

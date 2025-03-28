@@ -1,20 +1,16 @@
 // src/validators/sensor.validator.js
 
-const { check } = require("express-validator");
+const { check, param } = require("express-validator");
 
-const sensorValidateId = () => {
+const sensorValidateIdRules = () => {
   return [
     check("_id").isMongoId().withMessage("Invalid internal Sensor ID format"),
   ];
 };
 
-const sensorValidateSensorId = () => {
+const sensorValidateSensorIdRules = () => {
   return [
-    check("sensor_id", "Sensor ID is required").notEmpty(),
-    check(
-      "sensor_id",
-      "Sensor ID should start with 'sen_' then 4 digits"
-    ).matches(/^sen_\d{4}$/),
+    param("sensor_id", "Invalid sensor ID format").matches(/^sen_\d{4}$/),
   ];
 };
 
@@ -35,7 +31,6 @@ const sensorCreateValidationRules = () => {
     ]),
     check("unit", "Unit is required").notEmpty(),
     check("location", "Location is required").notEmpty(),
-   
   ];
 };
 
@@ -57,14 +52,12 @@ const sensorUpdateValidationRules = () => {
     ]),
     check("unit", "Unit is required").notEmpty(),
     check("location", "Location is required").notEmpty(),
-   
   ];
 };
 
 module.exports = {
-  sensorValidateId,
-  sensorValidateSensorId,
+  sensorValidateIdRules,
+  sensorValidateSensorIdRules,
   sensorCreateValidationRules,
   sensorUpdateValidationRules,
 };
-

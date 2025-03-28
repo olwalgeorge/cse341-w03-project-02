@@ -13,10 +13,10 @@ const {
 const validate = require("../../middlewares/validation.middleware.js");
 const protect = require("../../middlewares/auth.middleware.js");
 const {
-  sensorValidateId,
-  sensorValidateSensorId,
   sensorCreateValidationRules,
   sensorUpdateValidationRules,
+  sensorValidateSensorIdRules,
+  sensorValidateIdRules,
 } = require("../../validators/sensor.validator.js");
 
 const router = express.Router();
@@ -32,12 +32,12 @@ router.get(
 );
 
 router.get(
-  "/:id",
+  "/:sensor_id",
   protect,
-  validate(sensorValidateSensorId()),
+  validate(sensorValidateSensorIdRules()),
 
   /* #swagger.tags = ['Sensors'] */
-  /* #swagger.description = 'Endpoint to retrieve a sensor by id' */
+  /* #swagger.description = 'Endpoint to retrieve a sensor by sensor_id' */
   /* #swagger.parameters['id'] = { in: 'path', description: 'Sensor ID', required: true, type: 'string' } */
   /* #swagger.responses[200] = { description: 'Sensor retrieved successfully' } */
   /* #swagger.responses[400] = { description: 'Invalid sensor ID format' } */
@@ -77,7 +77,7 @@ router.put(
 router.delete(
   "/:id",
   protect,
-  validate(sensorValidateId()),
+  validate(sensorValidateIdRules()),
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to delete a sensor' */
   /* #swagger.parameters['id'] = { in: 'path', description: 'Sensor ID', required: true, type: 'string' } */

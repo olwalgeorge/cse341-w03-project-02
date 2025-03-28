@@ -27,14 +27,17 @@ const getSensors = asyncHandler(async (req, res) => {
 // @access  Private
 const getSensorById = asyncHandler(async (req, res) => {
   try {
-    const sensor = await Sensor.findOne({ sensor_id: req.params.id });
+    const sensor = await Sensor.findOne({ sensor_id: req.params.sensor_id });
     if (sensor) {
       sendResponse(res, 200, "Sensor retrieved successfully", sensor);
     } else {
       return sendResponse(res, 404, "Sensor not found");
     }
   } catch (error) {
-    logger.error(`Error retrieving sensor with ID ${req.params.id}:`, error);
+    logger.error(
+      `Error retrieving sensor with ID ${req.params.sensor_id}:`,
+      error
+    );
     if (error.name === "CastError" && error.kind === "ObjectId") {
       return sendResponse(res, 400, "Invalid sensor ID format");
     }
@@ -60,7 +63,11 @@ const createSensor = asyncHandler(async (req, res) => {
     logger.error("Error creating sensor:", error);
 
     // Check for MongoDB duplicate key error (code 11000) for sensor_id
-    if (error.code === 11000 && error.keyPattern && error.keyPattern.sensor_id) {
+    if (
+      error.code === 11000 &&
+      error.keyPattern &&
+      error.keyPattern.sensor_id
+    ) {
       return sendResponse(res, 409, "Sensor ID already exists.", null, {
         message: "A sensor with this ID already exists.",
       });

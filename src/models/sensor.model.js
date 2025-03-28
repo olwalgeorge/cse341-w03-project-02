@@ -27,7 +27,7 @@ const sensorSchema = new mongoose.Schema(
     location: {
       type: String,
       trim: true,
-    }    
+    },
   },
   {
     timestamps: true,

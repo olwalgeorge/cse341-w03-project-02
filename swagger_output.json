@@ -273,19 +273,25 @@
         }
       }
     },
-    "/sensors/{id}": {
+    "/sensors/{sensor_id}": {
       "get": {
         "tags": [
           "Sensors"
         ],
-        "description": "Endpoint to retrieve a sensor by id",
+        "description": "Endpoint to retrieve a sensor by sensor_id",
         "parameters": [
+          {
+            "name": "sensor_id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
           {
             "name": "id",
             "in": "path",
+            "description": "Sensor ID",
             "required": true,
-            "type": "string",
-            "description": "Sensor ID"
+            "type": "string"
           }
         ],
         "responses": {
@@ -302,7 +308,9 @@
             "description": "Failed to retrieve sensor"
           }
         }
-      },
+      }
+    },
+    "/sensors/{id}": {
       "put": {
         "tags": [
           "Sensors"

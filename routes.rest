@@ -42,11 +42,11 @@ GET http://localhost:3000/api/sensors
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get Sensor By ID (Requires Authentication)
-GET http://localhost:3000/api/sensors/67e5908760fb0d0879b05e9
+GET http://localhost:3000/api/sensors/sen_1001
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Create Sensor (Requires Authentication)
-POST http://localhost:3000/api/sensors
+POST http://localhost:3000/api/sensors/
 Content-Type: application/json
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
@@ -60,7 +60,7 @@ Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 }
 
 ### Update Sensor (Requires Authentication)
-PUT http://localhost:3000/api/sensors/1
+PUT http://localhost:3000/api/sensors/
 Content-Type: application/json
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 

@@ -16,7 +16,7 @@ const getSensorsByType = async (sensorType) => {
   }
 };
 
-// Add other sensor-related service functions here (e.g.,
+// I will add more sensor related service functions here e.g
 // - Calculating average sensor readings
 // - Filtering sensor data
 // - Processing sensor data for specific use cases)

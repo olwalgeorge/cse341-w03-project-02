@@ -12,8 +12,7 @@ const registerUser = asyncHandler(async (req, res) => {
   logger.debug("Request body:", req.body);
   try {
     const user = await User.create(req.body);
-    sendResponse(res, 201, "User created successfully", {
-      user_sys_id: user._id,
+    sendResponse(res, 201, "User created successfully", {      
       user_public_id: user.user_id,
       username: user.username,
       email: user.email,
@@ -63,14 +62,12 @@ const loginUser = asyncHandler(async (req, res) => {
         return sendResponse(res, 500, "Internal server error during login");
       }
       sendResponse(res, 200, "User logged in successfully", {
-        user_sys_id: user._id,
-        user_public_id: user.user_id,
+       
         username: user.username,
         email: user.email,
         user_fname: user.firstName,
         user_lname: user.lastName,
-        profile_photo: user.avatar,
-        access_role: user.role,
+        
       });
     });
   })(req, res);
@@ -104,7 +101,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
       runValidators: true,
     });
     sendResponse(res, 200, "User profile updated successfully", {
-      user_sys_id: user._id,
+      
       user_public_id: user.user_id,
       user_fname: user.firstName,
       user_lname: user.lastName,

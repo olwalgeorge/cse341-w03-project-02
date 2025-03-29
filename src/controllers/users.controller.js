@@ -151,9 +151,9 @@ const logoutUser = asyncHandler(async (req, res) => {
 // @access  Private
 const getUserById = asyncHandler(async (req, res) => {
   logger.info(`getUserById called with ID: ${req.params.user_id}`);
-  logger.debug("Request body:", req.body);
+  logger.debug("Request body:", req.params.user_id);
   try {
-    const user = await User.findById(req.params.user_id);
+    const user = await User.findOne({user_id: req.params.user_id});
     if (user) {
       sendResponse(res, 200, "User retrieved successfully", {
         user_sys_id: user._id,

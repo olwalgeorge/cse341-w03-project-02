@@ -3,14 +3,14 @@ POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-  "user_id": "usr_1006",
-  "firstName": "George",
-  "lastName": "Olwal",
-  "username": "george_olwal",
-  "email": "george@example.com",
-  "password": "securePassword123",
-  "avatar": "george_avatar.png",
-  "role": "user"
+  "user_id": "usr_1001",
+  "firstName": "Super",
+  "lastName": "Admin",
+  "username": "superadmin",
+  "email": "superadmin@example.com",
+  "password": "superadpassword",
+  "avatar": "superadmin_avatar.png",
+  "role": "superadmin"
 }
 
 ### Login User
@@ -47,11 +47,11 @@ GET http://localhost:3000/api/users
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get User By ID (Requires Authentication)
-GET http://localhost:3000/api/users/usr_1002
+GET http://localhost:3000/api/users/usr_1003
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Delete User By ID (Requires Authentication)
-DELETE http://localhost:3000/api/users/:
+DELETE http://localhost:3000/api/users
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get User By Username (Requires Authentication)

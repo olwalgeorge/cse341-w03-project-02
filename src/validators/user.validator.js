@@ -1,23 +1,66 @@
-// src/validators/user.validator.js
-const { check } = require("express-validator");
+const { check, param } = require("express-validator");
 
-const userValidationRules = () => {
+  
+const userValidateIdRules = () => {
+
+  
+  return [param("_id", "Invalid internal User ID format").isMongoId() 
+    
+  ];
+};
+const userValidateUserIdRules = () => {
   return [
-    check("username", "Username is required").notEmpty(),
-    check("email", "Invalid email").isEmail(),
-    check("password", "Password must be at least 6 characters").isLength({
-      min: 6,
+    param("user_id", "User ID should start with 'usr_' then 4 digits").matches(
+      /^usr_\d{4}$/
+    ),
+  ];
+};
+
+const userValidateUserTypeRules = () => {
+  return [
+    param("user_type", "Invalid user type").isIn(["admin", "user", "guest"]),
+  ];
+};
+
+const userCreateValidationRules = () => {
+  return [    
+    
+    check("user_id", "User ID is required").notEmpty(), 
+    check("user_id", "User ID should start with 'usr_' then 4 digits").matches(/^usr_\d{4}$/),      
+    check("firstName", "First name is required").notEmpty(),
+    check("lastName", "Last name is required").notEmpty(),
+    check("username", "Username is required").notEmpty(),    
+    check("email", "Email is required").notEmpty(),    
+    check("email", "Invalid email format").isEmail(),
+    check("password", "Password is required").notEmpty(),
+    check("password", "Password must be at least 8 characters long").isLength({
+      min: 8,
     }),
-    check("fullName", "Full name is required").notEmpty(),
   ];
 };
 
 const userUpdateValidationRules = () => {
   return [
-    check("username", "Username is required").notEmpty(),
-    check("email", "Invalid email").isEmail(),
-    check("fullName", "Full name is required").notEmpty(),
+    param("_id", "User ID is required").not("profile")
+    .custom(userValidateIdRules()),   
+    
+    check("user_id", "User ID is required").optional(),    
+    check("firstName", "First name is required").optional(),
+    check("lastName", "Last name is required").optional(),
+    check("username", "Username is required").optional(),   
+    check("email", "Email is required").optional(),   
+    check("email", "Invalid email format").optional().isEmail(),
+    check("password", "Password is required").optional(),
+    check("password", "Password must be at least 8 characters long")
+      .optional()
+      .isLength({ min: 8 }),
   ];
 };
 
-module.exports = { userValidationRules, userUpdateValidationRules };
+module.exports = {
+  userValidateIdRules,
+  userCreateValidationRules,
+  userUpdateValidationRules,
+  userValidateUserIdRules,
+  userValidateUserTypeRules,
+};

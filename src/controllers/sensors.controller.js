@@ -32,7 +32,10 @@ const getSensorById = asyncHandler(async (req, res) => {
       return sendResponse(res, 404, "Sensor not found");
     }
   } catch (error) {
-    logger.error(`Error retrieving sensor with ID ${req.params.sensor_id}:`, error);
+    logger.error(
+      `Error retrieving sensor with ID ${req.params.sensor_id}:`,
+      error
+    );
     if (error.name === "CastError" && error.kind === "ObjectId") {
       return sendResponse(res, 400, "Invalid sensor ID format");
     }
@@ -70,8 +73,7 @@ const createSensor = asyncHandler(async (req, res) => {
       message: error.message,
     });
   }
-});    
-
+});
 
 // @desc    Update a sensor
 // @route   PUT /api/sensors/:id
@@ -188,4 +190,3 @@ module.exports = {
   deleteAllSensors,
   getSensorsByType,
 };
-

@@ -9,7 +9,6 @@ const {
   updateSensor,
   deleteSensor,
   getSensorsByType,
-  
 } = require("../../controllers/sensors.controller.js");
 const validate = require("../../middlewares/validation.middleware.js");
 const protect = require("../../middlewares/auth.middleware.js");

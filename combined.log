@@ -724,3 +724,197 @@
 {"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-28 20:37:36"}
 {"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-28 20:38:02","username":"testuser"}
 {"0":"E","1":"x","10":"o","11":"u","12":"b","13":"l","14":"e","15":"-","16":"q","17":"u","18":"o","19":"t","2":"p","20":"e","21":"d","22":" ","23":"p","24":"r","25":"o","26":"p","27":"e","28":"r","29":"t","3":"e","30":"y","31":" ","32":"n","33":"a","34":"m","35":"e","36":" ","37":"i","38":"n","39":" ","4":"c","40":"J","41":"S","42":"O","43":"N","44":" ","45":"a","46":"t","47":" ","48":"p","49":"o","5":"t","50":"s","51":"i","52":"t","53":"i","54":"o","55":"n","56":" ","57":"1","58":"4","59":"7","6":"e","60":" ","61":"(","62":"l","63":"i","64":"n","65":"e","66":" ","67":"8","68":" ","69":"c","7":"d","70":"o","71":"l","72":"u","73":"m","74":"n","75":" ","76":"1","77":")","8":" ","9":"d","level":"error","message":"JSON Parsing Error:","service":"smart-farm-api","timestamp":"2025-03-28 20:38:12"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-28 21:30:17","username":"testuser"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-28 21:30:39"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-28 21:30:50"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-28 21:30:50","username":"testuser"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-28 21:31:22"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-28 21:31:22"}
+{"0":{"location":"params","msg":"Invalid sensor type","path":"sensor_type","type":"field","value":":sensor_type"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-28 21:31:22"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-28 21:31:22"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-28 21:32:15"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-28 21:32:15"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-28 21:32:15"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-28 21:32:15"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-28 21:36:31"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-28 21:36:38"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-28 21:37:05"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-28 21:37:17"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-28 21:37:18","username":"testuser"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-28 21:37:31"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-28 21:37:31"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-28 21:37:31"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-28 21:37:31"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-28 21:42:42"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-28 21:42:42"}
+{"0":{"location":"params","msg":"Invalid sensor ID format","path":"sensor_id","type":"field","value":"temperature"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-28 21:42:42"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-28 21:42:42"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-28 21:44:05"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-28 21:44:05"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-28 21:44:05"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-28 21:44:05"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-28 21:45:11"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-28 21:45:20"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-28 21:45:26","username":"testuser"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-28 21:45:40"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-28 21:45:40"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-28 21:45:40"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-28 21:45:40"}
+{"level":"info","message":"Getting sensors by type: humidity","service":"smart-farm-api","timestamp":"2025-03-28 21:45:40"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-28 21:50:33"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-28 21:50:33"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-28 21:50:33"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-28 21:50:33"}
+{"level":"info","message":"Getting sensors by type: light","service":"smart-farm-api","timestamp":"2025-03-28 21:50:33"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-28 21:57:09"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-28 21:57:15"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-28 21:57:20","username":"testuser"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-28 22:00:03","username":"testuser"}
+{"level":"info","location":"Greenhouse","message":"Request Body:","sensor_id":"sen_1002","sensor_name":"Light Sensor 4","sensor_type":"light3","service":"smart-farm-api","timestamp":"2025-03-28 22:01:46","unit":"Lux"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-28 22:01:46"}
+{"0":{"location":"body","msg":"Invalid sensor type","path":"sensor_type","type":"field","value":"light3"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-28 22:01:46"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-28 22:01:46"}
+{"level":"info","location":"Greenhouse","message":"Request Body:","sensor_id":"sen_1001","sensor_name":"Light Sensor 4","sensor_type":"light","service":"smart-farm-api","timestamp":"2025-03-28 22:02:17","unit":"Lux"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-28 22:02:17"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-28 22:02:17"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-28 22:02:17"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-28 22:04:46"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-28 22:04:51"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-28 22:05:35","username":"testuser"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-28 22:09:38"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-28 22:09:43"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-28 22:10:11","username":"testuser"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-28 22:12:28"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-28 22:12:36"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-28 22:12:39","username":"testuser"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-28 22:20:56"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-28 22:21:00"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-28 22:21:30","username":"testuser"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-28 22:36:12"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-28 22:36:12"}
+{"0":{"location":"body","msg":"Invalid internal Sensor ID format","path":"_id","type":"field"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-28 22:36:12"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-28 22:36:12"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-28 22:39:36"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-28 22:39:39"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-28 22:40:14","username":"testuser"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-28 22:55:41"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-28 22:55:45"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-28 22:55:51","username":"testuser"}
+{"level":"info","location":"Greenhouse","message":"Request Body:","sensor_id":"sen_1001","sensor_name":"Light Sensor 4","sensor_type":"light","service":"smart-farm-api","timestamp":"2025-03-28 22:56:53","unit":"Lux"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-28 22:56:53"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-28 22:56:53"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-28 22:56:53"}
+{"level":"info","location":"Greenhouse","message":"Request Body:","sensor_id":"sen_1001","sensor_name":"Light Sensor 4","sensor_type":"light","service":"smart-farm-api","timestamp":"2025-03-28 22:57:01","unit":"Lux"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-28 22:57:01"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-28 22:57:01"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-28 22:57:01"}
+{"code":11000,"errorLabelSet":{},"errorResponse":{"code":11000,"errmsg":"E11000 duplicate key error collection: smart_farm_db.sensors index: sensor_id_1 dup key: { sensor_id: \"sen_1001\" }","index":0,"keyPattern":{"sensor_id":1},"keyValue":{"sensor_id":"sen_1001"}},"index":0,"keyPattern":{"sensor_id":1},"keyValue":{"sensor_id":"sen_1001"},"level":"error","message":"Error creating sensor: E11000 duplicate key error collection: smart_farm_db.sensors index: sensor_id_1 dup key: { sensor_id: \"sen_1001\" }","service":"smart-farm-api","stack":"MongoServerError: E11000 duplicate key error collection: smart_farm_db.sensors index: sensor_id_1 dup key: { sensor_id: \"sen_1001\" }\n    at InsertOneOperation.execute (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\node_modules\\mongodb\\lib\\operations\\insert.js:51:19)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async tryOperation (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:207:20)\n    at async executeOperation (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:75:16)\n    at async Collection.insertOne (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\node_modules\\mongodb\\lib\\collection.js:157:16)","timestamp":"2025-03-28 22:57:01"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-28 22:58:52","username":"testuser"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-28 23:14:23"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-28 23:14:27"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-28 23:15:08","username":"testuser"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-28 23:17:26"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-28 23:17:26"}
+{"0":{"location":"params","msg":"Invalid internal Sensor ID format","path":"_id","type":"field","value":"2"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-28 23:17:26"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-28 23:17:26"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-28 23:47:55"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-28 23:47:59"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-28 23:48:13","username":"testuser"}
+{"_id":"2","level":"info","message":"Request Params:","service":"smart-farm-api","timestamp":"2025-03-28 23:48:32"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-29 09:31:47","username":"testuser"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-29 09:32:02"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-29 09:32:12"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-29 09:32:18","username":"testuser"}
+{"level":"info","message":"getSensors called","service":"smart-farm-api","timestamp":"2025-03-29 09:35:48"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-29 09:45:27"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-29 09:45:31"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-29 09:45:39","username":"testuser"}
+{"level":"info","location":"Greenhouse","message":"Request Body:","sensor_id":"sen_1001","sensor_name":"Light Sensor 4","sensor_type":"light3","service":"smart-farm-api","timestamp":"2025-03-29 09:46:26","unit":"Lux"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-29 09:46:26"}
+{"0":{"location":"body","msg":"Invalid sensor type","path":"sensor_type","type":"field","value":"light3"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-29 09:46:26"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-29 09:46:26"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-29 10:09:51"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-29 10:09:55"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-29 10:10:39","username":"testuser"}
+{"level":"info","location":"Greenhouse","message":"Request Body:","sensor_id":"sen_10015","sensor_name":"Light Sensor 4","sensor_type":"light3","service":"smart-farm-api","timestamp":"2025-03-29 10:10:49","unit":"Lux"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-29 10:10:49"}
+{"0":{"location":"body","msg":"Sensor ID should start with 'sen_' then 4 digits","path":"sensor_id","type":"field","value":"sen_10015"},"1":{"location":"body","msg":"Invalid sensor type","path":"sensor_type","type":"field","value":"light3"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-29 10:10:49"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-29 10:10:49"}
+{"level":"info","location":"Greenhouse","message":"Request Body:","sensor_name":"Light Sensor 4","sensor_type":"light3","service":"smart-farm-api","timestamp":"2025-03-29 10:14:36","unit":"Lux"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-29 10:14:36"}
+{"0":{"location":"body","msg":"Sensor ID is required","path":"sensor_id","type":"field"},"1":{"location":"body","msg":"Sensor ID should start with 'sen_' then 4 digits","path":"sensor_id","type":"field"},"2":{"location":"body","msg":"Invalid sensor type","path":"sensor_type","type":"field","value":"light3"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-29 10:14:36"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-29 10:14:36"}
+{"level":"info","location":"Greenhouse","message":"Request Body:","sensor_type":"light3","service":"smart-farm-api","timestamp":"2025-03-29 10:16:03","unit":"Lux"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-29 10:16:03"}
+{"0":{"location":"body","msg":"Sensor ID is required","path":"sensor_id","type":"field"},"1":{"location":"body","msg":"Sensor ID should start with 'sen_' then 4 digits","path":"sensor_id","type":"field"},"2":{"location":"body","msg":"Sensor name is required","path":"sensor_name","type":"field"},"3":{"location":"body","msg":"Invalid sensor type","path":"sensor_type","type":"field","value":"light3"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-29 10:16:03"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-29 10:16:03"}
+{"level":"info","location":"Greenhouse","message":"Request Body:","sensor_id":"sen_1001","sensor_name":"Light Sensor 4","sensor_type":"light","service":"smart-farm-api","timestamp":"2025-03-29 10:16:35","unit":"Lux"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-29 10:16:35"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-29 10:16:35"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-29 10:16:35"}
+{"level":"info","message":"createSensor called","service":"smart-farm-api","timestamp":"2025-03-29 10:16:35"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-29 10:23:48"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-29 10:23:51"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-29 10:24:35","username":"testuser"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-29 10:25:45"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-29 10:25:45"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-29 10:25:45"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-29 10:25:45"}
+{"level":"info","message":"getSensorById called with ID sen_1001","service":"smart-farm-api","timestamp":"2025-03-29 10:25:45"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-29 10:26:02"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-29 10:26:02"}
+{"0":{"location":"params","msg":"Invalid sensor ID format","path":"sensor_id","type":"field","value":"sen_10033"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-29 10:26:02"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-29 10:26:02"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-29 10:28:42"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-29 10:28:45"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-29 10:28:46","username":"testuser"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-29 10:29:07"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-29 10:29:07"}
+{"0":{"location":"params","msg":"Sensor ID should start with 'sen_' then 4 digits","path":"sensor_id","type":"field","value":"sen_10033"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-29 10:29:07"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-29 10:29:07"}
+{"level":"info","message":"getSensors called","service":"smart-farm-api","timestamp":"2025-03-29 10:29:25"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-29 10:30:08"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-29 10:30:08"}
+{"0":{"location":"params","msg":"Sensor ID should start with 'sen_' then 4 digits","path":"sensor_id","type":"field","value":"1"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-29 10:30:08"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-29 10:30:08"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-29 10:30:37"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-29 10:30:37"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-29 10:30:37"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-29 10:30:37"}
+{"level":"info","message":"getSensorById called with ID sen_1003","service":"smart-farm-api","timestamp":"2025-03-29 10:30:37"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-29 10:30:55"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-29 10:30:55"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-29 10:30:55"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-29 10:30:55"}
+{"level":"info","message":"getSensorById called with ID sen_1001","service":"smart-farm-api","timestamp":"2025-03-29 10:30:55"}
+{"level":"info","message":"Request Body:","sensor_name":"Updated Sensor","sensor_type":"soil moisture","service":"smart-farm-api","timestamp":"2025-03-29 10:32:07","unit":"%"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-29 10:32:07"}
+{"0":{"location":"params","msg":"Invalid internal Sensor ID format","path":"_id","type":"field","value":"sen_1001"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-29 10:32:07"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-29 10:32:07"}
+{"level":"info","message":"Request Body:","sensor_name":"Updated Sensor","sensor_type":"soil moisture","service":"smart-farm-api","timestamp":"2025-03-29 10:32:32","unit":"%"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-29 10:32:32"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-29 10:32:32"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-29 10:32:32"}
+{"level":"info","message":"updateSensor called with ID 67e79e5366e9c9e24b3af116","service":"smart-farm-api","timestamp":"2025-03-29 10:32:32"}
+{"level":"info","message":"Request Body:","sensor_name":"Updated Sensor","sensor_type":"soil moisture2","service":"smart-farm-api","timestamp":"2025-03-29 10:34:36","unit":"%"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-29 10:34:36"}
+{"0":{"location":"body","msg":"Invalid sensor type","path":"sensor_type","type":"field","value":"soil moisture2"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-29 10:34:36"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-29 10:34:36"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-29 10:44:01"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-29 10:44:04"}
+{"_id":"67e578b560fb0d0879b05e8c","email":"test@example.com","fullName":"Test User","level":"info","message":"User logged in successfully:","service":"smart-farm-api","timestamp":"2025-03-29 10:46:02","username":"testuser"}
+{"level":"info","location":"Greenhouse","message":"Request Body:","sensor_id":"sen_1002","sensor_name":"Temperature Sensor","sensor_type":"temperature","service":"smart-farm-api","timestamp":"2025-03-29 10:49:18","unit":"Celsius"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-29 10:49:18"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-29 10:49:18"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-29 10:49:18"}
+{"level":"info","message":"createSensor called","service":"smart-farm-api","timestamp":"2025-03-29 10:49:18"}
+{"level":"info","message":"Request Body:","sensor_id":"sen_1002","sensor_name":"Updated Sensor","sensor_type":"soil moisture2","service":"smart-farm-api","timestamp":"2025-03-29 10:50:10","unit":"%"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-29 10:50:10"}
+{"0":{"location":"body","msg":"Invalid sensor type","path":"sensor_type","type":"field","value":"soil moisture2"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-29 10:50:10"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-29 10:50:10"}
+{"level":"info","message":"Request Body:","sensor_id":"sen_1002","sensor_name":"Updated Sensor","sensor_type":"soil moisture","service":"smart-farm-api","timestamp":"2025-03-29 10:51:19","unit":"%"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-29 10:51:19"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-29 10:51:19"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-29 10:51:19"}
+{"level":"info","message":"updateSensor called with ID 67e79e5366e9c9e24b3af116","service":"smart-farm-api","timestamp":"2025-03-29 10:51:19"}
+{"$clusterTime":{"clusterTime":{"$timestamp":"7487135935558057998"},"signature":{"hash":"dEoaS9OEUf57ZWyvDkp3dd3/5j8=","keyId":{"high":1729502927,"low":12,"unsigned":false}}},"code":11000,"codeName":"DuplicateKey","errorLabelSet":{},"errorResponse":{"$clusterTime":{"clusterTime":{"$timestamp":"7487135935558057998"},"signature":{"hash":"dEoaS9OEUf57ZWyvDkp3dd3/5j8=","keyId":{"high":1729502927,"low":12,"unsigned":false}}},"code":11000,"codeName":"DuplicateKey","errmsg":"Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: smart_farm_db.sensors index: sensor_id_1 dup key: { sensor_id: \"sen_1002\" }","keyPattern":{"sensor_id":1},"keyValue":{"sensor_id":"sen_1002"},"ok":0,"operationTime":{"$timestamp":"7487135935558057996"}},"keyPattern":{"sensor_id":1},"keyValue":{"sensor_id":"sen_1002"},"level":"error","message":"Error updating sensor with ID 67e79e5366e9c9e24b3af116: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: smart_farm_db.sensors index: sensor_id_1 dup key: { sensor_id: \"sen_1002\" }","ok":0,"operationTime":{"$timestamp":"7487135935558057996"},"service":"smart-farm-api","stack":"MongoServerError: Plan executor error during findAndModify :: caused by :: E11000 duplicate key error collection: smart_farm_db.sensors index: sensor_id_1 dup key: { sensor_id: \"sen_1002\" }\n    at Connection.sendCommand (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\node_modules\\mongodb\\lib\\cmap\\connection.js:299:27)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async Connection.command (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\node_modules\\mongodb\\lib\\cmap\\connection.js:327:26)\n    at async Server.command (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\node_modules\\mongodb\\lib\\sdam\\server.js:168:29)\n    at async FindOneAndUpdateOperation.executeCommand (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\node_modules\\mongodb\\lib\\operations\\command.js:76:16)\n    at async FindOneAndUpdateOperation.execute (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\node_modules\\mongodb\\lib\\operations\\find_and_modify.js:85:24)\n    at async tryOperation (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:207:20)\n    at async executeOperation (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\node_modules\\mongodb\\lib\\operations\\execute_operation.js:75:16)\n    at async Collection.findOneAndUpdate (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\node_modules\\mongodb\\lib\\collection.js:500:16)\n    at async model.Query._findOneAndUpdate (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\node_modules\\mongoose\\lib\\query.js:3477:13)","timestamp":"2025-03-29 10:51:19"}

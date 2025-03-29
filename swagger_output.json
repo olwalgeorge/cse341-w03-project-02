@@ -310,7 +310,7 @@
         }
       }
     },
-    "/sensors/{id}": {
+    "/sensors/{_id}": {
       "put": {
         "tags": [
           "Sensors"
@@ -318,11 +318,17 @@
         "description": "Endpoint to update a sensor",
         "parameters": [
           {
-            "name": "id",
+            "name": "_id",
             "in": "path",
             "required": true,
-            "type": "string",
-            "description": "Sensor ID"
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Sensor ID",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {
@@ -363,11 +369,17 @@
         "description": "Endpoint to delete a sensor",
         "parameters": [
           {
-            "name": "id",
+            "name": "_id",
             "in": "path",
             "required": true,
-            "type": "string",
-            "description": "Sensor ID"
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Sensor ID",
+            "required": true,
+            "type": "string"
           }
         ],
         "responses": {

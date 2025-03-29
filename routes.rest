@@ -52,28 +52,32 @@ Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 {
   "sensor_id": "sen_1002",
-  "sensor_name": "Light Sensor 4",
-  "sensor_type": "light3",
-  "unit": "Lux4",
-  "location": "Greenhouse",
-  
+  "sensor_name": "Temperature Sensor",
+  "sensor_type": "temperature",
+  "unit": "Celsius",
+  "location": "Greenhouse"  
 }
 
 ### Update Sensor (Requires Authentication)
-PUT http://localhost:3000/api/sensors/
+PUT http://localhost:3000/api/sensors/67e79e5366e9c9e24b3af116
 Content-Type: application/json
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 {
+  "sensor_id": "sen_1002",
   "sensor_name": "Updated Sensor",
   "sensor_type": "soil moisture",
   "unit": "%"
 }
 
 ### Delete Sensor (Requires Authentication)
-DELETE http://localhost:3000/api/sensors/:id
+DELETE http://localhost:3000/api/sensors/
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get Sensors By Type (Requires Authentication)
-GET http://localhost:3000/api/sensors/type/:sensor_type
+GET http://localhost:3000/api/sensors/type/light
+Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
+
+### Delete All Sensors (Requires Authentication)
+DELETE http://localhost:3000/api/sensors/
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN

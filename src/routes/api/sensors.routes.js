@@ -9,14 +9,16 @@ const {
   updateSensor,
   deleteSensor,
   getSensorsByType,
+  
 } = require("../../controllers/sensors.controller.js");
 const validate = require("../../middlewares/validation.middleware.js");
 const protect = require("../../middlewares/auth.middleware.js");
 const {
+  sensorValidateIdRules,
+  sensorValidateSensorIdRules,
   sensorCreateValidationRules,
   sensorUpdateValidationRules,
-  sensorValidateSensorIdRules,
-  sensorValidateIdRules,
+  sensorValidateSensorTypeRules,
 } = require("../../validators/sensor.validator.js");
 
 const router = express.Router();
@@ -61,7 +63,7 @@ router.post(
 );
 
 router.put(
-  "/:id",
+  "/:_id",
   protect,
   validate(sensorUpdateValidationRules()),
   /* #swagger.tags = ['Sensors'] */
@@ -76,7 +78,7 @@ router.put(
 );
 
 router.delete(
-  "/:id",
+  "/:_id",
   protect,
   validate(sensorValidateIdRules()),
   /* #swagger.tags = ['Sensors'] */
@@ -91,6 +93,7 @@ router.delete(
 
 router.get(
   "/type/:sensor_type",
+  validate(sensorValidateSensorTypeRules()),
   protect,
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to retrieve sensors by type' */
@@ -100,5 +103,15 @@ router.get(
   /* #swagger.responses[500] = { description: 'Failed to retrieve sensors' } */
   getSensorsByType
 );
+
+// router.delete(
+//   "/",
+//   protect,
+//   /* #swagger.tags = ['Sensors'] */
+//   /* #swagger.description = 'Endpoint to delete all sensors' */
+//   /* #swagger.responses[200] = { description: 'All sensors deleted successfully' } */
+//   /* #swagger.responses[500] = { description: 'Failed to delete all sensors' } */
+//   deleteAllSensors
+// );
 
 module.exports = router;

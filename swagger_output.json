@@ -21,160 +21,72 @@
         }
       }
     },
-    "/users/": {
+    "/auth/register": {
       "post": {
         "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "description": "User data",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "username": {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "example": "string"
-                    },
-                    "example": {
-                      "type": "string",
-                      "example": "john_doe"
-                    }
-                  }
-                },
-                "email": {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "example": "string"
-                    },
-                    "example": {
-                      "type": "string",
-                      "example": "john@example.com"
-                    }
-                  }
-                },
-                "password": {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "example": "string"
-                    },
-                    "example": {
-                      "type": "string",
-                      "example": "securePassword123"
-                    }
-                  }
-                },
-                "fullName": {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "example": "string"
-                    },
-                    "example": {
-                      "type": "string",
-                      "example": "John Doe"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        ],
         "responses": {
           "default": {
             "description": ""
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Users"
-        ],
-        "description": "Endpoint to retrieve all users",
-        "responses": {
-          "200": {
-            "description": "Users retrieved successfully"
-          },
-          "401": {
-            "description": "Not authenticated"
-          },
-          "500": {
-            "description": "Failed to retrieve users"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "Users"
-        ],
-        "description": "Endpoint to delete all users",
-        "responses": {
-          "200": {
-            "description": "All users deleted successfully"
-          },
-          "401": {
-            "description": "Not authenticated"
-          },
-          "500": {
-            "description": "Failed to delete all users"
           }
         }
       }
     },
-    "/users/login": {
+    "/auth/login": {
       "post": {
         "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "description": "Login credentials",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "username": {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "example": "string"
-                    },
-                    "example": {
-                      "type": "string",
-                      "example": "john_doe"
-                    }
-                  }
-                },
-                "password": {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "example": "string"
-                    },
-                    "example": {
-                      "type": "string",
-                      "example": "securePassword123"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        ],
         "responses": {
           "default": {
             "description": ""
+          }
+        }
+      }
+    },
+    "/auth/github": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/auth/github/callback": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/auth/google": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/auth/google/callback": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/auth/logout": {
+      "post": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -250,22 +162,6 @@
         "responses": {
           "default": {
             "description": ""
-          }
-        }
-      }
-    },
-    "/users/logout": {
-      "get": {
-        "tags": [
-          "Users"
-        ],
-        "description": "Endpoint to logout user",
-        "responses": {
-          "200": {
-            "description": "User logged out successfully"
-          },
-          "401": {
-            "description": "Not authenticated"
           }
         }
       }
@@ -372,6 +268,42 @@
           },
           "500": {
             "description": "Failed to update user"
+          }
+        }
+      }
+    },
+    "/users/": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "description": "Endpoint to retrieve all users",
+        "responses": {
+          "200": {
+            "description": "Users retrieved successfully"
+          },
+          "401": {
+            "description": "Not authenticated"
+          },
+          "500": {
+            "description": "Failed to retrieve users"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "description": "Endpoint to delete all users",
+        "responses": {
+          "200": {
+            "description": "All users deleted successfully"
+          },
+          "401": {
+            "description": "Not authenticated"
+          },
+          "500": {
+            "description": "Failed to delete all users"
           }
         }
       }

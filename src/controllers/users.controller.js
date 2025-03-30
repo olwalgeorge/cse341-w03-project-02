@@ -2,56 +2,11 @@ const User = require("../models/user.model.js");
 const sendResponse = require("../utils/response.js");
 const asyncHandler = require("express-async-handler");
 const logger = require("../utils/logger.js");
-const passport = require("../config/passport");
 
-// @desc    Register a new user
-// @route   POST /api/users
-// @access  Public
-// eslint-disable-next-line no-unused-vars
-const registerUser = asyncHandler(async (req, res, next) => {
-  logger.info("registerUser called");
-  logger.debug("Request body:", req.body);
 
-  const user = await User.create(req.body);
-  sendResponse(res, 201, "User created successfully", {
-    user_public_id: user.user_id,
-    username: user.username,
-    email: user.email,
-    user_fname: user.firstName,
-    user_lname: user.lastName,
-    profile_photo: user.avatar,
-    access_role: user.role,
-  });
-});
 
-// @desc    Login user
-// @route   POST /api/users/login
-// @access  Public
-const loginUser = asyncHandler(async (req, res, next) => {
-  logger.info("loginUser called");
-  logger.debug("Request body:", req.body);
-  passport.authenticate("local", async (err, user, info) => {
-    if (err) {
-      return next(err);
-    }
-    if (!user) {
-      const error = new Error(info.message);
-      error.status = 401;
-      return next(error);
-    }
-    req.logIn(user, (err) => {
-      if (err) {
-        return next(err);
-      }
-      sendResponse(res, 200, "User logged in successfully", {
-        username: user.username,
-        email: user.email,
-        user_fname: user.firstName,
-        user_lname: user.lastName,
-      });
-    });
-  })(req, res, next);
-});
+
+
 
 // @desc    Get user profile
 // @route   GET /api/users/profile
@@ -84,13 +39,13 @@ const updateUserProfile = asyncHandler(async (req, res, next) => {
     new: true,
   });
   sendResponse(res, 200, "User profile updated successfully", {
-    user_public_id: user.user_id,
-    user_fname: user.firstName,
-    user_lname: user.lastName,
+    user_id: user.user_id,
+    firstName: user.firstName,
+    lastName: user.lastName,
     username: user.username,
     email: user.email,
-    access_role: user.role,
-    profile_photo: user.avatar,
+    role: user.role,
+    avatar: user.avatar,
   });
 });
 
@@ -120,13 +75,13 @@ const getUserById = asyncHandler(async (req, res) => {
     if (user) {
       sendResponse(res, 200, "User retrieved successfully", {
         user_sys_id: user._id,
-        user_public_id: user.user_id,
+        user_id: user.user_id,
         username: user.username,
         email: user.email,
-        user_fname: user.firstName,
-        user_lname: user.lastName,
-        profile_photo: user.avatar,
-        access_role: user.role,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        avatar: user.avatar,
+        role: user.role,
       });
     } else {
       sendResponse(res, 404, "User not found");
@@ -191,13 +146,13 @@ const getUserByUsername = asyncHandler(async (req, res) => {
     if (user) {
       sendResponse(res, 200, "User retrieved successfully", {
         user_sys_id: user._id,
-        user_public_id: user.user_id,
+        user_id: user.user_id,
         username: user.username,
         email: user.email,
-        user_fname: user.firstName,
-        user_lname: user.lastName,
-        profile_photo: user.avatar,
-        access_role: user.role,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        avatar: user.avatar,
+        role: user.role,
       });
     } else {
       sendResponse(res, 404, "User not found");
@@ -223,13 +178,13 @@ const getUserByEmail = asyncHandler(async (req, res) => {
     if (user) {
       sendResponse(res, 200, "User retrieved successfully", {
         user_sys_id: user._id,
-        user_public_id: user.user_id,
+        user_id: user.user_id,
         username: user.username,
         email: user.email,
-        user_fname: user.firstName,
-        user_lname: user.lastName,
-        profile_photo: user.avatar,
-        access_role: user.role,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        avatar: user.avatar,
+        role: user.role,
       });
     } else {
       sendResponse(res, 404, "User not found");
@@ -296,13 +251,13 @@ const updateUserById = asyncHandler(async (req, res) => {
     if (user) {
       sendResponse(res, 200, "User updated successfully", {
         user_sys_id: user._id,
-        user_public_id: user.user_id,
+        user_id: user.user_id,
         username: user.username,
         email: user.email,
-        user_fname: user.firstName,
-        user_lname: user.lastName,
-        profile_photo: user.avatar,
-        access_role: user.role,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        avatar: user.avatar,
+        role: user.role,
       });
     } else {
       sendResponse(res, 404, "User not found");
@@ -332,8 +287,7 @@ const updateUserById = asyncHandler(async (req, res) => {
 });
 
 module.exports = {
-  registerUser,
-  loginUser,
+ 
   getUserProfile,
   logoutUser,
   updateUserProfile,

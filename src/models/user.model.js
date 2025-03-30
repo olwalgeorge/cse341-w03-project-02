@@ -47,7 +47,7 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: [true, "Password is required"],
-      trim: true,      
+      trim: true,
       match: [
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,50}$/,
         "Password should contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character, and be between 8 to 50 characters",
@@ -90,4 +90,3 @@ userSchema.methods.isPasswordMatch = async function (password) {
 const User = mongoose.model("User", userSchema);
 
 module.exports = User;
-

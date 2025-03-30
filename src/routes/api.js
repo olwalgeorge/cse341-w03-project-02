@@ -1,6 +1,7 @@
 // src/routes/index.js
 const express = require("express");
 const userRoutes = require("./api/users.routes.js");
+const authRoutes = require("./api/auth.routes.js");
 const sensorRoutes = require("./api/sensors.routes.js");
 
 const router = express.Router();
@@ -16,7 +17,7 @@ router.get("/", (req, res) => {
         </p>
     `);
 });
-
+router.use("/auth", authRoutes);
 router.use("/users", userRoutes);
 router.use("/sensors", sensorRoutes);
 

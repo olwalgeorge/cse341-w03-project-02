@@ -11,7 +11,7 @@ const {
   getSensorsByType,
 } = require("../../controllers/sensors.controller.js");
 const validate = require("../../middlewares/validation.middleware.js");
-const protect = require("../../middlewares/auth.middleware.js");
+const isAuthenticated = require("../../middlewares/auth.middleware.js");
 const {
   sensorValidateIdRules,
   sensorValidateSensorIdRules,
@@ -24,7 +24,7 @@ const router = express.Router();
 
 router.get(
   "/",
-  protect,
+  isAuthenticated,
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to retrieve all sensors' */
   /* #swagger.responses[200] = { description: 'Sensors retrieved successfully' } */
@@ -34,7 +34,7 @@ router.get(
 
 router.get(
   "/:sensor_id",
-  protect,
+  isAuthenticated,
   validate(sensorValidateSensorIdRules()),
 
   /* #swagger.tags = ['Sensors'] */
@@ -49,7 +49,7 @@ router.get(
 
 router.post(
   "/",
-  protect,
+  isAuthenticated,
 
   validate(sensorCreateValidationRules()),
   /* #swagger.tags = ['Sensors'] */
@@ -63,7 +63,7 @@ router.post(
 
 router.put(
   "/:_id",
-  protect,
+  isAuthenticated,
   validate(sensorUpdateValidationRules()),
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to update a sensor' */
@@ -78,7 +78,7 @@ router.put(
 
 router.delete(
   "/:_id",
-  protect,
+  isAuthenticated,
   validate(sensorValidateIdRules()),
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to delete a sensor' */
@@ -93,7 +93,7 @@ router.delete(
 router.get(
   "/type/:sensor_type",
   validate(sensorValidateSensorTypeRules()),
-  protect,
+  isAuthenticated,
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to retrieve sensors by type' */
   /* #swagger.parameters['sensor_type'] = { in: 'path', description: 'Sensor type', required: true, type: 'string', enum: ['temperature', 'humidity', 'light', 'soil moisture'] } */
@@ -105,7 +105,7 @@ router.get(
 
 // router.delete(
 //   "/",
-//   protect,
+//   isAuthenticated,
 //   /* #swagger.tags = ['Sensors'] */
 //   /* #swagger.description = 'Endpoint to delete all sensors' */
 //   /* #swagger.responses[200] = { description: 'All sensors deleted successfully' } */

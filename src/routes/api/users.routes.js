@@ -1,9 +1,8 @@
 const express = require("express");
 const {
-  registerUser,
-  loginUser,
+ 
   getUserProfile,
-  logoutUser,
+ 
   updateUserProfile,
   getUserById,
   deleteUserById,
@@ -15,13 +14,13 @@ const {
   updateUserById,
 } = require("../../controllers/users.controller.js");
 const validate = require("../../middlewares/validation.middleware.js");
-const protect = require("../../middlewares/auth.middleware.js");
+const isAuthenticated = require("../../middlewares/auth.middleware.js");
 const {
-  userValidateIdRules,
-  userCreateValidationRules,
+  
+  userValidationIdRules, 
   userUpdateValidationRules,
-  userValidateUserIdRules,
-  userValidateUserTypeRules,
+  userValidationUserIdRules,
+  userValidationUserTypeRules,
 } = require("../../validators/user.validator.js");
 
 const router = express.Router();
@@ -29,40 +28,40 @@ const router = express.Router();
 /* #swagger.tags = ['Users'] */
 /* #swagger.description = 'User management endpoints' */
 
-router.post(
-  "/",
-  validate(userCreateValidationRules()),
-  /* #swagger.parameters['body'] = {
-      in: 'body',
-      description: 'User data',
-      required: true,
-      schema: {
-        username: { type: 'string', example: 'john_doe' },
-        email: { type: 'string', example: 'john@example.com' },
-        password: { type: 'string', example: 'securePassword123' },
-        fullName: { type: 'string', example: 'John Doe' }
-      }
-  } */
-  registerUser
-);
+// router.post(
+//   "/",
+//   validate(userCreateValidationRules()),
+//   /* #swagger.parameters['body'] = {
+//       in: 'body',
+//       description: 'User data',
+//       required: true,
+//       schema: {
+//         username: { type: 'string', example: 'john_doe' },
+//         email: { type: 'string', example: 'john@example.com' },
+//         password: { type: 'string', example: 'securePassword123' },
+//         fullName: { type: 'string', example: 'John Doe' }
+//       }
+//   } */
+//   registerUser
+// );
 
-router.post(
-  "/login",
-  /* #swagger.parameters['body'] = {
-      in: 'body',
-      description: 'Login credentials',
-      required: true,
-      schema: {
-        username: { type: 'string', example: 'john_doe' },
-        password: { type: 'string', example: 'securePassword123' }
-      }
-  } */
-  loginUser
-);
+// router.post(
+//   "/login",
+//   /* #swagger.parameters['body'] = {
+//       in: 'body',
+//       description: 'Login credentials',
+//       required: true,
+//       schema: {
+//         username: { type: 'string', example: 'john_doe' },
+//         password: { type: 'string', example: 'securePassword123' }
+//       }
+//   } */
+//   loginUser
+// );
 
 router.get(
   "/profile",
-  protect,
+  isAuthenticated,
   /* #swagger.tags = ['Users'] */
   /* #swagger.description = 'Endpoint to retrieve user profile' */
   /* #swagger.responses[200] = { description: 'User profile retrieved successfully' } */
@@ -72,7 +71,7 @@ router.get(
 
 router.put(
   "/profile",
-  protect,
+  isAuthenticated,
   validate(userUpdateValidationRules()),
   /* #swagger.parameters['body'] = {
       in: 'body',
@@ -87,19 +86,9 @@ router.put(
 );
 
 router.get(
-  "/logout",
-  protect,
-  /* #swagger.tags = ['Users'] */
-  /* #swagger.description = 'Endpoint to logout user' */
-  /* #swagger.responses[200] = { description: 'User logged out successfully' } */
-  /* #swagger.responses[401] = { description: 'Not authenticated' } */
-  logoutUser
-);
-
-router.get(
   "/:user_id",
-  protect,
-  validate(userValidateUserIdRules()),
+  isAuthenticated,
+  validate(userValidationUserIdRules()),
   /* #swagger.tags = ['Users'] */
   /* #swagger.description = 'Endpoint to retrieve a user by ID' */
   /* #swagger.parameters['user_id'] = { in: 'path', description: 'User ID', required: true, type: 'string' } */
@@ -112,8 +101,8 @@ router.get(
 
 router.delete(
   "/:_id",
-  protect,
-  validate(userValidateIdRules()),
+  isAuthenticated,
+  validate(userValidationIdRules()),
   /* #swagger.tags = ['Users'] */
   /* #swagger.description = 'Endpoint to delete a user by ID' */
   /* #swagger.parameters['_id'] = { in: 'path', description: 'User ID', required: true, type: 'string' } */
@@ -127,7 +116,7 @@ router.delete(
 
 router.get(
   "/",
-  protect,
+  isAuthenticated,
   /* #swagger.tags = ['Users'] */
   /* #swagger.description = 'Endpoint to retrieve all users' */
   /* #swagger.responses[200] = { description: 'Users retrieved successfully' } */
@@ -138,7 +127,7 @@ router.get(
 
 router.get(
   "/username/:username",
-  protect,
+  isAuthenticated,
   /* #swagger.tags = ['Users'] */
   /* #swagger.description = 'Endpoint to retrieve a user by username' */
   /* #swagger.parameters['username'] = { in: 'path', description: 'Username', required: true, type: 'string' } */
@@ -151,7 +140,7 @@ router.get(
 
 router.get(
   "/email/:email",
-  protect,
+  isAuthenticated,
   /* #swagger.tags = ['Users'] */
   /* #swagger.description = 'Endpoint to retrieve a user by email' */
   /* #swagger.parameters['email'] = { in: 'path', description: 'Email', required: true, type: 'string' } */
@@ -164,7 +153,7 @@ router.get(
 
 router.get(
   "/role/:role",
-  protect,
+  isAuthenticated,
   /* #swagger.tags = ['Users'] */
   /* #swagger.description = 'Endpoint to retrieve users by role' */
   /* #swagger.parameters['role'] = { in: 'path', description: 'Role', required: true, type: 'string' } */
@@ -177,8 +166,8 @@ router.get(
 
 router.delete(
   "/",
-  protect,
-  validate(userValidateUserTypeRules()),
+  isAuthenticated,
+  validate(userValidationUserTypeRules()),
   /* #swagger.tags = ['Users'] */
   /* #swagger.description = 'Endpoint to delete all users' */
   /* #swagger.responses[200] = { description: 'All users deleted successfully' } */
@@ -189,7 +178,7 @@ router.delete(
 
 router.put(
   "/:_id",
-  protect,
+  isAuthenticated,
   validate(userUpdateValidationRules()),
   /* #swagger.tags = ['Users'] */
   /* #swagger.description = 'Endpoint to update a user by ID' */
@@ -204,3 +193,4 @@ router.put(
 );
 
 module.exports = router;
+

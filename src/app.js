@@ -8,7 +8,7 @@ const errorMiddleware = require("./middlewares/error.middleware.js");
 const swaggerUi = require("swagger-ui-express");
 const swaggerOutput = require("../swagger_output.json");
 const passport = require("./config/passport.js");
-const session = require("express-session");
+const session = require("./config/session.js");
 
 const app = express();
 
@@ -19,19 +19,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));
 
 // Session setup (required for Passport)
-app.use(
-  session({
-    secret: "123456789",
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
-      maxAge: 24 * 60 * 60 * 1000, // 24 hours
-    },
-  })
-);
-
+connectDB();
+app.use(session);
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -45,6 +34,6 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerOutput));
 app.use(errorMiddleware);
 
 // Database Connection
-connectDB();
+
 
 module.exports = app;

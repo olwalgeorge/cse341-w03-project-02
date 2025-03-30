@@ -1,20 +1,21 @@
 ### Register User
-POST http://localhost:3000/api/users
+POST http://localhost:3000/api/auth/register
 Content-Type: application/json
 
 {
-  "user_id": "usr_1000",
-  "firstName": "Super",
-  "lastName": "Admin",
-  "username": "superadmin",
-  "email": "superadmin@example.com",
-  "password": "SuperAdmin1234!",
-  "avatar": "superadmin_avatar.png",
-  "role": "superadmin"
+  "user_id": "usr_1010",
+  "firstName": "Samson",
+  "lastName": "Muchai",
+  "username": "samson",
+  "email": "samson@example.com",
+  "password": "Samson1234!",
+  "avatar": "samson_avatar.png",
+  "role": "admin"
+
 }
 
 ### Login User
-POST http://localhost:3000/api/users/login
+POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
@@ -32,15 +33,15 @@ Content-Type: application/json
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 {
-  "user_id":"usr_1001",
-  "firstName": "Super",
-  "lastName": "Admin",
-  "email": "superadmin@example.com",
-  "avatar": "superadmin_avatar.png"
+  "user_id": "usr_1001",
+    "firstName": "Super",
+    "lastName": "Admin",
+    "username": "superadmin",
+    "email": "superadmin@example.com"
 }
 
 ### Logout User (Requires Authentication)
-GET http://localhost:3000/api/users/logout
+POST http://localhost:3000/api/auth/logout
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get All Users (Requires Authentication)

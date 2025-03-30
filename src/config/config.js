@@ -15,4 +15,10 @@ module.exports = {
   db: {
     uri: process.env.MONGO_URI,
   },
+  github: {
+    clientId: process.env.GITHUB_CLIENT_ID,
+    clientSecret: process.env.GITHUB_CLIENT_SECRET,
+    callbackUrl:
+      process.env.CALLBACK_URL
+  },
 };

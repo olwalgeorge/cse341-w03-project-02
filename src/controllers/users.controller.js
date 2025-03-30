@@ -7,39 +7,21 @@ const passport = require("../config/passport");
 // @desc    Register a new user
 // @route   POST /api/users
 // @access  Public
-const registerUser = asyncHandler(async (req, res) => {
+// eslint-disable-next-line no-unused-vars
+const registerUser = asyncHandler(async (req, res, next) => {
   logger.info("registerUser called");
   logger.debug("Request body:", req.body);
-  try {
-    const user = await User.create(req.body);
-    sendResponse(res, 201, "User created successfully", {      
-      user_public_id: user.user_id,
-      username: user.username,
-      email: user.email,
-      user_fname: user.firstName,
-      user_lname: user.lastName,
-      profile_photo: user.avatar,
-      access_role: user.role,
-    });
-  } catch (error) {
-    logger.error("Error registering user:", error);
-    if (error.name === "ValidationError") {
-      const errors = Object.values(error.errors).map((val) => val.message);
-      return sendResponse(res, 400, "Validation error", null, {
-        message: errors.join(". "),
-      });
-    }
-    if (error.code === 11000) {
-      const field = Object.keys(error.keyValue)[0];
-      const value = error.keyValue[field];
-      return sendResponse(res, 409, `Duplicate ${field}`, null, {
-        message: `${field} '${value}' already exists`,
-      });
-    }
-    sendResponse(res, 500, "Failed to register user", null, {
-      message: error.message,
-    });
-  }
+
+  const user = await User.create(req.body);
+  sendResponse(res, 201, "User created successfully", {
+    user_public_id: user.user_id,
+    username: user.username,
+    email: user.email,
+    user_fname: user.firstName,
+    user_lname: user.lastName,
+    profile_photo: user.avatar,
+    access_role: user.role,
+  });
 });
 
 // @desc    Login user

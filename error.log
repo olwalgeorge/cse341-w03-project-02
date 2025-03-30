@@ -55,3 +55,4 @@
 {"errors":[{"field":"user_id","fieldMessage":"user_id already exists"}],"level":"error","message":"Error 409: Mongoose Validation Error","service":"smart-farm-api","timestamp":"2025-03-30 11:36:17"}
 {"errors":[{"field":"user_id","message":"user_id already exists"}],"level":"error","message":"Error 409: Mongoose Validation Error","service":"smart-farm-api","timestamp":"2025-03-30 11:38:43"}
 {"errors":[{"field":"user_id","message":"user_id already exists"}],"level":"error","message":"Error 409: Mongoose Validation Error","service":"smart-farm-api","timestamp":"2025-03-30 11:47:43"}
+{"errors":[{"field":"user_id","message":"user_id already exists"}],"level":"error","message":"Error 409: Mongoose Validation Error","service":"smart-farm-api","timestamp":"2025-03-30 12:03:23"}

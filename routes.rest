@@ -3,12 +3,12 @@ POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-  "user_id": "usr_1001",
+  "user_id": "usr_1000",
   "firstName": "Super",
   "lastName": "Admin",
   "username": "superadmin",
   "email": "superadmin@example.com",
-  "password": "superadpassword",
+  "password": "SuperAdmin1234!",
   "avatar": "superadmin_avatar.png",
   "role": "superadmin"
 }
@@ -19,7 +19,7 @@ Content-Type: application/json
 
 {
   "email": "superadmin@example.com",
-  "password": "superadpassword"
+  "password": "SuperAdmin1234!"
 }
 
 ### Get User Profile (Requires Authentication)
@@ -32,6 +32,7 @@ Content-Type: application/json
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 {
+  "user_id":"usr_1001",
   "firstName": "Super",
   "lastName": "Admin",
   "email": "superadmin@example.com",
@@ -55,7 +56,7 @@ DELETE http://localhost:3000/api/users
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get User By Username (Requires Authentication)
-GET http://localhost:3000/api/users/username/:username
+GET http://localhost:3000/api/users/username/kennedy
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get User By Email (Requires Authentication)

@@ -1,8 +1,8 @@
-const User = require("../models/user.model.js"); 
+const User = require("../models/user.model.js");
 const sendResponse = require("../utils/response.js");
 const asyncHandler = require("express-async-handler");
 const logger = require("../utils/logger.js");
-const passport = require("../config/passport"); 
+const passport = require("../config/passport");
 
 // @desc    Register a new user
 // @route   POST /api/users
@@ -27,32 +27,30 @@ const registerUser = asyncHandler(async (req, res, next) => {
 // @desc    Login user
 // @route   POST /api/users/login
 // @access  Public
-const loginUser = asyncHandler(async (req, res) => {
+const loginUser = asyncHandler(async (req, res, next) => {
   logger.info("loginUser called");
   logger.debug("Request body:", req.body);
-  passport.authenticate("local", (err, user, info) => {
+  passport.authenticate("local", async (err, user, info) => {
     if (err) {
-      logger.error("Passport authentication error:", err);
-      return sendResponse(res, 500, "Internal server error");
+      return next(err);
     }
     if (!user) {
-      return sendResponse(res, 401, info.message);
+      const error = new Error(info.message);
+      error.status = 401;
+      return next(error);
     }
     req.logIn(user, (err) => {
       if (err) {
-        logger.error("Error during login:", err);
-        return sendResponse(res, 500, "Internal server error during login");
+        return next(err);
       }
       sendResponse(res, 200, "User logged in successfully", {
-       
         username: user.username,
         email: user.email,
         user_fname: user.firstName,
         user_lname: user.lastName,
-        
       });
     });
-  })(req, res);
+  })(req, res, next);
 });
 
 // @desc    Get user profile
@@ -64,7 +62,10 @@ const getUserProfile = asyncHandler(async (req, res) => {
     const user = await User.findById(req.user._id).select("-password");
     sendResponse(res, 200, "User profile retrieved successfully", user);
   } catch (error) {
-    logger.error(`Error retrieving user profile for ID: ${req.user?._id}`, error);
+    logger.error(
+      `Error retrieving user profile for ID: ${req.user?._id}`,
+      error
+    );
     sendResponse(res, 500, "Failed to retrieve user profile", null, {
       message: error.message,
     });
@@ -74,43 +75,23 @@ const getUserProfile = asyncHandler(async (req, res) => {
 // @desc    Update user profile
 // @route   PUT /api/users/profile
 // @access  Private
-const updateUserProfile = asyncHandler(async (req, res) => {
+// eslint-disable-next-line no-unused-vars
+const updateUserProfile = asyncHandler(async (req, res, next) => {
   logger.info(`updateUserProfile called for user ID: ${req.user?._id}`);
   logger.debug("Request body:", req.body);
-  try {
-    const user = await User.findByIdAndUpdate(req.user._id, req.body, {
-      new: true,
-      runValidators: true,
-    });
-    sendResponse(res, 200, "User profile updated successfully", {
-      
-      user_public_id: user.user_id,
-      user_fname: user.firstName,
-      user_lname: user.lastName,
-      username: user.username,
-      email: user.email,
-      access_role: user.role,
-      profile_photo: user.avatar,
-    });
-  } catch (error) {
-    logger.error(`Error updating user profile for ID: ${req.user?._id}`, error);
-    if (error.name === "ValidationError") {
-      const errors = Object.values(error.errors).map((val) => val.message);
-      return sendResponse(res, 400, "Validation error", null, {
-        message: errors.join(". "),
-      });
-    }
-    if (error.code === 11000) {
-      const field = Object.keys(error.keyValue)[0];
-      const value = error.keyValue[field];
-      return sendResponse(res, 409, `Duplicate ${field}`, null, {
-        message: `${field} '${value}' already exists`,
-      });
-    }
-    sendResponse(res, 500, "Failed to update user profile", null, {
-      message: error.message,
-    });
-  }
+
+  const user = await User.findByIdAndUpdate(req.user._id, req.body, {
+    new: true,
+  });
+  sendResponse(res, 200, "User profile updated successfully", {
+    user_public_id: user.user_id,
+    user_fname: user.firstName,
+    user_lname: user.lastName,
+    username: user.username,
+    email: user.email,
+    access_role: user.role,
+    profile_photo: user.avatar,
+  });
 });
 
 // @desc    Logout user
@@ -135,7 +116,7 @@ const getUserById = asyncHandler(async (req, res) => {
   logger.info(`getUserById called with ID: ${req.params.user_id}`);
   logger.debug("Request body:", req.params.user_id);
   try {
-    const user = await User.findOne({user_id: req.params.user_id});
+    const user = await User.findOne({ user_id: req.params.user_id });
     if (user) {
       sendResponse(res, 200, "User retrieved successfully", {
         user_sys_id: user._id,
@@ -222,7 +203,10 @@ const getUserByUsername = asyncHandler(async (req, res) => {
       sendResponse(res, 404, "User not found");
     }
   } catch (error) {
-    logger.error(`Error retrieving user with username: ${req.params.username}`, error);
+    logger.error(
+      `Error retrieving user with username: ${req.params.username}`,
+      error
+    );
     sendResponse(res, 500, "Failed to retrieve user", null, {
       message: error.message,
     });
@@ -251,7 +235,10 @@ const getUserByEmail = asyncHandler(async (req, res) => {
       sendResponse(res, 404, "User not found");
     }
   } catch (error) {
-    logger.error(`Error retrieving user with email: ${req.params.email}`, error);
+    logger.error(
+      `Error retrieving user with email: ${req.params.email}`,
+      error
+    );
     sendResponse(res, 500, "Failed to retrieve user", null, {
       message: error.message,
     });
@@ -285,7 +272,9 @@ const deleteAllUsers = asyncHandler(async (req, res) => {
   logger.warn("deleteAllUsers called - USE WITH CAUTION!");
   try {
     const result = await User.deleteMany({});
-    sendResponse(res, 200, "All users deleted successfully", { deletedCount: result.deletedCount });
+    sendResponse(res, 200, "All users deleted successfully", {
+      deletedCount: result.deletedCount,
+    });
   } catch (error) {
     logger.error("Error deleting all users:", error);
     sendResponse(res, 500, "Failed to delete all users", null, {
@@ -357,4 +346,3 @@ module.exports = {
   deleteAllUsers,
   updateUserById,
 };
-

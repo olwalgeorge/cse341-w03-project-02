@@ -1605,3 +1605,420 @@
 {"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"debug","message":"Request body:","password":"superadpassword","role":"superadmin","service":"smart-farm-api","timestamp":"2025-03-30 12:03:21","user_id":"usr_1001","username":"superadmin"}
 {"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 12:03:22"}
 {"errors":[{"field":"user_id","message":"user_id already exists"}],"level":"error","message":"Error 409: Mongoose Validation Error","service":"smart-farm-api","timestamp":"2025-03-30 12:03:23"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","password":"superadpassword","role":"superadmin","service":"smart-farm-api","timestamp":"2025-03-30 12:09:44","user_id":"usr_1001","username":"superadmin"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 12:09:44"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 12:09:44"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-30 12:09:44"}
+{"level":"info","message":"registerUser called","service":"smart-farm-api","timestamp":"2025-03-30 12:09:44"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"debug","message":"Request body:","password":"superadpassword","role":"superadmin","service":"smart-farm-api","timestamp":"2025-03-30 12:09:44","user_id":"usr_1001","username":"superadmin"}
+{"errors":[{"field":"user_id","message":"user_id already exists"}],"level":"error","message":"Error 409: Mongoose Validation Error","service":"smart-farm-api","timestamp":"2025-03-30 12:09:44"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 12:10:02"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 12:10:04"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","password":"superadpassword","role":"superadmin","service":"smart-farm-api","timestamp":"2025-03-30 12:10:08","user_id":"usr_1001","username":"superadmin"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 12:10:08"}
+{"0":{"location":"body","msg":"User ID already exists","path":"user_id","type":"field","value":"usr_1001"},"1":{"location":"body","msg":"Username already exists","path":"username","type":"field","value":"superadmin"},"2":{"location":"body","msg":"Email already exists","path":"email","type":"field","value":"superadmin@example.com"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 12:10:09"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-30 12:10:09"}
+{"errors":[{"message":"Expected double-quoted property name in JSON at position 242 (line 10 column 1)"}],"level":"error","message":"Error 500: Internal server error","service":"smart-farm-api","timestamp":"2025-03-30 12:11:54"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 12:25:27"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 12:25:31"}
+{"avatar":"kennedy_avatar.png","email":"kennedy@example.com","firstName":"Kennedy","lastName":"Nyabwari","level":"info","message":"Request Body:","password":"kennedy","role":"user","service":"smart-farm-api","timestamp":"2025-03-30 12:25:33","user_id":"usr_1002","username":"kennedy"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 12:25:33"}
+{"0":{"location":"body","msg":"Password must be at least 8 characters long","path":"password","type":"field","value":"kennedy"},"1":{"location":"body","msg":"User ID already exists","path":"user_id","type":"field","value":"usr_1002"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 12:25:34"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-30 12:25:34"}
+{"avatar":"kennedy_avatar.png","email":"kennedy02345@example.com","firstName":"Kennedy","lastName":"Nyabwari","level":"info","message":"Request Body:","password":"kennedy","role":"user","service":"smart-farm-api","timestamp":"2025-03-30 12:27:14","user_id":"usr_1005","username":"kennedy"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 12:27:14"}
+{"0":{"location":"body","msg":"Password must be at least 8 characters long","path":"password","type":"field","value":"kennedy"},"1":{"location":"body","msg":"User ID already exists","path":"user_id","type":"field","value":"usr_1005"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 12:27:14"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-30 12:27:14"}
+{"avatar":"kennedy_avatar.png","email":"kennedy@example.com","firstName":"Kennedy","lastName":"Nyabwari","level":"info","message":"Request Body:","password":"kennedy1234","role":"user","service":"smart-farm-api","timestamp":"2025-03-30 12:28:07","user_id":"usr_1006","username":"kennedy"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 12:28:07"}
+{"0":{"location":"body","msg":"User ID already exists","path":"user_id","type":"field","value":"usr_1006"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 12:28:07"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-30 12:28:07"}
+{"avatar":"kennedy_avatar.png","email":"kennedy@example.com","firstName":"Kennedy","lastName":"Nyabwari","level":"info","message":"Request Body:","password":"kennedy1234","role":"user","service":"smart-farm-api","timestamp":"2025-03-30 12:28:22","user_id":"usr_1008","username":"kennedy"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 12:28:22"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 12:28:22"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-30 12:28:22"}
+{"level":"info","message":"registerUser called","service":"smart-farm-api","timestamp":"2025-03-30 12:28:22"}
+{"avatar":"kennedy_avatar.png","email":"kennedy@example.com","firstName":"Kennedy","lastName":"Nyabwari","level":"debug","message":"Request body:","password":"kennedy1234","role":"user","service":"smart-farm-api","timestamp":"2025-03-30 12:28:22","user_id":"usr_1008","username":"kennedy"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 12:40:38"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 12:40:41"}
+{"avatar":"timothy_avatar.png","email":"timothy@example.com","firstName":"Timothy","lastName":"Smith","level":"info","message":"Request Body:","password":"timothy1234","role":"user","service":"smart-farm-api","timestamp":"2025-03-30 12:41:39","user_id":"usr_1009","username":"Aimothy Okelo*"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 12:41:39"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 12:41:41"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-30 12:41:41"}
+{"level":"info","message":"registerUser called","service":"smart-farm-api","timestamp":"2025-03-30 12:41:41"}
+{"avatar":"timothy_avatar.png","email":"timothy@example.com","firstName":"Timothy","lastName":"Smith","level":"debug","message":"Request body:","password":"timothy1234","role":"user","service":"smart-farm-api","timestamp":"2025-03-30 12:41:41","user_id":"usr_1009","username":"Aimothy Okelo*"}
+{"errors":[{"field":"username","message":"Username should only contain letters, numbers, and underscores"}],"level":"error","message":"Error 400: Database validation failed","service":"smart-farm-api","timestamp":"2025-03-30 12:41:41"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 12:48:42"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 12:48:45"}
+{"avatar":"timothy_avatar.png","email":"Aimothy@example.com","firstName":"Timothy","lastName":"Smith","level":"info","message":"Request Body:","password":"timothy1234","role":"user","service":"smart-farm-api","timestamp":"2025-03-30 12:49:20","user_id":"usr_1009","username":"Aimothy Okelo*"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 12:49:20"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 12:49:21"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-30 12:49:21"}
+{"level":"info","message":"registerUser called","service":"smart-farm-api","timestamp":"2025-03-30 12:49:21"}
+{"avatar":"timothy_avatar.png","email":"aimothy@example.com","firstName":"Timothy","lastName":"Smith","level":"debug","message":"Request body:","password":"timothy1234","role":"user","service":"smart-farm-api","timestamp":"2025-03-30 12:49:21","user_id":"usr_1009","username":"Aimothy Okelo*"}
+{"errors":[{"field":"username","message":"Username should only contain letters, numbers, and underscores"}],"level":"error","message":"Error 400: Database validation failed","service":"smart-farm-api","timestamp":"2025-03-30 12:49:21"}
+{"avatar":"timothy_avatar.png","email":"Aimothy@example.com","firstName":"Timothy","lastName":"Smith","level":"info","message":"Request Body:","password":"timothy1234","role":"user","service":"smart-farm-api","timestamp":"2025-03-30 12:50:16","user_id":"usr_1009","username":"timothy"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 12:50:16"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 12:50:16"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-30 12:50:16"}
+{"level":"info","message":"registerUser called","service":"smart-farm-api","timestamp":"2025-03-30 12:50:16"}
+{"avatar":"timothy_avatar.png","email":"aimothy@example.com","firstName":"Timothy","lastName":"Smith","level":"debug","message":"Request body:","password":"timothy1234","role":"user","service":"smart-farm-api","timestamp":"2025-03-30 12:50:16","user_id":"usr_1009","username":"timothy"}
+{"avatar":"timothy_avatar.png","email":"Aimothy@example.com","firstName":"Timothy","lastName":"Smith","level":"info","message":"Request Body:","password":"timothy1234","role":"user","service":"smart-farm-api","timestamp":"2025-03-30 12:51:07","user_id":"usr_1009","username":"timothy"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 12:51:07"}
+{"0":{"location":"body","msg":"Username already exists","path":"username","type":"field","value":"timothy"},"1":{"location":"body","msg":"Email already exists","path":"email","type":"field","value":"aimothy@example.com"},"2":{"location":"body","msg":"User ID already exists","path":"user_id","type":"field","value":"usr_1009"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 12:51:08"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-30 12:51:08"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 12:53:00"}
+{"email":"superadmin@example.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 12:53:00"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 12:53:13"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 12:53:13"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 12:53:13"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-30 12:53:13"}
+{"level":"info","message":"updateUserProfile called for user ID: 67e8133a9ac4076d897b5468","service":"smart-farm-api","timestamp":"2025-03-30 12:53:13"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"debug","message":"Request body:","service":"smart-farm-api","timestamp":"2025-03-30 12:53:13"}
+{"level":"info","message":"getAllUsers called","service":"smart-farm-api","timestamp":"2025-03-30 12:53:55"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 12:54:19"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 12:54:19"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 12:54:19"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-30 12:54:19"}
+{"level":"info","message":"getUserById called with ID: usr_1003","service":"smart-farm-api","timestamp":"2025-03-30 12:54:19"}
+{"0":"u","1":"s","2":"r","3":"_","4":"1","5":"0","6":"0","7":"3","level":"debug","message":"Request body:","service":"smart-farm-api","timestamp":"2025-03-30 12:54:19"}
+{"level":"info","message":"getUserByUsername called with username: kennedy","service":"smart-farm-api","timestamp":"2025-03-30 12:54:38"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:15:07"}
+{"email":"superadmin@example.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:15:07"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:15:30"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:15:30"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 13:15:47"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 13:15:51"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:15:52"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:15:52"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:15:58"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:15:58"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:16:02"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:16:02"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:16:05"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:16:05"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:16:08"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:16:08"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:18:38"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:18:38"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:18:41"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:18:41"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:18:44"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:18:44"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 13:21:38"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 13:21:42"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:21:52"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:21:52"}
+{"errors":[{"message":"Cannot read properties of undefined (reading 'username')"}],"level":"error","message":"Error 500: Internal server error","service":"smart-farm-api","timestamp":"2025-03-30 13:21:52"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 13:24:26"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 13:24:30"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:24:33"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:24:33"}
+{"errors":[{"message":"Cannot read properties of undefined (reading 'username')"}],"level":"error","message":"Error 500: Internal server error","service":"smart-farm-api","timestamp":"2025-03-30 13:24:33"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 13:27:20"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 13:27:23"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:27:25"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:27:25"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 13:35:20"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 13:35:24"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:35:43"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:35:43"}
+{"errors":[{"message":"Incorrect email."}],"level":"error","message":"Error 401: Incorrect email.","service":"smart-farm-api","timestamp":"2025-03-30 13:35:43"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 13:41:55"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 13:41:58"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 13:42:46"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 13:42:49"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:42:58"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:42:58"}
+{"errors":[{"message":"Incorrect email."}],"level":"error","message":"Error 401: Authentication failed.","service":"smart-farm-api","timestamp":"2025-03-30 13:42:58"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:43:10"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:43:10"}
+{"errors":[{"message":"Incorrect email."}],"level":"error","message":"Error 401: Authentication failed.","service":"smart-farm-api","timestamp":"2025-03-30 13:43:10"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:43:13"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:43:13"}
+{"errors":[{"message":"Incorrect email."}],"level":"error","message":"Error 401: Authentication failed.","service":"smart-farm-api","timestamp":"2025-03-30 13:43:13"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:44:31"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"supera1dpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:44:31"}
+{"errors":[{"message":"Incorrect email."}],"level":"error","message":"Error 401: Authentication failed.","service":"smart-farm-api","timestamp":"2025-03-30 13:44:31"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:44:35"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"supera1dpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:44:35"}
+{"errors":[{"message":"Incorrect email."}],"level":"error","message":"Error 401: Authentication failed.","service":"smart-farm-api","timestamp":"2025-03-30 13:44:35"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:44:38"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"supera1dpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:44:38"}
+{"errors":[{"message":"Incorrect email."}],"level":"error","message":"Error 401: Authentication failed.","service":"smart-farm-api","timestamp":"2025-03-30 13:44:38"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:44:40"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"supera1dpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:44:40"}
+{"errors":[{"message":"Incorrect email."}],"level":"error","message":"Error 401: Authentication failed.","service":"smart-farm-api","timestamp":"2025-03-30 13:44:40"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:44:41"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"supera1dpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:44:41"}
+{"errors":[{"message":"Incorrect email."}],"level":"error","message":"Error 401: Authentication failed.","service":"smart-farm-api","timestamp":"2025-03-30 13:44:41"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:44:43"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"supera1dpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:44:43"}
+{"errors":[{"message":"Incorrect email."}],"level":"error","message":"Error 401: Authentication failed.","service":"smart-farm-api","timestamp":"2025-03-30 13:44:43"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 13:44:45"}
+{"email":"superadmin@examp4le.com","level":"debug","message":"Request body:","password":"supera1dpassword","service":"smart-farm-api","timestamp":"2025-03-30 13:44:45"}
+{"errors":[{"message":"Incorrect email."}],"level":"error","message":"Error 401: Authentication failed.","service":"smart-farm-api","timestamp":"2025-03-30 13:44:45"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:01:15"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:01:18"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 14:01:31"}
+{"email":"superadmin@example.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 14:01:31"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 14:03:03"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 14:03:03"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 14:03:03"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-30 14:03:03"}
+{"level":"info","message":"updateUserProfile called for user ID: 67e8133a9ac4076d897b5468","service":"smart-farm-api","timestamp":"2025-03-30 14:03:03"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"debug","message":"Request body:","service":"smart-farm-api","timestamp":"2025-03-30 14:03:03"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 14:04:11","user_id":"usr_1002"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 14:04:11"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 14:04:11"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-30 14:04:11"}
+{"level":"info","message":"updateUserProfile called for user ID: 67e8133a9ac4076d897b5468","service":"smart-farm-api","timestamp":"2025-03-30 14:04:11"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"debug","message":"Request body:","service":"smart-farm-api","timestamp":"2025-03-30 14:04:11","user_id":"usr_1002"}
+{"errors":[{"field":"user_id","message":"user_id already exists"}],"level":"error","message":"Error 409: Database Duplication Error","service":"smart-farm-api","timestamp":"2025-03-30 14:04:11"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:21:17"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:21:20"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 14:21:57"}
+{"email":"superadmin@example.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 14:21:57"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 14:22:28","user_id":"usr_1002"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 14:22:28"}
+{"0":{"location":"body","msg":"Username is required","path":"username","type":"field"},"1":{"location":"body","msg":"Password is required","path":"password","type":"field"},"2":{"location":"body","msg":"Password must be at least 8 characters long","path":"password","type":"field"},"3":{"location":"body","msg":"Username is required","path":"username","type":"field"},"4":{"location":"body","msg":"User ID already exists","path":"user_id","type":"field","value":"usr_1002"},"5":{"location":"body","msg":"Email already exists","path":"email","type":"field","value":"superadmin@example.com"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 14:22:30"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-30 14:22:30"}
+{"level":"error","message":"Error generating Swagger documentation: userCreateValidationRules.optional is not a function or its return value is not iterable","service":"smart-farm-api","stack":"TypeError: userCreateValidationRules.optional is not a function or its return value is not iterable\n    at userUpdateValidationRules (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\src\\validators\\user.validator.js:88:36)\n    at Object.<anonymous> (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\src\\routes\\api\\users.routes.js:76:12)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Module.require (node:internal/modules/cjs/loader:1340:12)\n    at require (node:internal/modules/helpers:138:16)","timestamp":"2025-03-30 14:24:53"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:25:16"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:25:24"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:25:28"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:26:10"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:26:14"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:28:12"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:28:15"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:31:17"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:31:21"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:33:52"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:33:55"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:36:48"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 14:36:51"}
+{"email":"superadmin@example.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 14:36:51"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:36:51"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 14:36:58","user_id":"usr_1002"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 14:36:58"}
+{"0":{"location":"body","msg":"Email already exists","path":"email","type":"field","value":"superadmin@example.com"},"1":{"location":"body","msg":"User ID already exists","path":"user_id","type":"field","value":"usr_1002"},"2":{"location":"body","msg":"Username is required","path":"username","type":"field"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 14:36:58"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-30 14:36:58"}
+{"level":"error","message":"Error generating Swagger documentation: userCheckUniquenessRules.forEach is not a function or its return value is not iterable","service":"smart-farm-api","stack":"TypeError: userCheckUniquenessRules.forEach is not a function or its return value is not iterable\n    at userUpdateValidationRules (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\src\\validators\\user.validator.js:88:35)\n    at Object.<anonymous> (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\src\\routes\\api\\users.routes.js:76:12)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)\n    at Module.require (node:internal/modules/cjs/loader:1340:12)\n    at require (node:internal/modules/helpers:138:16)","timestamp":"2025-03-30 14:39:21"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:44:16"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:44:19"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:45:53"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:45:57"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:46:11"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:46:14"}
+{"level":"error","message":"Error generating Swagger documentation: Cannot set properties of undefined (setting 'message')","service":"smart-farm-api","stack":"TypeError: Cannot set properties of undefined (setting 'message')\n    at ValidatorsImpl.withMessage (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\node_modules\\express-validator\\lib\\chain\\validators-impl.js:25:36)\n    at userCheckUniquenessRules (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\src\\validators\\user.validator.js:29:6)\n    at userCreateValidationRules (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\src\\validators\\user.validator.js:78:8)\n    at Object.<anonymous> (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\src\\routes\\api\\users.routes.js:34:12)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)","timestamp":"2025-03-30 14:46:38"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:48:03"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:48:06"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:48:43"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:48:46"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:48:53"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:48:56"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:49:09"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:49:12"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:49:32"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:49:35"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:49:56"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:49:59"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:51:27"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:51:31"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:51:42"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:51:47"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:51:50"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:51:59"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:52:04"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:52:07"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:52:15"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:52:18"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:57:04"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:57:08"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:57:13"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:57:16"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 14:57:52"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 14:57:55"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:00:27"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:00:30"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:01:02"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:02:05"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:02:08"}
+{"level":"error","message":"Error generating Swagger documentation: Cannot use 'in' operator to search for 'run' in false","service":"smart-farm-api","stack":"TypeError: Cannot use 'in' operator to search for 'run' in false\n    at ContextHandlerImpl.if (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\node_modules\\express-validator\\lib\\chain\\context-handler-impl.js:19:19)\n    at userCheckUniquenessRules (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\src\\validators\\user.validator.js:31:10)\n    at userCreateValidationRules (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\src\\validators\\user.validator.js:90:8)\n    at Object.<anonymous> (C:\\Users\\PC\\OneDrive\\Documents\\BYU\\Pathway\\cse341 classwork\\week-03\\cse341-w03-project-02\\src\\routes\\api\\users.routes.js:34:12)\n    at Module._compile (node:internal/modules/cjs/loader:1565:14)\n    at Object..js (node:internal/modules/cjs/loader:1708:10)\n    at Module.load (node:internal/modules/cjs/loader:1318:32)\n    at Function._load (node:internal/modules/cjs/loader:1128:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:219:24)","timestamp":"2025-03-30 15:06:45"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:08:36"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:08:39"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:09:34"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:09:38"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:10:39"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:10:42"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:10:52"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:10:55"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:11:07"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:11:10"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:11:19"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:11:22"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:11:29"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:11:32"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:12:14"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:12:19"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:12:22"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:12:31"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:12:34"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:12:54"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:12:57"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:13:06"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:13:09"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:13:25"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:13:33"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:13:36"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:13:43"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:13:47"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:15:22"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:15:26"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:22:30"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:22:33"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:23:34"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:23:37"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:23:41"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:23:46"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:23:49"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:24:06"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:24:09"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:24:39"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:24:42"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:25:32"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:25:36"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:25:45"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:25:48"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:26:57"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:27:00"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:27:03"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:27:16"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:27:19"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:27:44"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:27:47"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:28:10"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:28:13"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:28:36"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:28:39"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:28:56"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:28:59"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:29:27"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:29:30"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:30:15"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:30:19"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:30:22"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:31:52"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:31:55"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:31:59"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:32:22"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:32:25"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 15:32:34"}
+{"email":"superadmin@example.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 15:32:34"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 15:32:53","user_id":"usr_1002"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 15:32:53"}
+{"0":{"location":"body","msg":"User ID already exists","path":"user_id","type":"field","value":"usr_1002"},"1":{"location":"body","msg":"Email already exists","path":"email","type":"field","value":"superadmin@example.com"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 15:32:55"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-30 15:32:55"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 15:36:39","user_id":"usr_1011"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 15:36:39"}
+{"0":{"location":"body","msg":"Email already exists","path":"email","type":"field","value":"superadmin@example.com"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 15:36:39"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-30 15:36:39"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 15:37:25","user_id":"usr_1001"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 15:37:25"}
+{"0":{"location":"body","msg":"User ID already exists","path":"user_id","type":"field","value":"usr_1001"},"1":{"location":"body","msg":"Email already exists","path":"email","type":"field","value":"superadmin@example.com"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 15:37:26"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-30 15:37:26"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 15:37:57","user_id":"usr_1002"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 15:37:57"}
+{"0":{"location":"body","msg":"User ID already exists","path":"user_id","type":"field","value":"usr_1002"},"1":{"location":"body","msg":"Email already exists","path":"email","type":"field","value":"superadmin@example.com"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 15:37:57"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-30 15:37:57"}
+{"level":"info","message":"getUserProfile called for user ID: 67e8133a9ac4076d897b5468","service":"smart-farm-api","timestamp":"2025-03-30 15:38:10"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:41:01"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:41:04"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:41:58"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:42:01"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 15:42:53"}
+{"email":"superadmin@example.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 15:42:53"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 15:43:01","user_id":"usr_1002"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 15:43:01"}
+{"0":{"location":"body","msg":"User ID already exists","path":"user_id","type":"field","value":"usr_1002"},"1":{"location":"body","msg":"Email already exists","path":"email","type":"field","value":"superadmin@example.com"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 15:43:03"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-30 15:43:03"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 15:50:09"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 15:50:12"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 15:50:13"}
+{"email":"superadmin@example.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 15:50:13"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 15:50:20","user_id":"usr_1002"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 15:50:20"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 15:50:20"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-30 15:50:20"}
+{"level":"info","message":"updateUserProfile called for user ID: 67e8133a9ac4076d897b5468","service":"smart-farm-api","timestamp":"2025-03-30 15:50:20"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"debug","message":"Request body:","service":"smart-farm-api","timestamp":"2025-03-30 15:50:20","user_id":"usr_1002"}
+{"errors":[{"field":"user_id","message":"user_id already exists"}],"level":"error","message":"Error 409: Database Duplication Error","service":"smart-farm-api","timestamp":"2025-03-30 15:50:21"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 15:51:04","user_id":"usr_1002"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 15:51:04"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 15:51:04"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-30 15:51:04"}
+{"level":"info","message":"updateUserProfile called for user ID: 67e8133a9ac4076d897b5468","service":"smart-farm-api","timestamp":"2025-03-30 15:51:04"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"debug","message":"Request body:","service":"smart-farm-api","timestamp":"2025-03-30 15:51:04","user_id":"usr_1002"}
+{"errors":[{"field":"user_id","message":"user_id already exists"}],"level":"error","message":"Error 409: Database Duplication Error","service":"smart-farm-api","timestamp":"2025-03-30 15:51:04"}
+{"level":"info","message":"getUserProfile called for user ID: 67e8133a9ac4076d897b5468","service":"smart-farm-api","timestamp":"2025-03-30 15:51:08"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 15:51:19","user_id":"usr_1001"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 15:51:19"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 15:51:19"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-30 15:51:19"}
+{"level":"info","message":"updateUserProfile called for user ID: 67e8133a9ac4076d897b5468","service":"smart-farm-api","timestamp":"2025-03-30 15:51:19"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"debug","message":"Request body:","service":"smart-farm-api","timestamp":"2025-03-30 15:51:19","user_id":"usr_1001"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 16:12:59"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 16:13:02"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 16:16:41"}
+{"email":"superadmin@example.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 16:16:41"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 16:16:59"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 16:16:59"}
+{"email":"superadmin@example.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 16:16:59"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 16:17:03"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 16:17:18","user_id":"usr_1001"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 16:17:18"}
+{"0":{"location":"body","msg":"Password should contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character, and be between 8 to 50 characters","path":"password","type":"field","value":""},"1":{"location":"body","msg":"Username should only contain letters, numbers, and underscores, and be between 3 to 20 characters","path":"username","type":"field","value":""},"2":{"location":"body","msg":"Username should only contain letters, numbers, and underscores, and be between 3 to 20 characters","path":"username","type":"field","value":""},"3":{"location":"body","msg":"Email already exists","path":"email","type":"field","value":"superadmin@example.com"},"4":{"location":"body","msg":"User ID already exists","path":"user_id","type":"field","value":"usr_1001"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 16:17:18"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-30 16:17:18"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 16:35:58"}
+{"email":"superadmin@example.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 16:35:58"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 16:36:21","user_id":"usr_1001"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 16:36:21"}
+{"0":{"location":"body","msg":"Password should contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character, and be between 8 to 50 characters","path":"password","type":"field","value":""},"1":{"location":"body","msg":"Username should only contain letters, numbers, and underscores, and be between 3 to 20 characters","path":"username","type":"field","value":""},"2":{"location":"body","msg":"Username should only contain letters, numbers, and underscores, and be between 3 to 20 characters","path":"username","type":"field","value":""},"3":{"location":"body","msg":"Email already exists","path":"email","type":"field","value":"superadmin@example.com"},"4":{"location":"body","msg":"User ID already exists","path":"user_id","type":"field","value":"usr_1001"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 16:36:21"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-30 16:36:21"}
+{"level":"info","message":"getUserProfile called for user ID: 67e8133a9ac4076d897b5468","service":"smart-farm-api","timestamp":"2025-03-30 16:36:31"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 16:36:36","user_id":"usr_1001"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 16:36:36"}
+{"0":{"location":"body","msg":"Password should contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character, and be between 8 to 50 characters","path":"password","type":"field","value":""},"1":{"location":"body","msg":"Username should only contain letters, numbers, and underscores, and be between 3 to 20 characters","path":"username","type":"field","value":""},"2":{"location":"body","msg":"Username should only contain letters, numbers, and underscores, and be between 3 to 20 characters","path":"username","type":"field","value":""},"3":{"location":"body","msg":"Email already exists","path":"email","type":"field","value":"superadmin@example.com"},"4":{"location":"body","msg":"User ID already exists","path":"user_id","type":"field","value":"usr_1001"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 16:36:36"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-30 16:36:36"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 16:40:22"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 16:40:25"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","password":"SuperAdmin1234!","role":"superadmin","service":"smart-farm-api","timestamp":"2025-03-30 16:42:45","user_id":"usr_1000","username":"superadmin"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 16:42:45"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 16:42:46"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-30 16:42:46"}
+{"level":"info","message":"registerUser called","service":"smart-farm-api","timestamp":"2025-03-30 16:42:46"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"debug","message":"Request body:","password":"SuperAdmin1234!","role":"superadmin","service":"smart-farm-api","timestamp":"2025-03-30 16:42:46","user_id":"usr_1000","username":"superadmin"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","password":"SuperAdmin1234","role":"superadmin","service":"smart-farm-api","timestamp":"2025-03-30 16:42:58","user_id":"usr_1000","username":"superadmin"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 16:42:58"}
+{"0":{"location":"body","msg":"Password should contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character, and be between 8 to 50 characters","path":"password","type":"field","value":"SuperAdmin1234"},"1":{"location":"body","msg":"User ID already exists","path":"user_id","type":"field","value":"usr_1000"},"2":{"location":"body","msg":"Username already exists","path":"username","type":"field","value":"superadmin"},"3":{"location":"body","msg":"Email already exists","path":"email","type":"field","value":"superadmin@example.com"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 16:42:59"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-30 16:42:59"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 16:43:21"}
+{"email":"superadmin@example.com","level":"debug","message":"Request body:","password":"superadpassword","service":"smart-farm-api","timestamp":"2025-03-30 16:43:21"}
+{"errors":[{"message":"Incorrect password."}],"level":"error","message":"Error 401: Authentication failed.","service":"smart-farm-api","timestamp":"2025-03-30 16:43:21"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 16:44:01"}
+{"email":"superadmin@example.com","level":"debug","message":"Request body:","password":"SuperAdmin1234!","service":"smart-farm-api","timestamp":"2025-03-30 16:44:01"}
+{"level":"info","message":"getUserProfile called for user ID: 67e94a5630ac8efcb114ed14","service":"smart-farm-api","timestamp":"2025-03-30 16:44:08"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 16:44:32","user_id":"usr_1001"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 16:44:32"}
+{"0":{"location":"body","msg":"Password should contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character, and be between 8 to 50 characters","path":"password","type":"field","value":""},"1":{"location":"body","msg":"Role should be user, admin, or superadmin","path":"role","type":"field","value":""},"2":{"location":"body","msg":"Username should only contain letters, numbers, and underscores, and be between 3 to 20 characters","path":"username","type":"field","value":""},"3":{"location":"body","msg":"Username should only contain letters, numbers, and underscores, and be between 3 to 20 characters","path":"username","type":"field","value":""},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 16:44:32"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-03-30 16:44:32"}
+{"level":"info","message":"Server running on at http://localhost:3000/api in development mode","service":"smart-farm-api","timestamp":"2025-03-30 17:06:40"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-30 17:06:44"}
+{"level":"info","message":"loginUser called","service":"smart-farm-api","timestamp":"2025-03-30 17:07:17"}
+{"email":"superadmin@example.com","level":"debug","message":"Request body:","password":"SuperAdmin1234!","service":"smart-farm-api","timestamp":"2025-03-30 17:07:17"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-03-30 17:07:25","user_id":"usr_1001"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-03-30 17:07:25"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-03-30 17:07:25"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-03-30 17:07:25"}
+{"level":"info","message":"updateUserProfile called for user ID: 67e94a5630ac8efcb114ed14","service":"smart-farm-api","timestamp":"2025-03-30 17:07:25"}
+{"avatar":"superadmin_avatar.png","email":"superadmin@example.com","firstName":"Super","lastName":"Admin","level":"debug","message":"Request body:","service":"smart-farm-api","timestamp":"2025-03-30 17:07:25","user_id":"usr_1001"}

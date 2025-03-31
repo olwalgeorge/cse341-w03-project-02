@@ -9,16 +9,16 @@ const {
   updateSensor,
   deleteSensor,
   getSensorsByType,
-} = require("../../controllers/sensors.controller.js");
-const validate = require("../../middlewares/validation.middleware.js");
-const isAuthenticated = require("../../middlewares/auth.middleware.js");
+} = require("../controllers/sensors.controller.js");
+const validate = require("../middlewares/validation.middleware.js");
+const isAuthenticated = require("../middlewares/auth.middleware.js");
 const {
   sensorValidateIdRules,
   sensorValidateSensorIdRules,
   sensorCreateValidationRules,
   sensorUpdateValidationRules,
   sensorValidateSensorTypeRules,
-} = require("../../validators/sensor.validator.js");
+} = require("../validators/sensor.validator.js");
 
 const router = express.Router();
 

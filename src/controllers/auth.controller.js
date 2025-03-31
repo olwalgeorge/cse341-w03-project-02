@@ -1,13 +1,15 @@
-// src/api/controllers/auth/local.controller.js
+// src/controllers/auth.controller.js
+
 const User = require('../models/user.model');
 const asyncHandler = require('express-async-handler');
 const createHttpError = require('http-errors');
+const { generateuserID } = require('../utils/idGenerator');
 
 module.exports = {
   register: asyncHandler(async (req, res, next) => {
-    const { email, password, username, role, avatar, firstName, lastName,user_id } = req.body;
+    const { email, password, username, fullName } = req.body;
 
-    if (!email || !password || !username) {
+    if (!email || !password || !username || !fullName) {
       throw createHttpError(400, 'Please provide all required fields.');
     }
 
@@ -16,16 +18,15 @@ module.exports = {
       throw createHttpError(409, 'Email already exists.');
     }
 
-    const newUser = new User({
-      email, 
-      password, 
-      username,
-      role,
-      avatar,
-      firstName,
-      lastName,
-      user_id   
+    // Generate public ID
+    const userID = await generateuserID();
 
+    const newUser = new User({
+      email,
+      password,
+      username,
+      fullName, 
+      userID, 
     });
 
     await newUser.save();
@@ -35,27 +36,64 @@ module.exports = {
       if (err) {
         return next(err);
       }
-      res.status(201).json({ message: 'Registration successful', user: { id: newUser.id, email: newUser.email, username: newUser.username } });
+      res.status(201).json({
+        message: 'Registration successful',
+        user: { id: newUser.id, email: newUser.email, username: newUser.username, userID: newUser.userID, fullName: newUser.fullName }, // Include fullName in response
+      });
     });
   }),
-    /* eslint-disable-next-line */
+  //eslint-disable-next-line
   loginSuccess: asyncHandler(async (req, res, next) => {
     // Passport automatically attaches the authenticated user to req.user
-    res.status(200).json({ message: 'Login successful', user: { id: req.user.id, email: req.user.email, username: req.user.username } });
+    res.status(200).json({
+      message: 'Login successful',
+      user: { id: req.user.id, email: req.user.email, username: req.user.username, userID: req.user.userID, fullName: req.user.fullName }, // Include fullName
+    });
   }),
-    /* eslint-disable-next-line */
+  //eslint-disable-next-line
   githubSuccess: asyncHandler(async (req, res, next) => {
     // Passport automatically attaches the authenticated user to req.user
-    res.status(200).json({ message: 'GitHub login successful', user: { id: req.user.id, email: req.user.email, username: req.user.username, githubId: req.user.githubId } });
+    res.status(200).json({
+      message: 'GitHub login successful',
+      user: {
+        id: req.user._id, // Use _id as that's the MongoDB ID
+        email: req.user.email,
+        username: req.user.username,
+        githubId: req.user.githubId,
+        userID: req.user.userID,
+        fullName: req.user.fullName,
+        profilePicture: req.user.profilePicture,
+        bio: req.user.bio,
+        website: req.user.website,
+        location: req.user.location,
+        isVerified: req.user.isVerified,
+
+       
+        createdAt: req.user.createdAt,
+        updatedAt: req.user.updatedAt,
+      },
+    });
     // Or you might redirect the user to a specific page
-    // res.redirect('/dashboard');
+     res.redirect('/dashboard');
   }),
-    /* eslint-disable-next-line */
+  //eslint-disable-next-line
   googleSuccess: asyncHandler(async (req, res, next) => {
     // Passport automatically attaches the authenticated user to req.user
-    res.status(200).json({ message: 'Google login successful', user: { id: req.user.id, email: req.user.email, username: req.user.username, googleId: req.user.googleId } });
-    // Or you might redirect the user to a specific page
-    // res.redirect('/dashboard');
+    res.status(200).json({
+      message: 'Google login successful',
+      user: {
+        id: req.user._id, // Use _id as that's the MongoDB ID
+        email: req.user.email,
+        username: req.user.username,
+        googleId: req.user.googleId,
+        userID: req.user.userID, // Include userID in response
+        fullName: req.user.fullName, // Assuming you might fetch this in Google strategy
+        profilePicture: req.user.profilePicture, // Assuming you might fetch this in Google strategy
+        isVerified: req.user.isVerified, // Assuming you might fetch this in Google strategy
+        // Add other relevant fields if fetched in Google strategy
+      },
+    });
+    // res.redirect('/profile'); later
   }),
 
   logout: (req, res) => {

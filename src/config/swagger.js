@@ -4,7 +4,7 @@ const config = require("./config");
 const logger = require("../utils/logger");
 
 const outputFile = "../../swagger_output.json";
-const endpointsFiles = ["../routes/api"];
+const endpointsFiles = ["../routes/index.js"];
 
 let host = "localhost:3000/api"; // Default for development
 let schemes = ["http"]; // Default for development

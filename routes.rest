@@ -1,34 +1,33 @@
 ### Register User
-POST http://localhost:3000/api/auth/register
+POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-  "user_id": "usr_1010",
-  "firstName": "Samson",
-  "lastName": "Muchai",
-  "username": "samson",
-  "email": "samson@example.com",
-  "password": "Samson1234!",
-  "avatar": "samson_avatar.png",
-  "role": "admin"
+  
+  "fullName": "Stephen Mwangi",
+  "username": "stephen",
+  "email": "stephen@example.com",
+  "password": "Stephen1234!"
+
+  
 
 }
 
 ### Login User
-POST http://localhost:3000/api/auth/login
+POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-  "email": "superadmin@example.com",
-  "password": "SuperAdmin1234!"
+  "email": "stephen@example.com",
+  "password": "Stephen1234!"
 }
 
 ### Get User Profile (Requires Authentication)
-GET http://localhost:3000/api/users/profile
+GET http://localhost:3000/users/profile
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Update User Profile (Requires Authentication) not working
-PUT http://localhost:3000/api/users/profile 
+PUT http://localhost:3000/users/profile 
 Content-Type: application/json
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
@@ -41,39 +40,39 @@ Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 }
 
 ### Logout User (Requires Authentication)
-POST http://localhost:3000/api/auth/logout
+POST http://localhost:3000/auth/logout
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get All Users (Requires Authentication)
-GET http://localhost:3000/api/users
+GET http://localhost:3000/users
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get User By ID (Requires Authentication)
-GET http://localhost:3000/api/users/usr_1003
+GET http://localhost:3000/users/usr_1003
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Delete User By ID (Requires Authentication)
-DELETE http://localhost:3000/api/users
+DELETE http://localhost:3000/users
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get User By Username (Requires Authentication)
-GET http://localhost:3000/api/users/username/kennedy
+GET http://localhost:3000/users/username/kennedy
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get User By Email (Requires Authentication)
-GET http://localhost:3000/api/users/email/:email
+GET http://localhost:3000/users/email/:email
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get Users By Role (Requires Authentication)
-GET http://localhost:3000/api/users/role/:role
+GET http://localhost:3000/users/role/:role
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Delete All Users (Requires Authentication)
-DELETE http://localhost:3000/api/users
+DELETE http://localhost:3000/users
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Update User By ID (Requires Authentication)
-PUT http://localhost:3000/api/users/:user_id
+PUT http://localhost:3000/users/:user_id
 Content-Type: application/json
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
@@ -85,5 +84,4 @@ Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
   "avatar": "updated_avatar.png",
   "role": "admin"
 }
-
 

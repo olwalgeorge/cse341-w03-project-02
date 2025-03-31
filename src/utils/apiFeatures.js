@@ -1,4 +1,4 @@
-// src/utils/apiFeatures.js
+// src/utils/features.js
 class APIFeatures {
   constructor(query, queryString) {
     this.query = query;

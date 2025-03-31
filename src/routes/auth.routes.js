@@ -1,10 +1,10 @@
-// src/api/routes/auth.routes.js
+// src//routes/auth.routes.js
 const express = require('express');
 const router = express.Router();
-const passport = require('../../config/passport');
-const localAuthController = require('../../controllers/auth.controller.js');
-const { userCreateValidationRules } = require('../../validators/auth.validator');
-const validate = require('../../middlewares/validation.middleware');
+const passport = require('../config/passport.js');
+const localAuthController = require('../controllers/auth.controller.js');
+const { userCreateValidationRules } = require('../validators/auth.validator.js');
+const validate = require('../middlewares/validation.middleware.js');
 // Local Authentication
 router.post('/register', validate(userCreateValidationRules()),localAuthController.register); 
 router.post('/login', passport.authenticate('local'), localAuthController.loginSuccess); 

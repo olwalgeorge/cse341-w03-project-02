@@ -12,16 +12,16 @@ const {
   getUsersByRole,
   deleteAllUsers,
   updateUserById,
-} = require("../../controllers/users.controller.js");
-const validate = require("../../middlewares/validation.middleware.js");
-const isAuthenticated = require("../../middlewares/auth.middleware.js");
+} = require("../controllers/users.controller.js");
+const validate = require("../middlewares/validation.middleware.js");
+const isAuthenticated = require("../middlewares/auth.middleware.js");
 const {
   
   userValidationIdRules, 
   userUpdateValidationRules,
   userValidationUserIdRules,
   userValidationUserTypeRules,
-} = require("../../validators/user.validator.js");
+} = require("../validators/user.validator.js");
 
 const router = express.Router();
 

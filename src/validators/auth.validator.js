@@ -2,10 +2,10 @@ const { body } = require("express-validator");
 const User = require("../models/user.model");
 
 
-const userCheckUniquenessRules = () => {
+const userUniquenessValidationRules = () => {
   return [
-    body("user_id").custom(async (value) => {
-      const userExists = await User.exists({ user_id: value });
+    body("userID").custom(async (value) => {
+      const userExists = await User.exists({ userID: value });
       if (userExists) {
         throw new Error("User ID already exists");
       }
@@ -29,69 +29,75 @@ const userCheckUniquenessRules = () => {
   ];
 };
 
-const userValidationGeneralRules = () => {
+const userRequiredValidationRules = () => {
   return [
+    body("email", "Email is required").not().isEmpty(),
     body("email", "Invalid email format").trim().isEmail().normalizeEmail(),
+    body("password", "Password is required").not().isEmpty(),
+    body("username", "Username is required").not().isEmpty(),    
     body(
       "username",
-      "Username should only contain letters, numbers, and underscores, and be between 3 to 20 characters"
+      "Username must not start with a number and must contain only alphanumeric characters and underscores, and be between 3 to 20 characters"
     )
       .trim()
-      .matches(/^[a-zA-Z0-9_]+$/)
+      .matches(/^(?!\d)[a-zA-Z0-9_]+$/)
       .isLength({ min: 3, max: 20 })
-      .escape(),
-    body("user_id", "User ID should start with 'usr_' then 4 digits")
-      .trim()
-      .matches(/^usr_\d{4}$/),
+      .escape(),    
     body(
-      "firstName",
-      "First name should not exceed 20 characters, and be at least 3 characters"
+      "fullName",
+      "Full name must be at least 3 characters and at most 50 characters"
     )
       .trim()
-      .isLength({ min: 3, max: 20 })
-      .escape(),
-    body(
-      "lastName",
-      "Last name should not exceed 20 characters, and be at least 3 characters"
-    )
-      .trim()
-      .isLength({ min: 3, max: 20 })
+      .isLength({ min: 3, max: 50 })
       .escape(),
     body(
       "password",
-      "Password should contain at least 1 uppercase letter, 1 lowercase letter, 1 number, and 1 special character, and be between 8 to 50 characters"
+      "Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character, and be between 8 to 50 characters"
     )
       .trim()
       .matches(
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,50}$/
       ),
-    body("role", "Role should be user, admin, or superadmin")
-      .trim()
-      .isIn(["user", "admin", "superadmin"]),
-    body("avatar", "Avatar should not exceed 50 characters")
-      .trim()
-      .isLength({ max: 50 })
-      .optional()
-      .escape(),
   ];
+}
+
+const userGeneralValidationRules = () => {
+  return [
+    
+    body("role", "Role should be one of SUPERADMIN, ADMIN, USER, ORG")
+      .trim()
+      .isIn(["SUPERADMIN", "ADMIN", "USER", "ORG"])
+      .escape(),       
+    body("facebookId").optional().trim().escape(),
+    body("googleId").optional().trim().escape(),
+    body("twitterId").optional().trim().escape(),
+    body("githubId").optional().trim().escape(),
+    body("profilePicture").optional().trim().escape(),
+    body("bio").optional().trim().escape(),
+    body("website").optional().trim().escape(),
+    body("location").optional().trim().escape(),
+    body("isVerified").optional().isBoolean(),
+    body("phoneNumber").optional().trim().escape(),
+    body("preferences").optional().isObject(),
+  ];
+
 };
 const userCreateValidationRules = () => {
   return [
-    body("email", "Email is required").notEmpty(),
-    body("user_id", "User ID is required").notEmpty(),
-    body("firstName", "First name is required").notEmpty(),
-    body("lastName", "Last name is required").notEmpty(),
-    body("username", "Username is required").notEmpty(),
-    body("password", "Password is required").notEmpty(),
-    body("role", "Role is required").notEmpty(),
-    ...userValidationGeneralRules(),
-    ...userCheckUniquenessRules(),
+    ...userRequiredValidationRules(),
+    ...userUniquenessValidationRules(),    
   ];
-};
+}; 
+
+const userCreateProfileRules = () => {
+  return [
+    ...userGeneralValidationRules
+  ]
+}
 
 
 module.exports = {
   userCreateValidationRules,
-  userCheckUniquenessRules
+  userCreateProfileRules 
   
 };

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Farm Dashboard</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Smart Farm Dashboard</h1>
+            <div class="user-info">
+                <span>Welcome, [User's Full Name]</span>
+                <form action="/auth/logout" method="POST" style="display: inline;">
+                    <button type="submit" class="logout-button">Logout</button>
+                </form>
+            </div>
+        </header>
+
+        <main>
+            <section class="users-section">
+                <h2>Users</h2>
+                <ul class="data-list">
+                    <li>
+                        <strong>Username:</strong> user123
+                        <span><strong>Full Name:</strong> John Doe</span>
+                    </li>
+                    <li>
+                        <strong>Username:</strong> farmAdmin
+                        <span><strong>Full Name:</strong> Alice Smith</span>
+                    </li>
+                    <li>
+                        <strong>Username:</strong> sensorGuy
+                        <span><strong>Full Name:</strong> Bob Johnson</span>
+                    </li>
+                    </ul>
+            </section>
+
+            <section class="sensors-section">
+                <h2>Sensors</h2>
+                <ul class="data-list">
+                    <li>
+                        <strong>Sensor ID:</strong> SENSOR001
+                        <span><strong>Type:</strong> Temperature</span>
+                        <span><strong>Status:</strong> Active</span>
+                        <span><strong>Value:</strong> 25°C</span>
+                    </li>
+                    <li>
+                        <strong>Sensor ID:</strong> SENSOR002
+                        <span><strong>Type:</strong> Humidity</span>
+                        <span><strong>Status:</strong> Active</span>
+                        <span><strong>Value:</strong> 60%</span>
+                    </li>
+                    <li>
+                        <strong>Sensor ID:</strong> SENSOR003
+                        <span><strong>Type:</strong> Soil Moisture</span>
+                        <span><strong>Status:</strong> Inactive</span>
+                        <span><strong>Value:</strong> Low</span>
+                    </li>
+                    <li>
+                        <strong>Sensor ID:</strong> SENSOR004
+                        <span><strong>Type:</strong> Light Level</span>
+                        <span><strong>Status:</strong> Active</span>
+                        <span><strong>Value:</strong> 800 lux</span>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Smart Farm API</p>
+        </footer>
+    </div>
+    <script src="Scripts/script.js"></script>
+</body>
+</html>

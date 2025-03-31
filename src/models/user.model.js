@@ -29,14 +29,16 @@ const UserSchema = new Schema({
         lowercase: true, 
     },
     password: {
-        type: String,        
+        type: String,
         trim: true,
         match: [
             /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,50}$/,
             "Password must contain at least one lowercase letter, one uppercase letter, one number, and one special character",
         ],
-        select: false, // Don't return password by default
+        select: false,
+        required: false
     },
+    
     fullName: {
         type: String,
         required: true,

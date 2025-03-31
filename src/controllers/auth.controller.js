@@ -6,6 +6,9 @@ const createHttpError = require('http-errors');
 const { generateuserID } = require('../utils/idGenerator');
 
 module.exports = {
+  // @desc    Register a new user
+  // @route   POST /auth/register
+  // @access  Public
   register: asyncHandler(async (req, res, next) => {
     const { email, password, username, fullName } = req.body;
 
@@ -42,21 +45,29 @@ module.exports = {
       });
     });
   }),
-  //eslint-disable-next-line
+
+  // @desc    Login a user
+  // @route   POST /auth/login
+  // @access  Public
+  // eslint-disable-next-line no-unused-vars
   loginSuccess: asyncHandler(async (req, res, next) => {
-    // Passport automatically attaches the authenticated user to req.user
+  
     res.status(200).json({
       message: 'Login successful',
       user: { id: req.user.id, email: req.user.email, username: req.user.username, userID: req.user.userID, fullName: req.user.fullName }, // Include fullName
     });
   }),
-  //eslint-disable-next-line
+
+  // @desc    GitHub login
+  // @route   GET /auth/github
+  // @access  Public
+  // eslint-disable-next-line no-unused-vars
   githubSuccess: asyncHandler(async (req, res, next) => {
-    // Passport automatically attaches the authenticated user to req.user
+ 
     res.status(200).json({
       message: 'GitHub login successful',
       user: {
-        id: req.user._id, // Use _id as that's the MongoDB ID
+        id: req.user._id, 
         email: req.user.email,
         username: req.user.username,
         githubId: req.user.githubId,
@@ -66,36 +77,40 @@ module.exports = {
         bio: req.user.bio,
         website: req.user.website,
         location: req.user.location,
-        isVerified: req.user.isVerified,
-
-       
+        isVerified: req.user.isVerified,       
         createdAt: req.user.createdAt,
         updatedAt: req.user.updatedAt,
       },
     });
     // Or you might redirect the user to a specific page
-     res.redirect('/dashboard');
+     res.redirect('/dashboard'); // redirecet to dashboard
   }),
-  //eslint-disable-next-line
+
+  // @desc    Google login
+  // @route   GET /auth/google
+  // @access  Public
+  // eslint-disable-next-line no-unused-vars
   googleSuccess: asyncHandler(async (req, res, next) => {
-    // Passport automatically attaches the authenticated user to req.user
+    
     res.status(200).json({
       message: 'Google login successful',
       user: {
-        id: req.user._id, // Use _id as that's the MongoDB ID
+        id: req.user._id,
         email: req.user.email,
         username: req.user.username,
         googleId: req.user.googleId,
-        userID: req.user.userID, // Include userID in response
-        fullName: req.user.fullName, // Assuming you might fetch this in Google strategy
-        profilePicture: req.user.profilePicture, // Assuming you might fetch this in Google strategy
-        isVerified: req.user.isVerified, // Assuming you might fetch this in Google strategy
-        // Add other relevant fields if fetched in Google strategy
+        userID: req.user.userID,
+        fullName: req.user.fullName,
+        profilePicture: req.user.profilePicture,
+        isVerified: req.user.isVerified,
       },
     });
-    // res.redirect('/profile'); later
+    res.redirect('/dashboard'); // redirecet to dashboard
   }),
 
+  // @desc    Logout user
+  // @route   POST /auth/logout
+  // @access  Private
   logout: (req, res) => {
     req.logout(() => {
       res.status(200).json({ message: 'Logged out successfully' });

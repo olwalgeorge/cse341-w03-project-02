@@ -50,7 +50,6 @@ router.get(
 router.post(
   "/",
   isAuthenticated,
-
   validate(sensorCreateValidationRules()),
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to create a new sensor' */
@@ -92,8 +91,9 @@ router.delete(
 
 router.get(
   "/type/:sensor_type",
-  validate(sensorValidateSensorTypeRules()),
   isAuthenticated,
+  validate(sensorValidateSensorTypeRules()),
+  
   /* #swagger.tags = ['Sensors'] */
   /* #swagger.description = 'Endpoint to retrieve sensors by type' */
   /* #swagger.parameters['sensor_type'] = { in: 'path', description: 'Sensor type', required: true, type: 'string', enum: ['temperature', 'humidity', 'light', 'soil moisture'] } */

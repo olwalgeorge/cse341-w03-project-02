@@ -4,12 +4,8 @@ const asyncHandler = require("express-async-handler");
 const logger = require("../utils/logger.js");
 
 
-
-
-
-
 // @desc    Get user profile
-// @route   GET //users/profile
+// @route   GET /users/profile
 // @access  Private
 const getUserProfile = asyncHandler(async (req, res) => {
   logger.info(`getUserProfile called for user ID: ${req.user?._id}`);
@@ -28,7 +24,7 @@ const getUserProfile = asyncHandler(async (req, res) => {
 });
 
 // @desc    Update user profile
-// @route   PUT //users/profile
+// @route   PUT /users/profile
 // @access  Private
 // eslint-disable-next-line no-unused-vars
 const updateUserProfile = asyncHandler(async (req, res, next) => {
@@ -50,7 +46,7 @@ const updateUserProfile = asyncHandler(async (req, res, next) => {
 });
 
 // @desc    Logout user
-// @route   GET //users/logout
+// @route   GET /users/logout
 // @access  Private
 const logoutUser = asyncHandler(async (req, res) => {
   logger.info(`logoutUser called for user ID: ${req.user?._id}`);
@@ -65,7 +61,7 @@ const logoutUser = asyncHandler(async (req, res) => {
 });
 
 // @desc    Get user by ID
-// @route   GET //users/:userID
+// @route   GET /users/:userID
 // @access  Private
 const getUserById = asyncHandler(async (req, res) => {
   logger.info(`getUserById called with ID: ${req.params.userID}`);
@@ -98,7 +94,7 @@ const getUserById = asyncHandler(async (req, res) => {
 });
 
 // @desc    Delete user by ID
-// @route   DELETE //users/:_id
+// @route   DELETE /users/:_id
 // @access  Private
 const deleteUserById = asyncHandler(async (req, res) => {
   logger.info(`deleteUserById called with ID: ${req.params._id}`);
@@ -121,7 +117,7 @@ const deleteUserById = asyncHandler(async (req, res) => {
 });
 
 // @desc    Get all users
-// @route   GET //users
+// @route   GET /users
 // @access  Private
 const getAllUsers = asyncHandler(async (req, res) => {
   logger.info("getAllUsers called");
@@ -137,7 +133,7 @@ const getAllUsers = asyncHandler(async (req, res) => {
 });
 
 // @desc    Get user by username
-// @route   GET //users/username/:username
+// @route   GET /users/username/:username
 // @access  Private
 const getUserByUsername = asyncHandler(async (req, res) => {
   logger.info(`getUserByUsername called with username: ${req.params.username}`);
@@ -169,7 +165,7 @@ const getUserByUsername = asyncHandler(async (req, res) => {
 });
 
 // @desc    Get user by email
-// @route   GET //users/email/:email
+// @route   GET /users/email/:email
 // @access  Private
 const getUserByEmail = asyncHandler(async (req, res) => {
   logger.info(`getUserByEmail called with email: ${req.params.email}`);
@@ -201,7 +197,7 @@ const getUserByEmail = asyncHandler(async (req, res) => {
 });
 
 // @desc    Get users by role
-// @route   GET //users/role/:role
+// @route   GET /users/role/:role
 // @access  Private
 const getUsersByRole = asyncHandler(async (req, res) => {
   logger.info(`getUsersByRole called with role: ${req.params.role}`);
@@ -221,7 +217,7 @@ const getUsersByRole = asyncHandler(async (req, res) => {
 });
 
 // @desc    Delete all users
-// @route   DELETE //users
+// @route   DELETE /users
 // @access  Private
 const deleteAllUsers = asyncHandler(async (req, res) => {
   logger.warn("deleteAllUsers called - USE WITH CAUTION!");
@@ -239,7 +235,7 @@ const deleteAllUsers = asyncHandler(async (req, res) => {
 });
 
 // @desc    Update user by ID
-// @route   PUT //users/:_id
+// @route   PUT /users/:_id
 // @access  Private
 const updateUserById = asyncHandler(async (req, res) => {
   logger.info(`updateUserById called with ID: ${req.params._id}`);

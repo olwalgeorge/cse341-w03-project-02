@@ -3,6 +3,7 @@ const express = require("express");
 const userRoutes = require("./users.routes.js");
 const authRoutes = require("./auth.routes.js");
 const sensorRoutes = require("./sensors.routes.js");
+const path = require('path');
 
 const router = express.Router();
 
@@ -10,12 +11,7 @@ const router = express.Router();
 /* #swagger.description = 'Main  route' */
 
 router.get("/", (req, res) => {
-  res.send(`
-        <h1>Welcome to the Smart Farm </h1>
-        <p>
-            Please visit the <a href="/-docs" target="_blank">Swagger documentation</a> for more information.
-        </p>
-    `);
+  res.sendFile(path.join(__dirname, '../public/index.html')); 
 });
 router.use("/auth", authRoutes);
 router.use("/users", userRoutes);

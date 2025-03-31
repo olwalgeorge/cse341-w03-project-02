@@ -4,7 +4,7 @@
   "description": "API for a smart farm application",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js",
+    "start": "node src/config/swagger.js && node src/server.js",
     "dev": "node src/config/swagger.js && nodemon src/server.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",

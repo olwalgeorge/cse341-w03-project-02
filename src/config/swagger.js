@@ -6,8 +6,8 @@ const logger = require("../utils/logger");
 const outputFile = "../../swagger_output.json";
 const endpointsFiles = ["../routes/index.js"];
 
-let host = "localhost:3000/api"; // Default for development
-let schemes = ["http"]; // Default for development
+let host = "localhost:3000"; 
+let schemes = ["http"]; 
 
 if (config.env === "production") {
   host = "smart-farm-api.onrender.com";
@@ -25,7 +25,8 @@ const doc = {
 
 // Generate Swagger file on startup then run server
 swaggerAutogen(outputFile, endpointsFiles, doc)
-  .then(() => require("../server"))
+  .then(() => logger.info("Swagger documentation generated"))
   .catch((error) => {
     logger.error("Error generating Swagger documentation:", error);
   });
+

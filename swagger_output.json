@@ -5,7 +5,7 @@
     "description": "API documentation for the Smart Farm project",
     "version": "1.0.0"
   },
-  "host": "localhost:3000/api",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
     "http"
@@ -23,27 +23,45 @@
     },
     "/auth/register": {
       "post": {
-        "description": "",
+        "tags": [
+          "Auth"
+        ],
+        "description": "Endpoint to register a new user",
         "responses": {
-          "default": {
-            "description": ""
+          "201": {
+            "description": "Registration successful"
+          },
+          "400": {
+            "description": "Validation error"
+          },
+          "409": {
+            "description": "Email already exists"
           }
         }
       }
     },
     "/auth/login": {
       "post": {
-        "description": "",
+        "tags": [
+          "Auth"
+        ],
+        "description": "Endpoint to login a user",
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "Login successful"
+          },
+          "401": {
+            "description": "Authentication failed"
           }
         }
       }
     },
     "/auth/github": {
       "get": {
-        "description": "",
+        "tags": [
+          "Auth"
+        ],
+        "description": "GitHub authentication endpoint",
         "responses": {
           "default": {
             "description": ""
@@ -53,17 +71,26 @@
     },
     "/auth/github/callback": {
       "get": {
-        "description": "",
+        "tags": [
+          "Auth"
+        ],
+        "description": "GitHub authentication callback endpoint",
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "GitHub login successful"
+          },
+          "401": {
+            "description": "GitHub authentication failed"
           }
         }
       }
     },
     "/auth/google": {
       "get": {
-        "description": "",
+        "tags": [
+          "Auth"
+        ],
+        "description": "Google authentication endpoint",
         "responses": {
           "default": {
             "description": ""
@@ -73,20 +100,29 @@
     },
     "/auth/google/callback": {
       "get": {
-        "description": "",
+        "tags": [
+          "Auth"
+        ],
+        "description": "Google authentication callback endpoint",
         "responses": {
-          "default": {
-            "description": ""
+          "200": {
+            "description": "Google login successful"
+          },
+          "401": {
+            "description": "Google authentication failed"
           }
         }
       }
     },
     "/auth/logout": {
       "post": {
-        "description": "",
+        "tags": [
+          "Auth"
+        ],
+        "description": "Endpoint to logout a user",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "Logged out successfully"
           }
         }
       }

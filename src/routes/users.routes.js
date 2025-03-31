@@ -28,36 +28,6 @@ const router = express.Router();
 /* #swagger.tags = ['Users'] */
 /* #swagger.description = 'User management endpoints' */
 
-// router.post(
-//   "/",
-//   validate(userCreateValidationRules()),
-//   /* #swagger.parameters['body'] = {
-//       in: 'body',
-//       description: 'User data',
-//       required: true,
-//       schema: {
-//         username: { type: 'string', example: 'john_doe' },
-//         email: { type: 'string', example: 'john@example.com' },
-//         password: { type: 'string', example: 'securePassword123' },
-//         fullName: { type: 'string', example: 'John Doe' }
-//       }
-//   } */
-//   registerUser
-// );
-
-// router.post(
-//   "/login",
-//   /* #swagger.parameters['body'] = {
-//       in: 'body',
-//       description: 'Login credentials',
-//       required: true,
-//       schema: {
-//         username: { type: 'string', example: 'john_doe' },
-//         password: { type: 'string', example: 'securePassword123' }
-//       }
-//   } */
-//   loginUser
-// );
 
 router.get(
   "/profile",

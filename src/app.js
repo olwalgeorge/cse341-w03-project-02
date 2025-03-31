@@ -34,7 +34,7 @@ app.use(express.static("public"));
 app.use("/", routes);
 
 // Swagger Documentation
-app.use("/-docs", swaggerUi.serve, swaggerUi.setup(swaggerOutput));
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerOutput));
 
 // Error Handling Middleware
 app.use(errorMiddleware);

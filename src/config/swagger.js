@@ -10,7 +10,7 @@ let host = "localhost:3000";
 let schemes = ["http"]; 
 
 if (config.env === "production") {
-  host = "smart-farm-api.onrender.com";
+  host = "https://cse341-w03-project-02.onrender.com";
   schemes = ["https"];
 }
 

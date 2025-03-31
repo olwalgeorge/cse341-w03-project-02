@@ -12,6 +12,16 @@ router.post(
   validate(userCreateValidationRules()),
   /* #swagger.tags = ['Auth'] */
   /* #swagger.description = 'Endpoint to register a new user' */
+  /* #swagger.parameters['body'] = {
+      in: 'body',
+      description: 'User data to register a new user',
+      schema: {
+        email: { type: 'string', example: 'john@example.com' },
+        password: { type: 'string', example: 'securePassword123' },
+        username: { type: 'string', example: 'john_doe' },
+        fullName: { type: 'string', example: 'John Doe' }
+      }
+  } */
   /* #swagger.responses[201] = { description: 'Registration successful' } */
   /* #swagger.responses[400] = { description: 'Validation error' } */
   /* #swagger.responses[409] = { description: 'Email already exists' } */
@@ -67,7 +77,7 @@ router.get(
 // Logout
 router.post(
   '/logout',
-  
+
   /* #swagger.tags = ['Auth'] */
   /* #swagger.description = 'Endpoint to logout a user' */
   /* #swagger.responses[200] = { description: 'Logged out successfully' } */

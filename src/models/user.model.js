@@ -29,8 +29,7 @@ const UserSchema = new Schema({
         lowercase: true, 
     },
     password: {
-        type: String,
-        required: true,
+        type: String,        
         trim: true,
         match: [
             /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,50}$/,

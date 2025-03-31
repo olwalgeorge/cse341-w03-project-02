@@ -67,14 +67,10 @@ router.get(
 // Logout
 router.post(
   '/logout',
+  
   /* #swagger.tags = ['Auth'] */
   /* #swagger.description = 'Endpoint to logout a user' */
   /* #swagger.responses[200] = { description: 'Logged out successfully' } */
-  (req, res) => {
-    req.logout(() => {
-      res.status(200).json({ message: 'Logged out successfully' });
-    });
-  }
+localAuthController.logout
 );
-
 module.exports = router;

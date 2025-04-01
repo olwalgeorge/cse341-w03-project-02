@@ -266,7 +266,7 @@
         }
       }
     },
-    "/users/{user_id}": {
+    "/users/{userID}": {
       "get": {
         "tags": [
           "Users"
@@ -274,7 +274,7 @@
         "description": "Endpoint to retrieve a user by ID",
         "parameters": [
           {
-            "name": "user_id",
+            "name": "userID",
             "in": "path",
             "required": true,
             "type": "string",
@@ -293,6 +293,9 @@
           },
           "404": {
             "description": "User not found"
+          },
+          "500": {
+            "description": "Failed to retrieve user"
           }
         }
       }

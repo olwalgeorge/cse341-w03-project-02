@@ -2214,3 +2214,406 @@
 {"level":"info","message":"Swagger documentation generated","service":"smart-farm-api","timestamp":"2025-03-31 21:48:36"}
 {"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-03-31 21:48:39"}
 {"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-03-31 21:48:41"}
+{"level":"info","message":"Swagger documentation generated","service":"smart-farm-api","timestamp":"2025-04-01 12:51:44"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-04-01 12:51:49"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-04-01 12:51:52"}
+{"email":"stephen@example.com","fullName":"Stephen Mwangi","level":"info","message":"Request Body:","password":"Stephen1234!","service":"smart-farm-api","timestamp":"2025-04-01 12:53:16","username":"stephen"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-04-01 12:53:16"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-04-01 12:53:18"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-04-01 12:53:18"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-04-01 12:57:22"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-04-01 12:57:25"}
+{"level":"info","message":"Swagger documentation generated","service":"smart-farm-api","timestamp":"2025-04-01 12:58:21"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-04-01 12:58:26"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-04-01 12:58:30"}
+{"level":"info","message":"getUserProfile called for user ID: 67ebb78ea3e5d9b8a4245b28","service":"smart-farm-api","timestamp":"2025-04-01 12:59:21"}
+{"level":"info","message":"Swagger documentation generated","service":"smart-farm-api","timestamp":"2025-04-01 12:59:42"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-04-01 12:59:47"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-04-01 12:59:50"}
+{"level":"info","message":"getUserProfile called for user ID: 67ebb78ea3e5d9b8a4245b28","service":"smart-farm-api","timestamp":"2025-04-01 12:59:52"}
+{"level":"info","message":"getUserProfile called for user ID: 67ebb78ea3e5d9b8a4245b28","service":"smart-farm-api","timestamp":"2025-04-01 12:59:55"}
+{"level":"info","message":"getUserProfile called for user ID: 67ebb78ea3e5d9b8a4245b28","service":"smart-farm-api","timestamp":"2025-04-01 12:59:57"}
+{"level":"info","message":"getUserProfile called for user ID: 67ebb78ea3e5d9b8a4245b28","service":"smart-farm-api","timestamp":"2025-04-01 12:59:58"}
+{"avatar":"updated_avatar.png","email":"updated@example.com","firstName":"Updated","lastName":"User","level":"info","message":"Request Body:","role":"admin","service":"smart-farm-api","timestamp":"2025-04-01 13:00:56","username":"updated_username"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-04-01 13:00:56"}
+{"0":{"location":"params","msg":"Invalid internal User ID format","path":"_id","type":"field","value":":user_id"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-04-01 13:00:56"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-04-01 13:00:56"}
+{"avatar":"updated_avatar.png","email":"updated@example.com","firstName":"Updated","lastName":"User","level":"info","message":"Request Body:","role":"admin","service":"smart-farm-api","timestamp":"2025-04-01 13:01:10","username":"updated_username"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-04-01 13:01:10"}
+{"0":{"location":"params","msg":"Invalid internal User ID format","path":"_id","type":"field","value":":user_id"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-04-01 13:01:10"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-04-01 13:01:10"}
+{"avatar":"updated_avatar.png","email":"updated@example.com","firstName":"Updated","lastName":"User","level":"info","message":"Request Body:","role":"admin","service":"smart-farm-api","timestamp":"2025-04-01 13:01:21","username":"updated_username"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-04-01 13:01:21"}
+{"0":{"location":"params","msg":"Invalid internal User ID format","path":"_id","type":"field","value":":user_id"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-04-01 13:01:21"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-04-01 13:01:21"}
+{"avatar":"updated_avatar.png","email":"updated@example.com","firstName":"Updated","lastName":"User","level":"info","message":"Request Body:","role":"admin","service":"smart-farm-api","timestamp":"2025-04-01 13:01:32","username":"updated_username"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-04-01 13:01:32"}
+{"0":{"location":"params","msg":"Invalid internal User ID format","path":"_id","type":"field","value":":user_id"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-04-01 13:01:32"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-04-01 13:01:32"}
+{"avatar":"updated_avatar.png","email":"updated@example.com","firstName":"Updated","lastName":"User","level":"info","message":"Request Body:","role":"admin","service":"smart-farm-api","timestamp":"2025-04-01 13:01:52","username":"updated_username"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-04-01 13:01:52"}
+{"0":{"location":"params","msg":"Invalid internal User ID format","path":"_id","type":"field","value":"23"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-04-01 13:01:52"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-04-01 13:01:52"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-04-01 13:02:33"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-04-01 13:02:33"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-04-01 13:02:33"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-04-01 13:02:33"}
+{"level":"warn","message":"deleteAllUsers called - USE WITH CAUTION!","service":"smart-farm-api","timestamp":"2025-04-01 13:02:33"}
+{"level":"info","message":"Swagger documentation generated","service":"smart-farm-api","timestamp":"2025-04-01 13:03:08"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-04-01 13:03:11"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-04-01 13:03:20"}
+{"email":"stephen@example.com","fullName":"Stephen Mwangi","level":"info","message":"Request Body:","password":"Stephen1234!","service":"smart-farm-api","timestamp":"2025-04-01 13:06:58","username":"stephen"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-04-01 13:06:58"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-04-01 13:07:02"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-04-01 13:07:02"}
+{"email":"superadmin@example.com","fullName":"Super Admin","level":"info","message":"Request Body:","password":"SuperAdmin1234!","service":"smart-farm-api","timestamp":"2025-04-01 13:09:01","username":"superadmin"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-04-01 13:09:01"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-04-01 13:09:02"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-04-01 13:09:02"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-04-01 13:11:08"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-04-01 13:11:26"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-04-01 13:11:36"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-04-01 13:13:51"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-04-01 13:13:55"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-04-01 13:17:26"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-04-01 13:17:28"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-04-01 13:18:49"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-04-01 13:18:52"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-04-01 13:19:23"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-04-01 13:19:27"}
+{"level":"info","message":"Swagger documentation generated","service":"smart-farm-api","timestamp":"2025-04-01 13:21:15"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-04-01 13:21:19"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-04-01 13:21:23"}
+{"level":"info","message":"getUserProfile called for user ID: 67ebbac630c96c6c36e13bab","service":"smart-farm-api","timestamp":"2025-04-01 13:25:31"}
+{"level":"info","message":"getUserProfile called for user ID: 67ebbac630c96c6c36e13bab","service":"smart-farm-api","timestamp":"2025-04-01 13:28:05"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-04-01 13:29:04"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-04-01 13:29:04"}
+{"0":{"location":"params","msg":"User ID should be in the format SM-xxxxx (where x are digits)","path":"userID","type":"field"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-04-01 13:29:04"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-04-01 13:29:04"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-04-01 13:29:18"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-04-01 13:29:18"}
+{"0":{"location":"params","msg":"User ID should be in the format SM-xxxxx (where x are digits)","path":"userID","type":"field"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-04-01 13:29:18"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-04-01 13:29:18"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-04-01 13:29:38"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-04-01 13:29:38"}
+{"0":{"location":"params","msg":"User ID should be in the format SM-xxxxx (where x are digits)","path":"userID","type":"field"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-04-01 13:29:38"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-04-01 13:29:38"}
+{"level":"info","message":"getUserByUsername called with username: kennedy","service":"smart-farm-api","timestamp":"2025-04-01 13:30:54"}
+{"errors":[{"message":"User not found"}],"level":"error","message":"Error 500: Internal server error","service":"smart-farm-api","timestamp":"2025-04-01 13:30:55"}
+{"level":"info","message":"getUserByEmail called with email: :email","service":"smart-farm-api","timestamp":"2025-04-01 13:31:19"}
+{"errors":[{"message":"User not found"}],"level":"error","message":"Error 500: Internal server error","service":"smart-farm-api","timestamp":"2025-04-01 13:31:20"}
+{"level":"info","message":"getUsersByRole called with role: :role","service":"smart-farm-api","timestamp":"2025-04-01 13:31:24"}
+{"errors":[{"message":"Users not found"}],"level":"error","message":"Error 500: Internal server error","service":"smart-farm-api","timestamp":"2025-04-01 13:31:24"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-04-01 13:34:22"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-04-01 13:34:25"}
+{"level":"info","message":"Swagger documentation generated","service":"smart-farm-api","timestamp":"2025-04-01 13:34:32"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-04-01 13:34:37"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-04-01 13:34:40"}
+{"avatar":"updated_avatar.png","email":"updated@example.com","firstName":"Updated","lastName":"User","level":"info","message":"Request Body:","role":"admin","service":"smart-farm-api","timestamp":"2025-04-01 13:35:47","username":"updated_username"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-04-01 13:35:47"}
+{"0":{"location":"params","msg":"Invalid internal User ID format","path":"_id","type":"field","value":"56"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-04-01 13:35:47"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-04-01 13:35:47"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-04-01 13:36:02"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-04-01 13:36:02"}
+{"0":{"location":"params","msg":"User ID should be in the format SM-xxxxx (where x are digits)","path":"userID","type":"field"},"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-04-01 13:36:02"}
+{"level":"info","message":"Validation failed, sending response","service":"smart-farm-api","timestamp":"2025-04-01 13:36:02"}
+{"level":"info","message":"Request Body:","service":"smart-farm-api","timestamp":"2025-04-01 13:36:08"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-04-01 13:36:08"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-04-01 13:36:08"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-04-01 13:36:08"}
+{"level":"warn","message":"deleteAllUsers called - USE WITH CAUTION!","service":"smart-farm-api","timestamp":"2025-04-01 13:36:08"}
+{"level":"info","message":"Swagger documentation generated","service":"smart-farm-api","timestamp":"2025-04-01 13:38:08"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-04-01 13:38:11"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-04-01 13:38:15"}
+{"level":"info","message":"Swagger documentation generated","service":"smart-farm-api","timestamp":"2025-04-01 13:39:19"}
+{"level":"info","message":"Server running on at http://localhost:3000 in development mode","service":"smart-farm-api","timestamp":"2025-04-01 13:39:22"}
+{"level":"info","message":"MongoDB Connected...","service":"smart-farm-api","timestamp":"2025-04-01 13:39:25"}
+{"email":"superadmin@example.com","fullName":"Super Admin","level":"info","message":"Request Body:","password":"SuperAdmin1234!","service":"smart-farm-api","timestamp":"2025-04-01 13:39:57","username":"superadmin"}
+{"level":"info","message":"Validations:","service":"smart-farm-api","timestamp":"2025-04-01 13:39:57"}
+{"level":"info","message":"Errors:","service":"smart-farm-api","timestamp":"2025-04-01 13:39:59"}
+{"level":"info","message":"Validation passed, calling next()","service":"smart-farm-api","timestamp":"2025-04-01 13:39:59"}
+{"level":"info","message":"getUserByEmail called with email: :email","service":"smart-farm-api","timestamp":"2025-04-01 13:40:32"}
+{"0":"N","1":"o","10":"r","100":"k","101":"-","102":"0","103":"3","104":"\\","105":"c","106":"s","107":"e","108":"3","109":"4","11":"o","110":"1","111":"-","112":"w","113":"0","114":"3","115":"-","116":"p","117":"r","118":"o","119":"j","12":"r","120":"e","121":"c","122":"t","123":"-","124":"0","125":"2","126":"\\","127":"s","128":"r","129":"c","13":":","130":"\\","131":"c","132":"o","133":"n","134":"t","135":"r","136":"o","137":"l","138":"l","139":"e","14":" ","140":"r","141":"s","142":"\\","143":"u","144":"s","145":"e","146":"r","147":"s","148":".","149":"c","15":"U","150":"o","151":"n","152":"t","153":"r","154":"o","155":"l","156":"l","157":"e","158":"r","159":".","16":"s","160":"j","161":"s","162":":","163":"2","164":"2","165":"5","166":":","167":"2","168":"5","169":"\n","17":"e","170":" ","171":" ","172":" ","173":" ","174":"a","175":"t","176":" ","177":"p","178":"r","179":"o","18":"r","180":"c","181":"e","182":"s","183":"s","184":".","185":"p","186":"r","187":"o","188":"c","189":"e","19":" ","190":"s","191":"s","192":"T","193":"i","194":"c","195":"k","196":"s","197":"A","198":"n","199":"d","2":"t","20":"n","200":"R","201":"e","202":"j","203":"e","204":"c","205":"t","206":"i","207":"o","208":"n","209":"s","21":"o","210":" ","211":"(","212":"n","213":"o","214":"d","215":"e","216":":","217":"i","218":"n","219":"t","22":"t","220":"e","221":"r","222":"n","223":"a","224":"l","225":"/","226":"p","227":"r","228":"o","229":"c","23":" ","230":"e","231":"s","232":"s","233":"/","234":"t","235":"a","236":"s","237":"k","238":"_","239":"q","24":"f","240":"u","241":"e","242":"u","243":"e","244":"s","245":":","246":"1","247":"0","248":"5","249":":","25":"o","250":"5","251":")","26":"u","27":"n","28":"d","29":"\n","3":"F","30":" ","31":" ","32":" ","33":" ","34":"a","35":"t","36":" ","37":"C","38":":","39":"\\","4":"o","40":"U","41":"s","42":"e","43":"r","44":"s","45":"\\","46":"P","47":"C","48":"\\","49":"O","5":"u","50":"n","51":"e","52":"D","53":"r","54":"i","55":"v","56":"e","57":"\\","58":"D","59":"o","6":"n","60":"c","61":"u","62":"m","63":"e","64":"n","65":"t","66":"s","67":"\\","68":"B","69":"Y","7":"d","70":"U","71":"\\","72":"P","73":"a","74":"t","75":"h","76":"w","77":"a","78":"y","79":"\\","8":"E","80":"c","81":"s","82":"e","83":"3","84":"4","85":"1","86":" ","87":"c","88":"l","89":"a","9":"r","90":"s","91":"s","92":"w","93":"o","94":"r","95":"k","96":"\\","97":"w","98":"e","99":"e","level":"error","message":"Error: User not found - Method: GET - URL: /users/email/:email - IP: ::ffff:127.0.0.1","service":"smart-farm-api","timestamp":"2025-04-01 13:40:32"}
+2025-04-01 13:43:32 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 13:43:35 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 13:43:46 INFO [smart-farm-api]: Swagger documentation generated 
+2025-04-01 13:43:50 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 13:43:52 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 13:44:20 INFO [smart-farm-api]: getUsersByRole called with role: :role 
+2025-04-01 13:44:20 ERROR [smart-farm-api]: Error: Users not found - Method: GET - URL: /users/role/:role - IP: ::ffff:127.0.0.1 
+2025-04-01 13:46:11 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 13:46:14 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 13:48:10 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 13:48:13 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 13:48:58 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 13:49:01 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 13:49:19 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 13:49:23 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 13:49:55 INFO [smart-farm-api]: Swagger documentation generated 
+2025-04-01 13:50:01 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 13:50:04 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 13:50:08 INFO [smart-farm-api]: getUsersByRole called with role: :role 
+2025-04-01 13:50:08 ERROR [smart-farm-api]: Users not found 
+NotFoundError: Users not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:246:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-01 13:52:20 INFO [smart-farm-api]: getUserProfile called for user ID: 67ebc27fe0ba38154339b429 
+2025-04-01 14:01:38 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 14:01:41 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 14:03:47 ERROR [smart-farm-api]: Error: Expected double-quoted property name in JSON at position 32 (line 3 column 1) - Method: PUT - URL: /users/67ebc27fe0ba38154339b429 - IP: ::ffff:127.0.0.1 - Source: Client - Type: Internal Expected double-quoted property name in JSON at position 32 (line 3 column 1) 
+SyntaxError: Expected double-quoted property name in JSON at position 32 (line 3 column 1)
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\body-parser\lib\types\json.js:92:19)
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:524:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-04-01 14:04:12 INFO [smart-farm-api]: Request Body: 
+2025-04-01 14:04:12 INFO [smart-farm-api]: Validations: 
+2025-04-01 14:04:12 INFO [smart-farm-api]: Errors: 
+2025-04-01 14:04:12 INFO [smart-farm-api]: Validation passed, calling next() 
+2025-04-01 14:04:12 INFO [smart-farm-api]: updateUserById called with ID: 67ebc27fe0ba38154339b429 
+2025-04-01 14:04:51 INFO [smart-farm-api]: Request Body: 
+2025-04-01 14:04:51 INFO [smart-farm-api]: Validations: 
+2025-04-01 14:04:51 INFO [smart-farm-api]: Errors: 
+2025-04-01 14:04:51 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-01 14:05:04 INFO [smart-farm-api]: Request Body: 
+2025-04-01 14:05:04 INFO [smart-farm-api]: Validations: 
+2025-04-01 14:05:04 INFO [smart-farm-api]: Errors: 
+2025-04-01 14:05:04 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-01 14:05:06 INFO [smart-farm-api]: Request Body: 
+2025-04-01 14:05:06 INFO [smart-farm-api]: Validations: 
+2025-04-01 14:05:06 INFO [smart-farm-api]: Errors: 
+2025-04-01 14:05:06 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-01 14:06:05 INFO [smart-farm-api]: getUserByUsername called with username: superadmin 
+2025-04-01 14:14:47 INFO [smart-farm-api]: Request Body: 
+2025-04-01 14:14:47 INFO [smart-farm-api]: Validations: 
+2025-04-01 14:14:47 INFO [smart-farm-api]: Errors: 
+2025-04-01 14:14:47 INFO [smart-farm-api]: Validation passed, calling next() 
+2025-04-01 14:14:47 INFO [smart-farm-api]: updateUserById called with ID: 67ebc27fe0ba38154339b429 
+2025-04-01 14:18:43 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 14:18:46 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 14:19:09 INFO [smart-farm-api]: Swagger documentation generated 
+2025-04-01 14:19:13 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 14:19:16 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 14:19:28 INFO [smart-farm-api]: getUserProfile called for user ID: 67ebc27fe0ba38154339b429 
+2025-04-01 14:23:55 INFO [smart-farm-api]: getAllUsers called 
+2025-04-01 14:24:02 INFO [smart-farm-api]: Request Body: 
+2025-04-01 14:24:02 INFO [smart-farm-api]: Validations: 
+2025-04-01 14:24:02 INFO [smart-farm-api]: Errors: 
+2025-04-01 14:24:02 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-01 14:24:34 INFO [smart-farm-api]: Request Body: 
+2025-04-01 14:24:34 INFO [smart-farm-api]: Validations: 
+2025-04-01 14:24:34 INFO [smart-farm-api]: Errors: 
+2025-04-01 14:24:34 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-01 14:24:47 INFO [smart-farm-api]: Request Body: 
+2025-04-01 14:24:47 INFO [smart-farm-api]: Validations: 
+2025-04-01 14:24:47 INFO [smart-farm-api]: Errors: 
+2025-04-01 14:24:47 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-01 14:25:18 INFO [smart-farm-api]: getAllUsers called 
+2025-04-01 14:25:37 INFO [smart-farm-api]: Request Body: 
+2025-04-01 14:25:37 INFO [smart-farm-api]: Validations: 
+2025-04-01 14:25:37 INFO [smart-farm-api]: Errors: 
+2025-04-01 14:25:37 INFO [smart-farm-api]: Validation passed, calling next() 
+2025-04-01 14:25:37 INFO [smart-farm-api]: deleteUserById called with ID: 67ebc27fe0ba38154339b429 
+2025-04-01 14:26:23 INFO [smart-farm-api]: Request Body: 
+2025-04-01 14:26:23 INFO [smart-farm-api]: Validations: 
+2025-04-01 14:26:25 INFO [smart-farm-api]: Errors: 
+2025-04-01 14:26:25 INFO [smart-farm-api]: Validation passed, calling next() 
+2025-04-01 14:26:38 INFO [smart-farm-api]: getUsersByRole called with role: admin 
+2025-04-01 14:26:44 INFO [smart-farm-api]: getUsersByRole called with role: admin 
+2025-04-01 14:26:48 INFO [smart-farm-api]: getUsersByRole called with role: admin 
+2025-04-01 14:26:54 INFO [smart-farm-api]: getUsersByRole called with role: admin 
+2025-04-01 14:27:07 INFO [smart-farm-api]: getUsersByRole called with role: ADMIN 
+2025-04-01 14:27:09 INFO [smart-farm-api]: getUsersByRole called with role: ADMIN 
+2025-04-01 14:28:12 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 14:28:18 INFO [smart-farm-api]: Swagger documentation generated 
+2025-04-01 14:28:22 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 14:28:26 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 14:40:37 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 14:40:41 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 14:49:57 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 14:50:01 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 14:51:07 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 14:51:10 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 14:51:25 INFO [smart-farm-api]: Swagger documentation generated 
+2025-04-01 14:51:31 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 14:51:34 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 14:51:53 INFO [smart-farm-api]: getAllUsers called 
+2025-04-01 14:51:58 INFO [smart-farm-api]: Request Body: 
+2025-04-01 14:51:58 INFO [smart-farm-api]: Validations: 
+2025-04-01 14:51:58 INFO [smart-farm-api]: Errors: 
+2025-04-01 14:51:58 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-01 14:52:13 INFO [smart-farm-api]: Request Body: 
+2025-04-01 14:52:13 INFO [smart-farm-api]: Validations: 
+2025-04-01 14:52:13 INFO [smart-farm-api]: Errors: 
+2025-04-01 14:52:13 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-01 14:53:35 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 14:53:38 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 14:54:23 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 14:54:26 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:00:05 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:00:08 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:00:59 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:01:03 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:01:50 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:01:53 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:04:22 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:04:25 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:04:41 INFO [smart-farm-api]: Swagger documentation generated 
+2025-04-01 15:04:46 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:04:49 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:04:58 INFO [smart-farm-api]: getAllUsers called 
+2025-04-01 15:05:04 INFO [smart-farm-api]: Request Body: 
+2025-04-01 15:05:04 INFO [smart-farm-api]: Validations: 
+2025-04-01 15:05:04 INFO [smart-farm-api]: Errors: 
+2025-04-01 15:05:04 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-01 15:08:14 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:08:17 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:08:27 INFO [smart-farm-api]: Swagger documentation generated 
+2025-04-01 15:08:32 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:08:34 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:08:36 INFO [smart-farm-api]: Request Body: 
+2025-04-01 15:08:36 INFO [smart-farm-api]: Validations: 
+2025-04-01 15:08:36 INFO [smart-farm-api]: Errors: 
+2025-04-01 15:08:36 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-01 15:08:39 INFO [smart-farm-api]: Request Body: 
+2025-04-01 15:08:39 INFO [smart-farm-api]: Validations: 
+2025-04-01 15:08:39 INFO [smart-farm-api]: Errors: 
+2025-04-01 15:08:39 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-01 15:08:55 INFO [smart-farm-api]: Request Body: 
+2025-04-01 15:08:55 INFO [smart-farm-api]: Validations: 
+2025-04-01 15:08:55 INFO [smart-farm-api]: Errors: 
+2025-04-01 15:08:55 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-01 15:09:01 INFO [smart-farm-api]: Request Body: 
+2025-04-01 15:09:01 INFO [smart-farm-api]: Validations: 
+2025-04-01 15:09:01 INFO [smart-farm-api]: Errors: 
+2025-04-01 15:09:01 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-01 15:10:20 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:10:23 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:11:13 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:11:19 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:12:22 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:12:25 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:17:23 INFO [smart-farm-api]: Request Body: 
+2025-04-01 15:17:23 INFO [smart-farm-api]: Validations: 
+2025-04-01 15:17:23 INFO [smart-farm-api]: Errors: 
+2025-04-01 15:17:23 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-01 15:17:43 INFO [smart-farm-api]: Request Body: 
+2025-04-01 15:17:43 INFO [smart-farm-api]: Validations: 
+2025-04-01 15:17:43 INFO [smart-farm-api]: Errors: 
+2025-04-01 15:17:43 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-01 15:22:57 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:23:01 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:23:11 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:23:14 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:24:21 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:24:24 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:24:32 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:24:35 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:24:56 INFO [smart-farm-api]: Swagger documentation generated 
+2025-04-01 15:25:02 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:25:05 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:25:38 INFO [smart-farm-api]: getAllUsers called 
+2025-04-01 15:25:46 INFO [smart-farm-api]: Request Body: 
+2025-04-01 15:25:46 INFO [smart-farm-api]: Validations: 
+2025-04-01 15:25:46 INFO [smart-farm-api]: Errors: 
+2025-04-01 15:25:46 INFO [smart-farm-api]: Validation passed, calling next() 
+2025-04-01 15:25:46 INFO [smart-farm-api]: getUserById called with ID: undefined 
+2025-04-01 15:25:46 DEBUG [smart-farm-api]: Request body: 
+2025-04-01 15:25:46 ERROR [smart-farm-api]: Error retrieving user with ID: undefined Cannot read properties of undefined (reading 'toString') 
+TypeError: Cannot read properties of undefined (reading 'toString')
+    at Object.getUserByIdService (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\services\users.service.js:5:12)
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:105:40
+    at asyncUtilWrap (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\express-async-handler\index.js:3:20)
+    at Layer.handle [as handle_request] (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\express\lib\router\route.js:149:13)
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\middlewares\validation.middleware.js:17:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-01 15:25:46 ERROR [smart-farm-api]: Cannot read properties of undefined (reading 'toString') 
+InternalServerError: Cannot read properties of undefined (reading 'toString')
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:127:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-01 15:35:00 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:35:03 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:35:09 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:35:13 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:41:06 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:41:09 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:41:51 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:41:55 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:42:55 INFO [smart-farm-api]: Swagger documentation generated 
+2025-04-01 15:43:00 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:43:04 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:43:06 INFO [smart-farm-api]: getAllUsers called 
+2025-04-01 15:43:12 INFO [smart-farm-api]: Request Body: 
+2025-04-01 15:43:12 INFO [smart-farm-api]: Validations: 
+2025-04-01 15:43:12 INFO [smart-farm-api]: Errors: 
+2025-04-01 15:43:12 INFO [smart-farm-api]: Validation passed, calling next() 
+2025-04-01 15:43:12 INFO [smart-farm-api]: getUserById called with ID: SM-00001 
+2025-04-01 15:43:12 DEBUG [smart-farm-api]: Request body: 
+2025-04-01 15:43:12 ERROR [smart-farm-api]: User not found 
+NotFoundError: User not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:123:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-01 15:43:40 INFO [smart-farm-api]: Request Body: 
+2025-04-01 15:43:40 INFO [smart-farm-api]: Validations: 
+2025-04-01 15:43:40 INFO [smart-farm-api]: Errors: 
+2025-04-01 15:43:40 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-01 15:43:58 INFO [smart-farm-api]: getAllUsers called 
+2025-04-01 15:44:38 INFO [smart-farm-api]: Request Body: 
+2025-04-01 15:44:38 INFO [smart-farm-api]: Validations: 
+2025-04-01 15:44:38 INFO [smart-farm-api]: Errors: 
+2025-04-01 15:44:38 INFO [smart-farm-api]: Validation passed, calling next() 
+2025-04-01 15:44:38 INFO [smart-farm-api]: getUserById called with ID: SM-00001 
+2025-04-01 15:44:38 DEBUG [smart-farm-api]: Request body: 
+2025-04-01 15:44:38 ERROR [smart-farm-api]: User not found 
+NotFoundError: User not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:123:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-01 15:48:16 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:48:22 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 15:48:27 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 15:48:57 INFO [smart-farm-api]: getUserProfile called for user ID: 67ebcd6189007eaadf5ca73a 
+2025-04-01 15:48:58 ERROR [smart-farm-api]: User not found 
+NotFoundError: User not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:16:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-01 15:49:09 INFO [smart-farm-api]: getUserProfile called for user ID: 67ebcd6189007eaadf5ca73a 
+2025-04-01 15:49:09 ERROR [smart-farm-api]: User not found 
+NotFoundError: User not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:16:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-01 15:49:38 INFO [smart-farm-api]: Request Body: 
+2025-04-01 15:49:38 INFO [smart-farm-api]: Validations: 
+2025-04-01 15:49:38 INFO [smart-farm-api]: Errors: 
+2025-04-01 15:49:38 INFO [smart-farm-api]: Validation passed, calling next() 
+2025-04-01 15:49:38 INFO [smart-farm-api]: getUserById called with ID: SM-00001 
+2025-04-01 15:49:38 DEBUG [smart-farm-api]: Request body: 
+2025-04-01 15:50:32 INFO [smart-farm-api]: getUserProfile called for user ID: 67ebcd6189007eaadf5ca73a 
+2025-04-01 15:50:32 ERROR [smart-farm-api]: User not found 
+NotFoundError: User not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:16:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-01 16:00:10 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 16:00:17 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 16:00:20 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 16:00:44 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 16:00:47 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 16:01:54 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 16:01:58 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 16:02:09 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 16:02:12 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 16:03:17 INFO [smart-farm-api]: Swagger documentation generated 
+2025-04-01 16:03:22 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 16:03:25 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 16:04:16 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 16:04:19 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 16:04:33 INFO [smart-farm-api]: Swagger documentation generated 
+2025-04-01 16:04:37 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-01 16:04:41 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-01 16:05:33 INFO [smart-farm-api]: getUserProfile called for user ID: 67ebcd6189007eaadf5ca73a 

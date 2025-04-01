@@ -1,50 +1,63 @@
-const sendResponse = require("../utils/response");
-const logger = require("../utils/logger");
+// middleware/error.middleware.js
 
+const logger = require("../utils/logger.js");
+const sendResponse = require("../utils/response.js");
 // eslint-disable-next-line no-unused-vars
 const errorHandler = (err, req, res, next) => {
-  let status = 500;
-  let message = "Internal server error";
-  let errors = [];
+    let logMessage = `Error: ${err.message} - Method: ${req.method} - URL: ${req.url} - IP: ${req.ip}`;
+    let errorSource = "Server"; // Default to server-side error
+    let errorType = "Internal"; // Default error type
 
-  // Handle specific error types
-  switch (true) {
-    case err.name === "ValidationError":
-      status = 400;
-      message = "Database validation failed";
-      errors = Object.values(err.errors).map((e) => ({
-        field: e.path,
-        message: e.message,
-      }));
-      break;
+    // Include user ID if authenticated
+    if (req.user && req.user._id) {
+        logMessage += ` - User ID: ${req.user._id}`;
+    }
 
-    case err.code === 11000:
-      status = 409;
-      message = "Database Duplication Error";
-      errors = Object.keys(err.keyValue).map((field) => ({
-        field,
-        message: `${field} already exists`,
-      }));
-      break;
+    let statusCode = err.statusCode || 500;
+    let message = err.message || "Internal Server Error";
+    let details = err.details || undefined;
 
-    case err.message.includes("Incorrect email."):
-      status = 401;
-      message = "Authentication failed.";
-      errors.push({ message: "Incorrect email." });
-      break;
+    // Classify error source based on status code
+    if (statusCode >= 400 && statusCode < 500) {
+        errorSource = "Client";
+    }
 
-    case err.message.includes("Incorrect password."):
-      status = 401;
-      message = "Authentication failed.";
-      errors.push({ message: "Incorrect password." });
-      break;
+    // Handle specific Mongoose errors for better clarity and error type classification
+    if (err.name === "CastError" && err.kind === "ObjectId") {
+        statusCode = 400;
+        message = "Invalid ID format";
+        errorType = "InvalidInput";
+    } else if (err.code === 11000) {
+        statusCode = 409;
+        const field = Object.keys(err.keyValue)[0];
+        message = `Duplicate ${field}`;
+        details = { message: `${field} '${err.keyValue[field]}' already exists` };
+        errorType = "DuplicateEntry";
+        errorSource = "Client"; // Could be client trying to create a duplicate
+    } else if (err.name === "ValidationError") {
+        statusCode = 400;
+        const errors = Object.values(err.errors).map((val) => val.message);
+        message = "Validation error";
+        details = { message: errors.join(". ") };
+        errorType = "Validation";
+        errorSource = "Client";
+    } else if (statusCode === 401) {
+        errorType = "Authentication";
+        errorSource = "Client";
+    } else if (statusCode === 403) {
+        errorType = "Authorization";
+        errorSource = "Client";
+    } else if (statusCode >= 500) {
+        errorType = "InternalServer";
+    }
 
-    default:
-      errors.push({ message: err.message });
-  }
+    // Log the error with the stack trace
+    logger.error(
+      `${logMessage} - Source: ${errorSource} - Type: ${errorType}`,
+      err // Pass the entire error object
+  );
 
-  logger.error(`Error ${status}: ${message}`, { errors });
-  sendResponse(res, status, message, null, { errors });
+    sendResponse(res, statusCode, message, { error: details });
 };
 
 module.exports = errorHandler;

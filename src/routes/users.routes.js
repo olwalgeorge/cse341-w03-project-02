@@ -1,8 +1,6 @@
 const express = require("express");
 const {
- 
   getUserProfile,
- 
   updateUserProfile,
   getUserById,
   deleteUserById,
@@ -16,18 +14,16 @@ const {
 const validate = require("../middlewares/validation.middleware.js");
 const isAuthenticated = require("../middlewares/auth.middleware.js");
 const {
-  
-  userValidationIdRules, 
   userUpdateValidationRules,
-  userValidationUserIdRules,
-  userValidationUserTypeRules,
+  userIDValidationRules,
+  user_IdValidationRules,
+  userTypeValidationRules,
 } = require("../validators/user.validator.js");
 
 const router = express.Router();
 
 /* #swagger.tags = ['Users'] */
 /* #swagger.description = 'User management endpoints' */
-
 
 router.get(
   "/profile",
@@ -56,23 +52,24 @@ router.put(
 );
 
 router.get(
-  "/:user_id",
+  "/:userID",
   isAuthenticated,
-  validate(userValidationUserIdRules()),
+  validate(userIDValidationRules()),
   /* #swagger.tags = ['Users'] */
   /* #swagger.description = 'Endpoint to retrieve a user by ID' */
-  /* #swagger.parameters['user_id'] = { in: 'path', description: 'User ID', required: true, type: 'string' } */
+  /* #swagger.parameters['userID'] = { in: 'path', description: 'User ID', required: true, type: 'string' } */
   /* #swagger.responses[200] = { description: 'User retrieved successfully' } */
   /* #swagger.responses[400] = { description: 'Invalid user ID format' } */
   /* #swagger.responses[401] = { description: 'Not authenticated' } */
   /* #swagger.responses[404] = { description: 'User not found' } */
+  /* #swagger.responses[500] = { description: 'Failed to retrieve user' } */
   getUserById
 );
 
 router.delete(
   "/:_id",
   isAuthenticated,
-  validate(userValidationIdRules()),
+  validate(user_IdValidationRules()),
   /* #swagger.tags = ['Users'] */
   /* #swagger.description = 'Endpoint to delete a user by ID' */
   /* #swagger.parameters['_id'] = { in: 'path', description: 'User ID', required: true, type: 'string' } */
@@ -137,7 +134,7 @@ router.get(
 router.delete(
   "/",
   isAuthenticated,
-  validate(userValidationUserTypeRules()),
+  validate(userTypeValidationRules()),
   /* #swagger.tags = ['Users'] */
   /* #swagger.description = 'Endpoint to delete all users' */
   /* #swagger.responses[200] = { description: 'All users deleted successfully' } */

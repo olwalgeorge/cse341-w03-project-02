@@ -4,13 +4,10 @@ Content-Type: application/json
 
 {
   
-  "fullName": "Stephen Mwangi",
-  "username": "stephen",
-  "email": "stephen@example.com",
-  "password": "Stephen1234!"
-
-  
-
+ "fullName": "Super Admin",
+  "username": "superadmin",
+  "password": "SuperAdmin1234!",
+  "email": "superadmin@example.com" 
 }
 
 ### Login User
@@ -18,8 +15,8 @@ POST http://localhost:3000/auth/login
 Content-Type: application/json
 
 {
-  "email": "stephen@example.com",
-  "password": "Stephen1234!"
+  "password": "SuperAdmin1234!",
+  "email": "superadmin@example.com" 
 }
 
 ### Get User Profile (Requires Authentication)
@@ -29,14 +26,12 @@ Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 ### Update User Profile (Requires Authentication) not working
 PUT http://localhost:3000/users/profile 
 Content-Type: application/json
-Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
-
-{
-  "user_id": "usr_1001",
-    "firstName": "Super",
-    "lastName": "Admin",
-    "username": "superadmin",
-    "email": "superadmin@example.com"
+Authorization: 123456789
+{  
+ "fullName": "Super Admin",
+  "username": "superadmin",
+  "password": "SuperAdmin1234!",
+  "email": "superadmin@example.com" 
 }
 
 ### Logout User (Requires Authentication)
@@ -48,15 +43,15 @@ GET http://localhost:3000/users
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get User By ID (Requires Authentication)
-GET http://localhost:3000/users/usr_1003
+GET http://localhost:3000/users/SM-00001
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Delete User By ID (Requires Authentication)
-DELETE http://localhost:3000/users
+DELETE http://localhost:3000/users/
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get User By Username (Requires Authentication)
-GET http://localhost:3000/users/username/kennedy
+GET http://localhost:3000/users/username/superadmin
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get User By Email (Requires Authentication)
@@ -64,7 +59,7 @@ GET http://localhost:3000/users/email/:email
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get Users By Role (Requires Authentication)
-GET http://localhost:3000/users/role/:role
+GET http://localhost:3000/users/role/ADMIN
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Delete All Users (Requires Authentication)
@@ -72,16 +67,11 @@ DELETE http://localhost:3000/users
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Update User By ID (Requires Authentication)
-PUT http://localhost:3000/users/:user_id
+PUT http://localhost:3000/users/67ebc27fe0ba38154339b429
 Content-Type: application/json
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 {
-  "firstName": "Updated",
-  "lastName": "User",
-  "username": "updated_username",
-  "email": "updated@example.com",
-  "avatar": "updated_avatar.png",
-  "role": "admin"
+ "fullName": "Super Admin"
 }
 

@@ -1,6 +1,6 @@
 const { body } = require("express-validator");
 const User = require("../models/user.model");
-
+const { isValidEmail, isValidUsernameBody, isValidRoleBody } = require("./user.validator");
 
 const userUniquenessValidationRules = () => {
   return [
@@ -32,17 +32,13 @@ const userUniquenessValidationRules = () => {
 const userRequiredValidationRules = () => {
   return [
     body("email", "Email is required").not().isEmpty(),
-    body("email", "Invalid email format").trim().isEmail().normalizeEmail(),
+    isValidEmail("email", "Invalid email format"),
     body("password", "Password is required").not().isEmpty(),
-    body("username", "Username is required").not().isEmpty(),    
-    body(
+    body("username", "Username is required").not().isEmpty(),
+    isValidUsernameBody(
       "username",
       "Username must not start with a number and must contain only alphanumeric characters and underscores, and be between 3 to 20 characters"
-    )
-      .trim()
-      .matches(/^(?!\d)[a-zA-Z0-9_]+$/)
-      .isLength({ min: 3, max: 20 })
-      .escape(),    
+    ),
     body(
       "fullName",
       "Full name must be at least 3 characters and at most 50 characters"
@@ -58,16 +54,13 @@ const userRequiredValidationRules = () => {
       .matches(
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,50}$/
       ),
+    body("role", "Role is required").not().isEmpty(),
+    isValidRoleBody("role", ["SUPERADMIN", "ADMIN", "USER", "ORG"], "Role should be one of SUPERADMIN, ADMIN, USER, ORG"),
   ];
-}
+};
 
 const userGeneralValidationRules = () => {
   return [
-    
-    body("role", "Role should be one of SUPERADMIN, ADMIN, USER, ORG")
-      .trim()
-      .isIn(["SUPERADMIN", "ADMIN", "USER", "ORG"])
-      .escape(),       
     body("facebookId").optional().trim().escape(),
     body("googleId").optional().trim().escape(),
     body("twitterId").optional().trim().escape(),
@@ -80,14 +73,14 @@ const userGeneralValidationRules = () => {
     body("phoneNumber").optional().trim().escape(),
     body("preferences").optional().isObject(),
   ];
-
 };
+
 const userCreateValidationRules = () => {
   return [
     ...userRequiredValidationRules(),
-    ...userUniquenessValidationRules(),    
+    ...userUniquenessValidationRules(),
   ];
-}; 
+};
 
 const userCreateProfileRules = () => {
   return [
@@ -95,9 +88,8 @@ const userCreateProfileRules = () => {
   ]
 }
 
-
 module.exports = {
   userCreateValidationRules,
-  userCreateProfileRules 
-  
+  userCreateProfileRules
+
 };

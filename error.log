@@ -217,3 +217,23 @@ BadRequestError: Invalid user ID format
     at updateUser (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:199:25)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:231:33
+2025-04-02 16:21:22 ERROR [smart-farm-api]: Users not found 
+NotFoundError: Users not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:153:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-02 16:21:38 ERROR [smart-farm-api]: User not found 
+NotFoundError: User not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:132:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-02 16:32:44 ERROR [smart-farm-api]: Users not found 
+NotFoundError: Users not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:153:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-02 16:32:47 ERROR [smart-farm-api]: Users not found 
+NotFoundError: Users not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:153:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-02 16:32:52 ERROR [smart-farm-api]: User not found 
+NotFoundError: User not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:132:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

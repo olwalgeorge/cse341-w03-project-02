@@ -12,8 +12,11 @@ const register = asyncHandler(async (req, res, next) => {
     try {
         const { email, password, username, fullName } = req.body;
 
+        // Normalize the email
+        const normalizedEmail = email.toLowerCase();
+
         // Check if email or username already exists
-        const existingUser = await User.findOne({ $or: [{ email }, { username }] });
+        const existingUser = await User.findOne({ $or: [{ email: normalizedEmail }, { username }] });
         if (existingUser) {
             logger.warn(`Registration failed: Email or username already exists - ${email}, ${username}`);
             return next(createHttpError(409, "Email or username already exists"));
@@ -23,11 +26,12 @@ const register = asyncHandler(async (req, res, next) => {
         const userID = await generateuserID();
 
         const user = new User({
-            email,
+            email: normalizedEmail,
             password,
             username,
             fullName,
             userID,
+           
         });
 
         await user.save();

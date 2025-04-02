@@ -16,9 +16,8 @@ const isSMUserIDBody = (fieldName, errorMessage) => {
 };
 
 // Reusable rule for validating the username format in the body
-const isValidUsername = (fieldName, errorMessage) => {
+const isValidUsernameBody = (fieldName, errorMessage) => {
     return check(fieldName, errorMessage)
-        .optional()
         .trim()
         .matches(/^(?!\d)[a-zA-Z0-9_]+$/)
         .withMessage("Username must not start with a number and can only contain alphanumeric characters and underscores")
@@ -42,6 +41,20 @@ const isValidRole = (fieldName, allowedRoles, errorMessage) => {
     return check(fieldName, errorMessage).optional().trim().toUpperCase().isIn(allowedRoles);
 };
 
+// rule for validating user role
+const isValidRoleBody = (fieldName, allowedRoles, errorMessage) => {
+    return check(fieldName, errorMessage)
+        .trim()
+        .isIn(allowedRoles)
+        .withMessage(errorMessage)
+        .escape();
+};
+
+// rule for validating and normalizing email
+const isValidEmail = (fieldName, errorMessage) => {
+    return check(fieldName, errorMessage).trim().isEmail().normalizeEmail().withMessage(errorMessage);
+};
+
 const user_IdValidationRules = () => {
     return [isMongoIdParam("_id", "Invalid internal User ID format")];
 };
@@ -60,7 +73,7 @@ const userUpdateValidationRules = () => {
         check("email").optional().trim().isEmail().normalizeEmail(),
         isSMUserIDBody("userID", "User ID should be in the format SM-xxxxx (where x are digits)"),
         check("fullName").optional().trim().isLength({ min: 3, max: 50 }),
-        isValidUsername("username", "Invalid username format"),
+        isValidUsernameBody("username", "Invalid username format"),
         isValidPassword("password", "Invalid password format"),
         isValidRole("role", ["SUPERADMIN", "ADMIN", "USER", "ORG"], "Invalid user role"),
         check("profilePicture").optional().trim().isLength({ max: 200 }),
@@ -73,9 +86,37 @@ const userUpdateValidationRules = () => {
     ];
 };
 
+const usernameValidationRules = () => {
+    return [
+        param("username", "Username must be between 3 and 20 characters")
+            .isLength({ min: 3, max: 20 })
+            .trim()
+            .escape(),
+    ];
+};
+
+const emailValidationRules = () => {
+    return [isValidEmail("email", "Invalid email format")];
+};
+
+const roleValidationRules = () => {
+    return [
+        param("role", "Role must be one of SUPERADMIN, ADMIN, USER, ORG")
+            .isIn(["SUPERADMIN", "ADMIN", "USER", "ORG"])
+            .trim()
+            .escape(),
+    ];
+};
+
 module.exports = {
     userUpdateValidationRules,
     userIDValidationRules, 
     user_IdValidationRules,
     userTypeValidationRules,
+    isValidEmail, 
+    isValidUsernameBody,
+    isValidRoleBody,
+    usernameValidationRules,
+    emailValidationRules,
+    roleValidationRules,
 };

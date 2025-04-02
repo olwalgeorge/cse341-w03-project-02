@@ -5,7 +5,7 @@ const localAuthController = require('../controllers/auth.controller.js');
 const { userCreateValidationRules } = require('../validators/auth.validator.js');
 const validate = require('../middlewares/validation.middleware.js');
 const isAuthenticated = require('../middlewares/auth.middleware.js');
-const logger = require('../utils/logger');
+
 
 router.post(
   '/register',

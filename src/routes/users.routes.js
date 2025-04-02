@@ -18,6 +18,9 @@ const {
   userIDValidationRules,
   user_IdValidationRules,
   userTypeValidationRules,
+  usernameValidationRules,
+  emailValidationRules,
+  roleValidationRules,
 } = require("../validators/user.validator.js");
 
 const router = express.Router();
@@ -95,6 +98,7 @@ router.get(
 router.get(
   "/username/:username",
   isAuthenticated,
+  validate(usernameValidationRules()),
   /* #swagger.tags = ['Users'] */
   /* #swagger.description = 'Endpoint to retrieve a user by username' */
   /* #swagger.parameters['username'] = { in: 'path', description: 'Username', required: true, type: 'string' } */
@@ -108,6 +112,7 @@ router.get(
 router.get(
   "/email/:email",
   isAuthenticated,
+  validate(emailValidationRules()),
   /* #swagger.tags = ['Users'] */
   /* #swagger.description = 'Endpoint to retrieve a user by email' */
   /* #swagger.parameters['email'] = { in: 'path', description: 'Email', required: true, type: 'string' } */
@@ -121,6 +126,7 @@ router.get(
 router.get(
   "/role/:role",
   isAuthenticated,
+  validate(roleValidationRules()),
   /* #swagger.tags = ['Users'] */
   /* #swagger.description = 'Endpoint to retrieve users by role' */
   /* #swagger.parameters['role'] = { in: 'path', description: 'Role', required: true, type: 'string' } */

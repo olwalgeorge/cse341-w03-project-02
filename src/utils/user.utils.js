@@ -30,6 +30,26 @@ const transformUser = (user) => {
     };
 };
 
+/**
+ * Transforms user data for updates, filtering valid fields.
+ * @param {Object} data - The data object to transform.
+ * @returns {Object} - The transformed data object.
+ */
+const transformUserData = (data) => {
+    const transformedData = {};
+    if (data.username) transformedData.username = data.username;
+    if (data.email) transformedData.email = data.email;
+    if (data.fullName) transformedData.fullName = data.fullName;
+    if (data.profilePicture) transformedData.profilePicture = data.profilePicture;
+    if (data.bio) transformedData.bio = data.bio;
+    if (data.website) transformedData.website = data.website;
+    if (data.location) transformedData.location = data.location;
+    if (data.phoneNumber) transformedData.phoneNumber = data.phoneNumber;
+    if (data.preferences) transformedData.preferences = data.preferences;
+    if (data.role) transformedData.role = data.role;
+    return transformedData;
+};
+
 const generateuserID = asyncHandler(async () => {
     const prefix = 'SM-';
     const paddedLength = 5;
@@ -60,4 +80,5 @@ const generateuserID = asyncHandler(async () => {
 module.exports = {
     transformUser,
     generateuserID,
+    transformUserData,
 };

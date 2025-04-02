@@ -4,7 +4,7 @@ Content-Type: application/json
 
 {
   "fullName": "Super Admin",
-  "username": "superadmin",
+  "username": "superadm",
   "password": "SuperAdmin1234!",
   "email": "superadmin@example.com"
 }
@@ -56,11 +56,11 @@ GET http://localhost:3000/users/username/superadmin
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get User By Email (Requires Authentication)
-GET http://localhost:3000/users/email/:email
+GET http://localhost:3000/users/email/email validation
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get Users By Role (Requires Authentication)
-GET http://localhost:3000/users/role/SUPERADMIN
+GET http://localhost:3000/users/role/validation
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Delete All Users (Requires Authentication)

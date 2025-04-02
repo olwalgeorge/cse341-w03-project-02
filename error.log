@@ -184,3 +184,19 @@ NotFoundError: Users not found
 NotFoundError: Users not found
     at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:195:25
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-02 15:23:41 ERROR [smart-farm-api]: User not found 
+NotFoundError: User not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:174:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-02 15:25:28 ERROR [smart-farm-api]: Users not found 
+NotFoundError: Users not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:195:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-02 15:25:31 ERROR [smart-farm-api]: Users not found 
+NotFoundError: Users not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:195:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-02 15:26:00 ERROR [smart-farm-api]: User not found 
+NotFoundError: User not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:242:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

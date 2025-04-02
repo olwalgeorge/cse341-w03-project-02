@@ -2826,3 +2826,111 @@ NotFoundError: Users not found
 2025-04-02 15:06:24 INFO [smart-farm-api]: Validations: 
 2025-04-02 15:06:24 INFO [smart-farm-api]: Errors: 
 2025-04-02 15:06:24 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-02 15:06:38 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:06:38 INFO [smart-farm-api]: Request Body: 
+2025-04-02 15:06:38 INFO [smart-farm-api]: Validations: 
+2025-04-02 15:06:38 INFO [smart-farm-api]: Errors: 
+2025-04-02 15:06:38 INFO [smart-farm-api]: Validation passed, calling next() 
+2025-04-02 15:06:38 INFO [smart-farm-api]: updateUserById called with ID: 67ed25d0a40543f31a201661 
+2025-04-02 15:19:50 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-02 15:19:54 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-02 15:22:27 INFO [smart-farm-api]: Request Body: 
+2025-04-02 15:22:27 INFO [smart-farm-api]: Validations: 
+2025-04-02 15:22:29 INFO [smart-farm-api]: Errors: 
+2025-04-02 15:22:29 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-02 15:22:47 INFO [smart-farm-api]: Request Body: 
+2025-04-02 15:22:47 INFO [smart-farm-api]: Validations: 
+2025-04-02 15:22:47 INFO [smart-farm-api]: Errors: 
+2025-04-02 15:22:47 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-02 15:23:18 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:23:18 INFO [smart-farm-api]: getUserByUsername called with username: superadmin 
+2025-04-02 15:23:40 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:23:40 INFO [smart-farm-api]: getUserByEmail called with email: iruti 
+2025-04-02 15:23:41 ERROR [smart-farm-api]: User not found 
+NotFoundError: User not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:174:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-02 15:24:59 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:24:59 INFO [smart-farm-api]: getUsersByRole called with role: SUPERADMIN 
+2025-04-02 15:25:28 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:25:28 INFO [smart-farm-api]: getUsersByRole called with role: superadmin 
+2025-04-02 15:25:28 ERROR [smart-farm-api]: Users not found 
+NotFoundError: Users not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:195:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-02 15:25:30 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:25:30 INFO [smart-farm-api]: getUsersByRole called with role: superadmin 
+2025-04-02 15:25:31 ERROR [smart-farm-api]: Users not found 
+NotFoundError: Users not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:195:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-02 15:26:00 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:26:00 INFO [smart-farm-api]: Request Body: 
+2025-04-02 15:26:00 INFO [smart-farm-api]: Validations: 
+2025-04-02 15:26:00 INFO [smart-farm-api]: Errors: 
+2025-04-02 15:26:00 INFO [smart-farm-api]: Validation passed, calling next() 
+2025-04-02 15:26:00 INFO [smart-farm-api]: updateUserById called with ID: 67ed25d0a40543f31a201623 
+2025-04-02 15:26:00 ERROR [smart-farm-api]: User not found 
+NotFoundError: User not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:242:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-02 15:26:09 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:26:09 INFO [smart-farm-api]: Request Body: 
+2025-04-02 15:26:09 INFO [smart-farm-api]: Validations: 
+2025-04-02 15:26:09 INFO [smart-farm-api]: Errors: 
+2025-04-02 15:26:09 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-02 15:26:21 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:26:21 INFO [smart-farm-api]: Request Body: 
+2025-04-02 15:26:21 INFO [smart-farm-api]: Validations: 
+2025-04-02 15:26:21 INFO [smart-farm-api]: Errors: 
+2025-04-02 15:26:21 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-02 15:26:45 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:26:46 INFO [smart-farm-api]: User logged out successfully. 
+2025-04-02 15:26:49 WARN [smart-farm-api]: User is not authenticated. 
+2025-04-02 15:26:53 WARN [smart-farm-api]: User is not authenticated. 
+2025-04-02 15:26:56 WARN [smart-farm-api]: User is not authenticated. 
+2025-04-02 15:27:04 INFO [smart-farm-api]: Attempting local login for email: superadmin@example.com 
+2025-04-02 15:27:04 INFO [smart-farm-api]: User superadmin logged in successfully using local strategy. 
+2025-04-02 15:27:05 INFO [smart-farm-api]: User superadmin logged in successfully. 
+2025-04-02 15:31:43 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-02 15:31:47 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-02 15:32:47 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-02 15:32:51 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-02 15:33:23 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-02 15:33:26 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-02 15:33:35 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-02 15:33:38 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-02 15:36:50 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-02 15:36:53 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-02 15:39:02 INFO [smart-farm-api]: Attempting local login for email: superadmin@example.com 
+2025-04-02 15:39:02 INFO [smart-farm-api]: User superadmin logged in successfully using local strategy. 
+2025-04-02 15:39:03 INFO [smart-farm-api]: User superadmin logged in successfully. 
+2025-04-02 15:39:13 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:39:13 INFO [smart-farm-api]: Request Body: 
+2025-04-02 15:39:13 INFO [smart-farm-api]: Validations: 
+2025-04-02 15:39:13 INFO [smart-farm-api]: Errors: 
+2025-04-02 15:39:13 INFO [smart-farm-api]: Validation failed, sending response 
+2025-04-02 15:39:16 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:39:16 INFO [smart-farm-api]: getUserProfile called for user ID: 67ed25d0a40543f31a201661 
+2025-04-02 15:39:45 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:39:45 INFO [smart-farm-api]: Request Body: 
+2025-04-02 15:39:45 INFO [smart-farm-api]: Validations: 
+2025-04-02 15:39:45 INFO [smart-farm-api]: Errors: 
+2025-04-02 15:39:45 INFO [smart-farm-api]: Validation passed, calling next() 
+2025-04-02 15:39:45 INFO [smart-farm-api]: updateUserById called with ID: 67ed25d0a40543f31a201661 
+2025-04-02 15:40:10 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-02 15:40:14 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-02 15:41:34 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-02 15:41:38 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-02 15:42:37 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-02 15:42:41 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-02 15:43:03 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:43:03 INFO [smart-farm-api]: Request Body: 
+2025-04-02 15:43:03 INFO [smart-farm-api]: Validations: 
+2025-04-02 15:43:03 INFO [smart-farm-api]: Errors: 
+2025-04-02 15:43:03 INFO [smart-farm-api]: Validation passed, calling next() 
+2025-04-02 15:43:03 INFO [smart-farm-api]: updateUserById called with ID: 67ed25d0a40543f31a201661 
+2025-04-02 15:45:06 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-02 15:45:09 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-02 15:45:39 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-02 15:45:43 INFO [smart-farm-api]: MongoDB Connected... 

@@ -3,7 +3,7 @@ const asyncHandler = require("express-async-handler");
 const logger = require("../utils/logger.js");
 const createHttpError = require("http-errors");
 const userService = require("../services/users.service"); // Import the user service
-const { transformUser } = require("../utils/user.utils.js");
+const { transformUser, transformUserData } = require("../utils/user.utils.js");
 
 // @desc    Get user profile
 // @route   GET /users/profile
@@ -23,48 +23,6 @@ const getUserProfile = asyncHandler(async (req, res, next) => {
             error
         );
         next(createHttpError(500, "Failed to retrieve user profile", { message: error.message }));
-    }
-});
-
-// @desc    Update user profile
-// @route   PUT /users/profile
-// @access  Private
-const updateUserProfile = asyncHandler(async (req, res, next) => {
-    logger.info(`updateUserProfile called for user ID: ${req.user?._id}`);
-    logger.debug("Request body:", req.body);
-
-    try {
-        const updates = {};
-        if (req.body.username) updates.username = req.body.username;
-        if (req.body.email) updates.email = req.body.email;
-        if (req.body.fullName) updates.fullName = req.body.fullName;
-        if (req.body.profilePicture) updates.profilePicture = req.body.profilePicture;
-        if (req.body.bio) updates.bio = req.body.bio;
-        if (req.body.website) updates.website = req.body.website;
-        if (req.body.location) updates.location = req.body.location;
-        if (req.body.phoneNumber) updates.phoneNumber = req.body.phoneNumber;
-        if (req.body.preferences) updates.preferences = req.body.preferences;
-
-        const user = await userService.updateUserProfileService(req.user._id, updates); 
-
-        if (!user) {
-            return next(createHttpError(404, "User not found"));
-        }
-
-        const transformedUser = transformUser(user);
-        sendResponse(res, 200, "User profile updated successfully", transformedUser);
-    } catch (error) {
-        logger.error(`Error updating user profile for ID: ${req.user?._id}`, error);
-        if (error.name === "ValidationError") {
-            const errors = Object.values(error.errors).map((val) => val.message);
-            return next(createHttpError(400, "Validation error", { message: errors.join(". ") }));
-        }
-        if (error.code === 11000) {
-            const field = Object.keys(error.keyValue)[0];
-            const value = error.keyValue[field];
-            return next(createHttpError(409, `Duplicate ${field}`, { message: `${field} '${value}' already exists` }));
-        }
-        next(createHttpError(500, "Failed to update user profile", { message: error.message }));
     }
 });
 
@@ -216,33 +174,18 @@ const deleteAllUsers = asyncHandler(async (req, res, next) => {
     }
 });
 
-// @desc    Update user by ID
-// @route   PUT /users/:_id
-// @access  Private
-const updateUserById = asyncHandler(async (req, res, next) => {
-    logger.info(`updateUserById called with ID: ${req.params._id}`);
+const updateUser = async (userId, updates, next) => {
     try {
-        const updates = {};
-        if (req.body.username) updates.username = req.body.username;
-        if (req.body.email) updates.email = req.body.email;
-        if (req.body.fullName) updates.fullName = req.body.fullName;
-        if (req.body.profilePicture) updates.profilePicture = req.body.profilePicture;
-        if (req.body.bio) updates.bio = req.body.bio;
-        if (req.body.website) updates.website = req.body.website;
-        if (req.body.location) updates.location = req.body.location;
-        if (req.body.phoneNumber) updates.phoneNumber = req.body.phoneNumber;
-        if (req.body.preferences) updates.preferences = req.body.preferences;
-        if (req.body.role) updates.role = req.body.role;
+        const user = await userService.updateUserByIdService(userId, updates);
 
-        const user = await userService.updateUserByIdService(req.params._id, updates); // Use service
-        if (user) {
-            const transformedUser = transformUser(user);
-            sendResponse(res, 200, "User updated successfully", transformedUser);
-        } else {
+        if (!user) {
             return next(createHttpError(404, "User not found"));
         }
+
+        const transformedUser = transformUser(user);
+        return transformedUser;
     } catch (error) {
-        logger.error(`Error updating user with ID: ${req.params._id}`, error);
+        logger.error(`Error updating user with ID: ${userId}`, error);
         if (error.name === "ValidationError") {
             const errors = Object.values(error.errors).map((val) => val.message);
             return next(createHttpError(400, "Validation error", { message: errors.join(". ") }));
@@ -255,7 +198,41 @@ const updateUserById = asyncHandler(async (req, res, next) => {
         if (error.name === "CastError" && error.kind === "ObjectId") {
             return next(createHttpError(400, "Invalid user ID format"));
         }
-        next(createHttpError(500, "Failed to update user", { message: error.message }));
+        return next(createHttpError(500, "Failed to update user", { message: error.message }));
+    }
+};
+
+// @desc    Update user profile
+// @route   PUT /users/profile
+// @access  Private
+const updateUserProfile = asyncHandler(async (req, res, next) => {
+    logger.info(`updateUserProfile called for user ID: ${req.user?._id}`);
+    logger.debug("Request body:", req.body);
+
+    try {
+        const updates = transformUserData(req.body);
+
+        const transformedUser = await updateUser(req.user._id, updates, next);
+        sendResponse(res, 200, "User profile updated successfully", transformedUser);
+    } catch (error) {
+        logger.error(`Error updating user profile for ID: ${req.user?._id}`, error);
+        next(error);
+    }
+});
+
+// @desc    Update user by ID
+// @route   PUT /users/:_id
+// @access  Private
+const updateUserById = asyncHandler(async (req, res, next) => {
+    logger.info(`updateUserById called with ID: ${req.params._id}`);
+    try {
+        const updates = transformUserData(req.body);
+
+        const transformedUser = await updateUser(req.params._id, updates, next);
+        sendResponse(res, 200, "User updated successfully", transformedUser);
+    } catch (error) {
+        logger.error(`Error updating user with ID: ${req.params._id}`, error);
+        next(error);
     }
 });
 

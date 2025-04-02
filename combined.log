@@ -2934,3 +2934,43 @@ NotFoundError: User not found
 2025-04-02 15:45:09 INFO [smart-farm-api]: MongoDB Connected... 
 2025-04-02 15:45:39 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
 2025-04-02 15:45:43 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-02 15:56:05 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-02 15:56:09 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-02 15:56:42 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:56:42 INFO [smart-farm-api]: Request Body: 
+2025-04-02 15:56:42 INFO [smart-farm-api]: Validations: 
+2025-04-02 15:56:42 INFO [smart-farm-api]: Errors: 
+2025-04-02 15:56:42 INFO [smart-farm-api]: Validation passed, calling next() 
+2025-04-02 15:56:42 INFO [smart-farm-api]: updateUserProfile called for user ID: 67ed25d0a40543f31a201661 
+2025-04-02 15:56:42 DEBUG [smart-farm-api]: Request body: 
+2025-04-02 15:56:53 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:56:53 INFO [smart-farm-api]: Request Body: 
+2025-04-02 15:56:53 INFO [smart-farm-api]: Validations: 
+2025-04-02 15:56:53 INFO [smart-farm-api]: Errors: 
+2025-04-02 15:56:53 INFO [smart-farm-api]: Validation passed, calling next() 
+2025-04-02 15:56:53 INFO [smart-farm-api]: updateUserById called with ID: 67ed25d0a40543f31a201661 
+2025-04-02 15:57:12 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:57:12 INFO [smart-farm-api]: Request Body: 
+2025-04-02 15:57:12 INFO [smart-farm-api]: Validations: 
+2025-04-02 15:57:12 INFO [smart-farm-api]: Errors: 
+2025-04-02 15:57:12 INFO [smart-farm-api]: Validation passed, calling next() 
+2025-04-02 15:57:12 INFO [smart-farm-api]: updateUserById called with ID: 67ed25d0a40543f31a20 
+2025-04-02 15:57:12 ERROR [smart-farm-api]: Error updating user with ID: 67ed25d0a40543f31a20 Cast to ObjectId failed for value "67ed25d0a40543f31a20" (type string) at path "_id" for model "User" 
+CastError: Cast to ObjectId failed for value "67ed25d0a40543f31a20" (type string) at path "_id" for model "User"
+    at SchemaObjectId.cast (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\mongoose\lib\schema\objectId.js:251:11)
+    at SchemaType.applySetters (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\mongoose\lib\schemaType.js:1255:12)
+    at SchemaType.castForQuery (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\mongoose\lib\schemaType.js:1673:17)
+    at cast (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\mongoose\lib\cast.js:390:32)
+    at Query.cast (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\mongoose\lib\query.js:4907:12)
+    at Query._castConditions (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\mongoose\lib\query.js:2325:10)
+    at model.Query._findOneAndUpdate (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\mongoose\lib\query.js:3421:8)
+    at model.Query.exec (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\mongoose\lib\query.js:4456:80)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.updateUserByIdService (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\services\users.service.js:44:12)
+2025-04-02 15:57:12 ERROR [smart-farm-api]: Invalid user ID format 
+BadRequestError: Invalid user ID format
+    at updateUser (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:199:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:231:33
+2025-04-02 15:58:04 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-02 15:58:04 INFO [smart-farm-api]: getUserProfile called for user ID: 67ed25d0a40543f31a201661 

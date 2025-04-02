@@ -57,8 +57,6 @@ const userTypeValidationRules = () => {
 
 const userUpdateValidationRules = () => {
     return [
-        
-        isMongoIdParam("_id", "Invalid internal User ID format"),
         check("email").optional().trim().isEmail().normalizeEmail(),
         isSMUserIDBody("userID", "User ID should be in the format SM-xxxxx (where x are digits)"),
         check("fullName").optional().trim().isLength({ min: 3, max: 50 }),

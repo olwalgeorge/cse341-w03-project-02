@@ -95,6 +95,18 @@ const UserSchema = new Schema({
     preferences: {
         type: Object,
     },
+    githubAccessToken: {
+        type: String,
+    },
+    githubRefreshToken: {
+        type: String,
+    },
+    googleAccessToken: {
+        type: String,
+    },
+    googleRefreshToken: {
+        type: String,
+    },
 },  {
     timestamps: true, 
     toJSON: { virtuals: true },

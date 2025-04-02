@@ -1,34 +1,48 @@
 // auth/github.js
 const GitHubStrategy = require("passport-github2").Strategy;
-const { clientID, clientSecret, callbackURL } = require("../config/config");
+const config = require("../config/config");
+const User = require('../models/user.model');
+const logger = require('../utils/logger');
 
 module.exports = new GitHubStrategy(
   {
-    clientID: clientID,
-    clientSecret: clientSecret,
-    callbackURL: callbackURL,
-    scope: ["user:email"], // Request access to the user's email
+    clientID: config.github.clientId,
+    clientSecret: config.github.clientSecret,
+    callbackURL: config.github.callbackUrl,
+    scope: ["user:email"],
   },
   async (accessToken, refreshToken, profile, done) => {
     try {
-      // In a real application, you would check if the user exists in your database
-      // and either create a new user or update the existing one.
-      const user = {
-        id: profile.id,
-        username: profile.username,
-        displayName: profile.displayName,
-        email:
-          profile.emails && profile.emails.length > 0
-            ? profile.emails[0].value
-            : null,
-        profileUrl: profile.profileUrl,
-        accessToken,
-        refreshToken,
-      };
+      let user = await User.findOne({ githubId: profile.id });
 
-      // For demonstration purposes, we'll just pass the user object to the next middleware
+      if (!user) {
+        const email = profile.emails && profile.emails.length > 0 ? profile.emails[0].value : null;
+
+        const emailExists = email ? await User.exists({ email: email }) : false;
+
+        if (emailExists) {
+          logger.warn(`GitHub login failed: Email ${email} already exists.`);
+          return done(null, false, { message: "Email already exists." });
+        }
+
+        user = new User({
+          githubId: profile.id,
+          username: profile.username,
+          email: email,
+          fullName: profile.displayName,
+          isVerified: true,
+        });
+      }
+
+      user.githubAccessToken = accessToken;
+      user.githubRefreshToken = refreshToken;
+
+      await user.save();
+
+      logger.info(`User ${user.username} logged in successfully using GitHub strategy.`);
       return done(null, user);
     } catch (error) {
+      logger.error(`Error during GitHub authentication: ${error.message}`, error);
       return done(error);
     }
   }

@@ -23,170 +23,53 @@
     },
     "/auth/register": {
       "post": {
-        "tags": [
-          "Auth"
-        ],
-        "description": "Endpoint to register a new user",
+        "description": "",
         "parameters": [
           {
             "name": "body",
             "in": "body",
-            "description": "User data to register a new user",
             "schema": {
               "type": "object",
               "properties": {
                 "email": {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "example": "string"
-                    },
-                    "example": {
-                      "type": "string",
-                      "example": "john@example.com"
-                    }
-                  }
+                  "example": "any"
                 },
                 "password": {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "example": "string"
-                    },
-                    "example": {
-                      "type": "string",
-                      "example": "securePassword123"
-                    }
-                  }
+                  "example": "any"
                 },
                 "username": {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "example": "string"
-                    },
-                    "example": {
-                      "type": "string",
-                      "example": "john_doe"
-                    }
-                  }
+                  "example": "any"
                 },
                 "fullName": {
-                  "type": "object",
-                  "properties": {
-                    "type": {
-                      "type": "string",
-                      "example": "string"
-                    },
-                    "example": {
-                      "type": "string",
-                      "example": "John Doe"
-                    }
-                  }
+                  "example": "any"
                 }
               }
             }
           }
         ],
         "responses": {
-          "201": {
-            "description": "Registration successful"
-          },
-          "400": {
-            "description": "Validation error"
-          },
-          "409": {
-            "description": "Email already exists"
+          "default": {
+            "description": ""
           }
         }
       }
     },
     "/auth/login": {
       "post": {
-        "tags": [
-          "Auth"
-        ],
-        "description": "Endpoint to login a user",
-        "responses": {
-          "200": {
-            "description": "Login successful"
-          },
-          "401": {
-            "description": "Authentication failed"
-          }
-        }
-      }
-    },
-    "/auth/github": {
-      "get": {
-        "tags": [
-          "Auth"
-        ],
-        "description": "GitHub authentication endpoint",
+        "description": "",
         "responses": {
           "default": {
             "description": ""
-          }
-        }
-      }
-    },
-    "/auth/github/callback": {
-      "get": {
-        "tags": [
-          "Auth"
-        ],
-        "description": "GitHub authentication callback endpoint",
-        "responses": {
-          "200": {
-            "description": "GitHub login successful"
-          },
-          "401": {
-            "description": "GitHub authentication failed"
-          }
-        }
-      }
-    },
-    "/auth/google": {
-      "get": {
-        "tags": [
-          "Auth"
-        ],
-        "description": "Google authentication endpoint",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/auth/google/callback": {
-      "get": {
-        "tags": [
-          "Auth"
-        ],
-        "description": "Google authentication callback endpoint",
-        "responses": {
-          "200": {
-            "description": "Google login successful"
-          },
-          "401": {
-            "description": "Google authentication failed"
           }
         }
       }
     },
     "/auth/logout": {
       "post": {
-        "tags": [
-          "Auth"
-        ],
-        "description": "Endpoint to logout a user",
+        "description": "",
         "responses": {
-          "200": {
-            "description": "Logged out successfully"
+          "default": {
+            "description": ""
           }
         }
       }

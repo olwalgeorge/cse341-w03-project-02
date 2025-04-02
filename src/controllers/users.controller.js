@@ -1,9 +1,9 @@
-
 const sendResponse = require("../utils/response.js");
 const asyncHandler = require("express-async-handler");
 const logger = require("../utils/logger.js");
 const createHttpError = require("http-errors");
 const userService = require("../services/users.service"); // Import the user service
+const { transformUser } = require("../utils/user.utils.js");
 
 // @desc    Get user profile
 // @route   GET /users/profile
@@ -15,7 +15,8 @@ const getUserProfile = asyncHandler(async (req, res, next) => {
         if (!user) {
             return next(createHttpError(404, "User not found"));
         }
-        sendResponse(res, 200, "User profile retrieved successfully", user);
+        const transformedUser = transformUser(user);
+        sendResponse(res, 200, "User profile retrieved successfully", transformedUser);
     } catch (error) {
         logger.error(
             `Error retrieving user profile for ID: ${req.user?._id}`,
@@ -50,21 +51,8 @@ const updateUserProfile = asyncHandler(async (req, res, next) => {
             return next(createHttpError(404, "User not found"));
         }
 
-        sendResponse(res, 200, "User profile updated successfully", {
-            _id: user._id,
-            userID: user.userID,
-            username: user.username,
-            email: user.email,
-            role: user.role,
-            fullName: user.fullName,
-            profilePicture: user.profilePicture,
-            bio: user.bio,
-            website: user.website,
-            location: user.location,
-            isVerified: user.isVerified,
-            phoneNumber: user.phoneNumber,
-            preferences: user.preferences,
-        });
+        const transformedUser = transformUser(user);
+        sendResponse(res, 200, "User profile updated successfully", transformedUser);
     } catch (error) {
         logger.error(`Error updating user profile for ID: ${req.user?._id}`, error);
         if (error.name === "ValidationError") {
@@ -104,21 +92,8 @@ const getUserById = asyncHandler(async (req, res, next) => {
     try {
         const user = await userService.getUserByUserIdService(req.params.userID); // Use service
         if (user) {
-            sendResponse(res, 200, "User retrieved successfully", {
-                _id: user._id,
-                userID: user.userID,
-                username: user.username,
-                email: user.email,
-                fullName: user.fullName,
-                profilePicture: user.profilePicture,
-                bio: user.bio,
-                website: user.website,
-                location: user.location,
-                isVerified: user.isVerified,
-                role: user.role,
-                phoneNumber: user.phoneNumber,
-                preferences: user.preferences,
-            });
+            const transformedUser = transformUser(user);
+            sendResponse(res, 200, "User retrieved successfully", transformedUser);
         } else {
             return next(createHttpError(404, "User not found"));
         }
@@ -171,21 +146,8 @@ const getUserByUsername = asyncHandler(async (req, res, next) => {
     try {
         const user = await userService.getUserByUsernameService(req.params.username); // Use service
         if (user) {
-            sendResponse(res, 200, "User retrieved successfully", {
-                _id: user._id,
-                userID: user.userID,
-                username: user.username,
-                email: user.email,
-                fullName: user.fullName,
-                profilePicture: user.profilePicture,
-                bio: user.bio,
-                website: user.website,
-                location: user.location,
-                isVerified: user.isVerified,
-                role: user.role,
-                phoneNumber: user.phoneNumber,
-                preferences: user.preferences,
-            });
+            const transformedUser = transformUser(user);
+            sendResponse(res, 200, "User retrieved successfully", transformedUser);
         } else {
             return next(createHttpError(404, "User not found"));
         }
@@ -206,21 +168,8 @@ const getUserByEmail = asyncHandler(async (req, res, next) => {
     try {
         const user = await userService.getUserByEmailService(req.params.email); // Use service
         if (user) {
-            sendResponse(res, 200, "User retrieved successfully", {
-                _id: user._id,
-                userID: user.userID,
-                username: user.username,
-                email: user.email,
-                fullName: user.fullName,
-                profilePicture: user.profilePicture,
-                bio: user.bio,
-                website: user.website,
-                location: user.location,
-                isVerified: user.isVerified,
-                role: user.role,
-                phoneNumber: user.phoneNumber,
-                preferences: user.preferences,
-            });
+            const transformedUser = transformUser(user);
+            sendResponse(res, 200, "User retrieved successfully", transformedUser);
         } else {
             return next(createHttpError(404, "User not found"));
         }
@@ -287,21 +236,8 @@ const updateUserById = asyncHandler(async (req, res, next) => {
 
         const user = await userService.updateUserByIdService(req.params._id, updates); // Use service
         if (user) {
-            sendResponse(res, 200, "User updated successfully", {
-                _id: user._id,
-                userID: user.userID,
-                username: user.username,
-                email: user.email,
-                fullName: user.fullName,
-                profilePicture: user.profilePicture,
-                bio: user.bio,
-                website: user.website,
-                location: user.location,
-                isVerified: user.isVerified,
-                role: user.role,
-                phoneNumber: user.phoneNumber,
-                preferences: user.preferences,
-            });
+            const transformedUser = transformUser(user);
+            sendResponse(res, 200, "User updated successfully", transformedUser);
         } else {
             return next(createHttpError(404, "User not found"));
         }

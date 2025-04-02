@@ -3,12 +3,12 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-  
- "fullName": "Super Admin",
+  "fullName": "Super Admin",
   "username": "superadmin",
   "password": "SuperAdmin1234!",
-  "email": "superadmin@example.com" 
+  "email": "superadmin@example.com"
 }
+
 
 ### Login User
 POST http://localhost:3000/auth/login
@@ -26,9 +26,10 @@ Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 ### Update User Profile (Requires Authentication) not working
 PUT http://localhost:3000/users/profile 
 Content-Type: application/json
-Authorization: 123456789
-{  
- "fullName": "Super Admin",
+Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
+
+{
+  "fullName": "Super Admin",
   "username": "superadmin",
   "password": "SuperAdmin1234!",
   "email": "superadmin@example.com" 
@@ -59,7 +60,7 @@ GET http://localhost:3000/users/email/:email
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get Users By Role (Requires Authentication)
-GET http://localhost:3000/users/role/ADMIN
+GET http://localhost:3000/users/role/SUPERADMIN
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Delete All Users (Requires Authentication)
@@ -67,11 +68,12 @@ DELETE http://localhost:3000/users
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Update User By ID (Requires Authentication)
-PUT http://localhost:3000/users/67ebc27fe0ba38154339b429
+PUT http://localhost:3000/users/67ed25d0a40543f31a201661
 Content-Type: application/json
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 {
- "fullName": "Super Admin"
+ "fullName": "Super Admin",
+ "role": "SUPERADMIN"
 }
 

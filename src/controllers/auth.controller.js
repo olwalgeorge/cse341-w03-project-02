@@ -1,71 +1,28 @@
-// src/controllers/auth.controller.js
+const sendResponse = require("../utils/response.js");
+const asyncHandler = require("express-async-handler");
+const logger = require("../utils/logger.js");
+const createHttpError = require("http-errors");
+const { transformUser, generateuserID } = require("../utils/user.utils.js");
+const User = require("../models/user.model.js");
 
-const User = require('../models/user.model');
-const asyncHandler = require('express-async-handler');
-const createHttpError = require('http-errors');
-const { generateuserID } = require('../utils/idGenerator');
+const register = asyncHandler(async (req, res, next) => {
+    logger.info("Register endpoint called");
+    logger.debug("Request body:", req.body);
 
-module.exports = {
-    // ... other controllers
-    
-    githubSuccess: asyncHandler(async (req, res, next) => {
-        res.status(200).json({
-            message: 'GitHub login successful',
-            user: {
-                id: req.user._id,
-                email: req.user.email,
-                username: req.user.username,
-                githubId: req.user.githubId,
-                userID: req.user.userID,
-                fullName: req.user.fullName,
-                profilePicture: req.user.profilePicture,
-                bio: req.user.bio,
-                website: req.user.website,
-                location: req.user.location,
-                isVerified: req.user.isVerified,
-            },
-        });
-    }),
-
-    googleSuccess: asyncHandler(async (req, res, next) => {
-        res.status(200).json({
-            message: 'Google login successful',
-            user: {
-                id: req.user._id,
-                email: req.user.email,
-                username: req.user.username,
-                googleId: req.user.googleId,
-                userID: req.user.userID,
-                fullName: req.user.fullName,
-                profilePicture: req.user.profilePicture,
-                isVerified: req.user.isVerified,
-            },
-        });
-    }),
-
-    loginSuccess: asyncHandler(async (req, res, next) => {
-        res.status(200).json({
-            message: 'Login successful',
-            user: { id: req.user.id, email: req.user.email, username: req.user.username, userID: req.user.userID, fullName: req.user.fullName },
-        });
-    }),
-
-    register: asyncHandler(async (req, res, next) => {
+    try {
         const { email, password, username, fullName } = req.body;
 
-        if (!email || !password || !username || !fullName) {
-            throw createHttpError(400, 'Please provide all required fields.');
-        }
-
-        const existingUser = await User.findOne({ email });
+        // Check if email or username already exists
+        const existingUser = await User.findOne({ $or: [{ email }, { username }] });
         if (existingUser) {
-            throw createHttpError(409, 'Email already exists.');
+            logger.warn(`Registration failed: Email or username already exists - ${email}, ${username}`);
+            return next(createHttpError(409, "Email or username already exists"));
         }
 
-        // Generate public ID
+        // Generate a unique userID
         const userID = await generateuserID();
 
-        const newUser = new User({
+        const user = new User({
             email,
             password,
             username,
@@ -73,23 +30,39 @@ module.exports = {
             userID,
         });
 
-        await newUser.save();
+        await user.save();
 
-        // log the user in immediately after registration
-        req.login(newUser, (err) => {
-            if (err) {
-                return next(err);
-            }
-            res.status(201).json({
-                message: 'Registration successful',
-                user: { id: newUser.id, email: newUser.email, username: newUser.username, userID: newUser.userID, fullName: newUser.fullName },
-            });
-        });
-    }),
+        logger.info(`User registered successfully: ${username}`);
+        sendResponse(res, 201, "Registration successful");
+    } catch (error) {
+        logger.error("Error during registration:", error);
+        if (error.name === "ValidationError") {
+            const errors = Object.values(error.errors).map((val) => val.message);
+            return next(createHttpError(400, "Validation error", { message: errors.join(". ") }));
+        }
+        next(createHttpError(500, "Failed to register user", { message: error.message }));
+    }
+});
 
-    logout: (req, res) => {
-        req.logout(() => {
-            res.status(200).json({ message: 'Logged out successfully' });
-        });
-    },
+const loginSuccess = (req, res) => {
+    logger.info(`User ${req.user.username} logged in successfully.`);
+    const transformedUser = transformUser(req.user);
+    sendResponse(res, 200, "Login successful", { user: transformedUser });
+};
+
+const logout = (req, res) => {
+    req.logout((err) => {
+        if (err) {
+            logger.error("Error during logout:", err);
+            return next(createHttpError(500, "Internal server error during logout", { message: err.message }));
+        }
+        logger.info(`User logged out successfully.`);
+        sendResponse(res, 200, "Logged out successfully");
+    });
+};
+
+module.exports = {
+    register,
+    loginSuccess,
+    logout,
 };

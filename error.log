@@ -152,3 +152,35 @@ NotFoundError: User not found
 NotFoundError: User not found
     at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:16:25
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-02 13:17:04 ERROR [smart-farm-api]: Error: Unknown authentication strategy "local" - Method: POST - URL: /auth/login - IP: ::ffff:127.0.0.1 - Source: Server - Type: InternalServer Unknown authentication strategy "local" 
+Error: Unknown authentication strategy "local"
+    at attempt (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:193:39)
+    at authenticate (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:379:7)
+    at Layer.handle [as handle_request] (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\express\lib\router\index.js:175:3)
+2025-04-02 14:55:39 ERROR [smart-farm-api]: Error: Unexpected non-whitespace character after JSON at position 136 (line 7 column 1) - Method: POST - URL: /auth/register - IP: ::ffff:127.0.0.1 - Source: Client - Type: Internal Unexpected non-whitespace character after JSON at position 136 (line 7 column 1) 
+SyntaxError: Unexpected non-whitespace character after JSON at position 136 (line 7 column 1)
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\body-parser\lib\types\json.js:92:19)
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\body-parser\lib\read.js:128:18
+    at AsyncResource.runInAsyncScope (node:async_hooks:211:14)
+    at invokeCallback (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\raw-body\index.js:238:16)
+    at done (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\raw-body\index.js:227:7)
+    at IncomingMessage.onEnd (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\raw-body\index.js:287:7)
+    at IncomingMessage.emit (node:events:524:28)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+2025-04-02 15:02:53 ERROR [smart-farm-api]: Users not found 
+NotFoundError: Users not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:195:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-02 15:03:18 ERROR [smart-farm-api]: Users not found 
+NotFoundError: Users not found
+    at C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:195:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

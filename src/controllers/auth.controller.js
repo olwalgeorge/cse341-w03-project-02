@@ -2,41 +2,15 @@ const sendResponse = require("../utils/response.js");
 const asyncHandler = require("express-async-handler");
 const logger = require("../utils/logger.js");
 const createHttpError = require("http-errors");
-const { transformUser, generateuserID } = require("../utils/user.utils.js");
-const User = require("../models/user.model.js");
+const { transformUser } = require("../utils/user.utils.js");
+const authService = require("../services/auth.service.js");
 
 const register = asyncHandler(async (req, res, next) => {
     logger.info("Register endpoint called");
     logger.debug("Request body:", req.body);
 
     try {
-        const { email, password, username, fullName } = req.body;
-
-        // Normalize the email
-        const normalizedEmail = email.toLowerCase();
-
-        // Check if email or username already exists
-        const existingUser = await User.findOne({ $or: [{ email: normalizedEmail }, { username }] });
-        if (existingUser) {
-            logger.warn(`Registration failed: Email or username already exists - ${email}, ${username}`);
-            return next(createHttpError(409, "Email or username already exists"));
-        }
-
-        // Generate a unique userID
-        const userID = await generateuserID();
-
-        const user = new User({
-            email: normalizedEmail,
-            password,
-            username: username.toLowerCase(),
-            fullName,
-            userID,
-           
-        });
-
-        await user.save();
-
-        logger.info(`User registered successfully: ${username}`);
+        await authService.registerUser(req.body);
         sendResponse(res, 201, "Registration successful");
     } catch (error) {
         logger.error("Error during registration:", error);
@@ -58,6 +32,7 @@ const logout = (req, res) => {
     req.logout((err) => {
         if (err) {
             logger.error("Error during logout:", err);
+            // eslint-disable-next-line
             return next(createHttpError(500, "Internal server error during logout", { message: err.message }));
         }
         logger.info(`User logged out successfully.`);

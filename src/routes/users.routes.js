@@ -26,15 +26,21 @@ const {
 const router = express.Router();
 
 /* #swagger.tags = ['Users'] */
-/* #swagger.description = 'User management endpoints' */
+/* #swagger.description = 'User management endpoints for handling user operations' */
 
 router.get(
   "/profile",
   isAuthenticated,
   /* #swagger.tags = ['Users'] */
-  /* #swagger.description = 'Endpoint to retrieve user profile' */
-  /* #swagger.responses[200] = { description: 'User profile retrieved successfully' } */
-  /* #swagger.responses[401] = { description: 'Not authenticated' } */
+  /* #swagger.description = 'Retrieve the profile of the currently authenticated user' */
+  /* #swagger.security = [{ "bearerAuth": [] }] */
+  /* #swagger.responses[200] = {
+        description: 'User profile retrieved successfully',
+        schema: { 
+          $ref: '#/definitions/UserProfile'
+        }
+     }
+  */
   getUserProfile
 );
 
@@ -42,13 +48,37 @@ router.put(
   "/profile",
   isAuthenticated,
   validate(userUpdateValidationRules()),
+  /* #swagger.tags = ['Users'] */
+  /* #swagger.description = 'Update the profile of the currently authenticated user' */
+  /* #swagger.security = [{ "bearerAuth": [] }] */
   /* #swagger.parameters['body'] = {
       in: 'body',
-      description: 'Updated user data',
+      description: 'User data to update',
+      required: true,
       schema: {
-        username: { type: 'string', example: 'new_john_doe' },
-        email: { type: 'string', example: 'new_john@example.com' },
-        fullName: { type: 'string', example: 'New John Doe' }
+        type: 'object',
+        properties: {
+          username: { 
+            type: 'string',
+            example: 'john_doe_2024',
+            description: 'New username (3-20 characters, alphanumeric and underscore)'
+          },
+          email: { 
+            type: 'string',
+            example: 'john.doe@example.com',
+            description: 'New email address'
+          },
+          fullName: { 
+            type: 'string',
+            example: 'John Robert Doe',
+            description: 'Updated full name (3-50 characters)'
+          },
+          bio: {
+            type: 'string',
+            example: 'Software developer with 5 years of experience',
+            description: 'User biography'
+          }
+        }
       }
   } */
   updateUserProfile
@@ -166,4 +196,5 @@ router.put(
 );
 
 module.exports = router;
+
 

@@ -101,7 +101,27 @@ router.get(
   /* #swagger.responses[404] = { description: 'Sensors not found' } */
   /* #swagger.responses[500] = { description: 'Failed to retrieve sensors' } */
   getSensorsByType
-);
+);// router.delete(
+//   "/",
+//   isAuthenticated,
+//   /* #swagger.tags = ['Sensors'] */
+//   /* #swagger.description = 'Endpoint to delete all sensors' */
+//   /* #swagger.responses[200] = { description: 'All sensors deleted successfully' } */
+//   /* #swagger.responses[500] = { description: 'Failed to delete all sensors' } */
+//   deleteAllSensors
+// );
+
+
+// router.delete(
+//   "/",
+//   isAuthenticated,
+//   /* #swagger.tags = ['Sensors'] */
+//   /* #swagger.description = 'Endpoint to delete all sensors' */
+//   /* #swagger.responses[200] = { description: 'All sensors deleted successfully' } */
+//   /* #swagger.responses[500] = { description: 'Failed to delete all sensors' } */
+//   deleteAllSensors
+// );
+
 
 // router.delete(
 //   "/",

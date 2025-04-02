@@ -23,7 +23,10 @@
     },
     "/auth/register": {
       "post": {
-        "description": "",
+        "tags": [
+          "Authentication"
+        ],
+        "description": "Endpoint to register a new user",
         "parameters": [
           {
             "name": "body",
@@ -56,7 +59,10 @@
     },
     "/auth/login": {
       "post": {
-        "description": "",
+        "tags": [
+          "Authentication"
+        ],
+        "description": "Endpoint to login an existing user",
         "responses": {
           "default": {
             "description": ""
@@ -66,7 +72,10 @@
     },
     "/auth/logout": {
       "post": {
-        "description": "",
+        "tags": [
+          "Authentication"
+        ],
+        "description": "Endpoint to logout the current user",
         "responses": {
           "default": {
             "description": ""
@@ -76,7 +85,10 @@
     },
     "/auth/github": {
       "get": {
-        "description": "",
+        "tags": [
+          "Authentication"
+        ],
+        "description": "Endpoint to initiate GitHub authentication",
         "responses": {
           "default": {
             "description": ""
@@ -86,7 +98,10 @@
     },
     "/auth/github/callback": {
       "get": {
-        "description": "",
+        "tags": [
+          "Authentication"
+        ],
+        "description": "Callback endpoint for GitHub authentication",
         "responses": {
           "default": {
             "description": ""
@@ -96,7 +111,10 @@
     },
     "/auth/google": {
       "get": {
-        "description": "",
+        "tags": [
+          "Authentication"
+        ],
+        "description": "Endpoint to initiate Google authentication",
         "responses": {
           "default": {
             "description": ""
@@ -106,7 +124,10 @@
     },
     "/auth/google/callback": {
       "get": {
-        "description": "",
+        "tags": [
+          "Authentication"
+        ],
+        "description": "Callback endpoint for Google authentication",
         "responses": {
           "default": {
             "description": ""
@@ -631,6 +652,104 @@
           },
           "500": {
             "description": "Failed to retrieve sensors"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "schemas": {
+      "RegisterInput": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "example": "user@example.com"
+          },
+          "password": {
+            "type": "string",
+            "example": "P@$$wOrd123"
+          },
+          "username": {
+            "type": "string",
+            "example": "johndoe"
+          },
+          "fullName": {
+            "type": "string",
+            "example": "John Doe"
+          }
+        },
+        "required": [
+          "email",
+          "password",
+          "username",
+          "fullName"
+        ]
+      },
+      "LoginInput": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "example": "user@example.com"
+          },
+          "password": {
+            "type": "string",
+            "example": "P@$$wOrd123"
+          }
+        },
+        "required": [
+          "email",
+          "password"
+        ]
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string",
+            "example": "654321abcdef0123456789"
+          },
+          "userID": {
+            "type": "string",
+            "example": "SM-00001"
+          },
+          "username": {
+            "type": "string",
+            "example": "johndoe"
+          },
+          "email": {
+            "type": "string",
+            "example": "user@example.com"
+          },
+          "fullName": {
+            "type": "string",
+            "example": "John Doe"
+          },
+          "role": {
+            "type": "string",
+            "example": "USER",
+            "enum": [
+              "SUPERADMIN",
+              "ADMIN",
+              "USER",
+              "ORG"
+            ]
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "updatedAt": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       }

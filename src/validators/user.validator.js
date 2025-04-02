@@ -22,7 +22,8 @@ const isValidUsernameBody = (fieldName, errorMessage) => {
         .matches(/^(?!\d)[a-zA-Z0-9_]+$/)
         .withMessage("Username must not start with a number and can only contain alphanumeric characters and underscores")
         .isLength({ min: 3, max: 20 })
-        .escape();
+        .escape()
+        .toLowerCase();
 };
 
 // Reusable rule for validating the password format in the body
@@ -91,7 +92,8 @@ const usernameValidationRules = () => {
         param("username", "Username must be between 3 and 20 characters")
             .isLength({ min: 3, max: 20 })
             .trim()
-            .escape(),
+            .escape()
+            .toLowerCase(),
     ];
 };
 
@@ -102,8 +104,9 @@ const emailValidationRules = () => {
 const roleValidationRules = () => {
     return [
         param("role", "Role must be one of SUPERADMIN, ADMIN, USER, ORG")
-            .isIn(["SUPERADMIN", "ADMIN", "USER", "ORG"])
             .trim()
+            .toUpperCase()
+            .isIn(["SUPERADMIN", "ADMIN", "USER", "ORG"])
             .escape(),
     ];
 };

@@ -3,9 +3,11 @@ const sendResponse = require("../utils/response.js");
 const asyncHandler = require("express-async-handler");
 const logger = require("../utils/logger.js");
 
-// @desc    Get all sensors
-// @route   GET //sensors
-// @access  Private
+/**
+ * @desc    Get all sensors
+ * @route   GET /sensors
+ * @access  Private
+ */
 const getSensors = asyncHandler(async (req, res) => {
   logger.info("getSensors called");
   try {
@@ -19,9 +21,11 @@ const getSensors = asyncHandler(async (req, res) => {
   }
 });
 
-// @desc    Get a sensor by ID
-// @route   GET //sensors/:id
-// @access  Private
+/**
+ * @desc    Get sensor by ID
+ * @route   GET /sensors/:sensor_id
+ * @access  Private
+ */
 const getSensorById = asyncHandler(async (req, res) => {
   logger.info(`getSensorById called with ID ${req.params.sensor_id}`);
   try {
@@ -45,9 +49,11 @@ const getSensorById = asyncHandler(async (req, res) => {
   }
 });
 
-// @desc    Create a new sensor
-// @route   POST //sensors
-// @access  Private
+/**
+ * @desc    Create new sensor
+ * @route   POST /sensors
+ * @access  Private
+ */
 const createSensor = asyncHandler(async (req, res) => {
   logger.info("createSensor called");
 
@@ -75,9 +81,11 @@ const createSensor = asyncHandler(async (req, res) => {
   }
 });
 
-// @desc    Update a sensor
-// @route   PUT //sensors/:id
-// @access  Private
+/**
+ * @desc    Update a sensor
+ * @route   PUT /sensors/:id
+ * @access  Private
+ */
 const updateSensor = asyncHandler(async (req, res) => {
   logger.info(`updateSensor called with ID ${req.params._id}`);
 
@@ -108,9 +116,11 @@ const updateSensor = asyncHandler(async (req, res) => {
   }
 });
 
-// @desc    Delete a sensor
-// @route   DELETE //sensors/:id
-// @access  Private
+/**
+ * @desc    Delete a sensor
+ * @route   DELETE /sensors/:id
+ * @access  Private
+ */
 const deleteSensor = asyncHandler(async (req, res) => {
   logger.info(`deleteSensor called with ID ${req.params.id}`);
   try {
@@ -131,9 +141,11 @@ const deleteSensor = asyncHandler(async (req, res) => {
   }
 });
 
-// @desc    Delete all sensors
-// @route   DELETE //sensors
-// @access  Private
+/**
+ * @desc    Delete all sensors
+ * @route   DELETE /sensors
+ * @access  Private
+ */
 const deleteAllSensors = asyncHandler(async (req, res) => {
   logger.info("deleteAllSensors called");
   try {
@@ -151,9 +163,11 @@ const deleteAllSensors = asyncHandler(async (req, res) => {
   }
 });
 
-// @desc    Get sensors by type
-// @route   GET //sensors/type/:sensor_type
-// @access  Private
+/**
+ * @desc    Get sensors by type
+ * @route   GET /sensors/type/:sensor_type
+ * @access  Private
+ */
 const getSensorsByType = asyncHandler(async (req, res) => {
   const { sensor_type } = req.params;
   logger.info(`getSensorsByType called with type ${sensor_type}`);

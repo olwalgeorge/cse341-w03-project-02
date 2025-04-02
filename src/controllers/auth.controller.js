@@ -5,6 +5,11 @@ const createHttpError = require("http-errors");
 const { transformUser } = require("../utils/user.utils.js");
 const authService = require("../services/auth.service.js");
 
+/**
+ * @desc    Register new user
+ * @route   POST /auth/register
+ * @access  Public
+ */
 const register = asyncHandler(async (req, res, next) => {
     logger.info("Register endpoint called");
     logger.debug("Request body:", req.body);
@@ -22,12 +27,22 @@ const register = asyncHandler(async (req, res, next) => {
     }
 });
 
+/**
+ * @desc    Login user
+ * @route   POST /auth/login
+ * @access  Public
+ */
 const loginSuccess = (req, res) => {
     logger.info(`User ${req.user.username} logged in successfully.`);
     const transformedUser = transformUser(req.user);
     sendResponse(res, 200, "Login successful", { user: transformedUser });
 };
 
+/**
+ * @desc    Logout user
+ * @route   POST /auth/logout
+ * @access  Private
+ */
 const logout = (req, res) => {
     req.logout((err) => {
         if (err) {

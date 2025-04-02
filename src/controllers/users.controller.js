@@ -6,52 +6,10 @@ const userService = require("../services/users.service"); // Import the user ser
 const { transformUser, transformUserData } = require("../utils/user.utils.js");
 
 /**
- * @swagger
- * /users/profile:
- *   get:
- *     summary: Get current user profile
- *     tags: [Users]
- *     security:
- *       - bearerAuth: []
- *     description: Retrieves the profile of the currently authenticated user
- *     responses:
- *       200:
- *         description: User profile retrieved successfully
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 success:
- *                   type: boolean
- *                   example: true
- *                 message:
- *                   type: string
- *                   example: User profile retrieved successfully
- *                 data:
- *                   $ref: '#/components/schemas/UserProfile'
- *             example:
- *               success: true
- *               message: User profile retrieved successfully
- *               data:
- *                 _id: "507f1f77bcf86cd799439011"
- *                 userID: "SM-00001"
- *                 username: "john_doe"
- *                 email: "john.doe@example.com"
- *                 fullName: "John Doe"
- *                 role: "USER"
- *                 isVerified: true
- *                 createdAt: "2024-01-20T12:00:00Z"
- *       401:
- *         description: Not authenticated
- *       404:
- *         description: User not found
- *       500:
- *         description: Server error
+ * @desc    Get current user profile
+ * @route   GET /users/profile
+ * @access  Private
  */
-// @desc    Get user profile
-// @route   GET /users/profile
-// @access  Private
 const getUserProfile = asyncHandler(async (req, res, next) => {
     logger.info(`getUserProfile called for user ID: ${req.user?._id}`);
     try {
@@ -71,65 +29,10 @@ const getUserProfile = asyncHandler(async (req, res, next) => {
 });
 
 /**
- * @swagger
- * /users/profile:
- *   put:
- *     summary: Update current user profile
- *     tags: [Users]
- *     security:
- *       - bearerAuth: []
- *     description: Update the profile of the currently authenticated user
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             properties:
- *               username:
- *                 type: string
- *                 example: "john_doe_2024"
- *                 description: New username (3-20 characters)
- *               email:
- *                 type: string
- *                 example: "john.doe@example.com"
- *                 description: New email address
- *               fullName:
- *                 type: string
- *                 example: "John Robert Doe"
- *                 description: Updated full name
- *               bio:
- *                 type: string
- *                 example: "Software developer with 5 years of experience"
- *                 description: User biography
- *     responses:
- *       200:
- *         description: Profile updated successfully
- *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 success:
- *                   type: boolean
- *                   example: true
- *                 message:
- *                   type: string
- *                   example: User profile updated successfully
- *                 data:
- *                   $ref: '#/components/schemas/UserProfile'
- *       400:
- *         description: Validation error
- *       401:
- *         description: Not authenticated
- *       404:
- *         description: User not found
- *       500:
- *         description: Server error
+ * @desc    Update user profile
+ * @route   PUT /users/profile
+ * @access  Private
  */
-// @desc    Update user profile
-// @route   PUT /users/profile
-// @access  Private
 const updateUserProfile = asyncHandler(async (req, res, next) => {
     logger.info(`updateUserProfile called for user ID: ${req.user?._id}`);
     logger.debug("Request body:", req.body);
@@ -160,9 +63,11 @@ const logoutUser = asyncHandler(async (req, res, next) => {
     });
 });
 
-// @desc    Get user by ID
-// @route   GET /users/:userID
-// @access  Private
+/**
+ * @desc    Get user by ID
+ * @route   GET /users/:userID
+ * @access  Private
+ */
 const getUserById = asyncHandler(async (req, res, next) => {
     logger.info(`getUserById called with ID: ${req.params.userID}`);
     logger.debug("Request body:", req.params.userID);

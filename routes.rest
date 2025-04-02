@@ -30,7 +30,7 @@ Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 {
   "fullName": "Super Admin",
-  "username": "superadmin",
+  
   "password": "SuperAdmin1234!",
   "email": "superadmin@example.com" 
 }
@@ -48,19 +48,19 @@ GET http://localhost:3000/users/SM-00001
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Delete User By ID (Requires Authentication)
-DELETE http://localhost:3000/users/
+DELETE http://localhost:3000/users/67ed48c7bc4cde6b1c5e7add
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get User By Username (Requires Authentication)
-GET http://localhost:3000/users/username/superadmin
+GET http://localhost:3000/users/username/
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get User By Email (Requires Authentication)
-GET http://localhost:3000/users/email/email validation
+GET http://localhost:3000/users/email/superadmin@example.com
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get Users By Role (Requires Authentication)
-GET http://localhost:3000/users/role/admin3
+GET http://localhost:3000/users/role/ADMIN
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Delete All Users (Requires Authentication)
@@ -68,7 +68,7 @@ DELETE http://localhost:3000/users
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Update User By ID (Requires Authentication)
-PUT http://localhost:3000/users/
+PUT http://localhost:3000/users/67ed48c7b
 Content-Type: application/json
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
@@ -76,4 +76,43 @@ Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
  "fullName": "Super Admin",
  "role": "SUPERADMIN"
 }
+
+### Get All Sensors (Requires Authentication)
+GET http://localhost:3000/sensors
+Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
+
+### Get Sensor By ID (Requires Authentication)
+GET http://localhost:3000/sensors/sen_5678
+Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
+
+### Create New Sensor (Requires Authentication)
+POST http://localhost:3000/sensors
+Content-Type: application/json
+Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
+
+{
+  "sensor_id": "sen_5678",
+  "sensor_name": "New Sensor",
+  "sensor_type": "temperature",
+  "unit": "°C",
+  "location": "Living Room"
+}
+
+### Update Sensor By ID (Requires Authentication)
+PUT http://localhost:3000/sensors/6585495b4c49a06249c9c64f
+Content-Type: application/json
+Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
+
+{
+  "sensor_name": "Updated Sensor Name",
+  "location": "Kitchen"
+}
+
+### Delete Sensor By ID (Requires Authentication)
+DELETE http://localhost:3000/sensors/6585495b4c49a06249c9c64f
+Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
+
+### Get Sensors By Type (Requires Authentication)
+GET http://localhost:3000/sensors/type/temperature
+Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 

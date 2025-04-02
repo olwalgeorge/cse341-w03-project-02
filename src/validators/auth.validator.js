@@ -54,7 +54,7 @@ const userRequiredValidationRules = () => {
       .matches(
         /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,50}$/
       ),
-    body("role", "Role is required").not().isEmpty(),
+    body("role").optional(),
     isValidRoleBody("role", ["SUPERADMIN", "ADMIN", "USER", "ORG"], "Role should be one of SUPERADMIN, ADMIN, USER, ORG"),
   ];
 };

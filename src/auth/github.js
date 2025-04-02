@@ -27,7 +27,7 @@ module.exports = new GitHubStrategy(
 
         user = new User({
           githubId: profile.id,
-          username: profile.username,
+          username: profile.username.toLowerCase(),
           email: email,
           fullName: profile.displayName,
           isVerified: true,

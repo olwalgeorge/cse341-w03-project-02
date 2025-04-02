@@ -28,7 +28,7 @@ const register = asyncHandler(async (req, res, next) => {
         const user = new User({
             email: normalizedEmail,
             password,
-            username,
+            username: username.toLowerCase(),
             fullName,
             userID,
            

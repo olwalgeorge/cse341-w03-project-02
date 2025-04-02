@@ -29,7 +29,7 @@ module.exports = new GoogleStrategy(
 
                 user = new User({
                     googleId: profile.id,
-                    username: profile.displayName,
+                    username: profile.displayName.toLowerCase(),
                     email: email,
                     fullName: profile.displayName,
                     isVerified: true, 

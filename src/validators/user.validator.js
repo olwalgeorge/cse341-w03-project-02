@@ -45,9 +45,15 @@ const isValidRole = (fieldName, allowedRoles, errorMessage) => {
 // rule for validating user role
 const isValidRoleBody = (fieldName, allowedRoles, errorMessage) => {
     return check(fieldName, errorMessage)
-        .trim()
-        .isIn(allowedRoles)
+        .optional()
+        .custom((value) => {
+            if (!value) {
+                return true; // Skip validation if value is undefined or empty
+            }
+            return allowedRoles.includes(value.toUpperCase());
+        })
         .withMessage(errorMessage)
+        .trim()
         .escape();
 };
 
@@ -74,7 +80,7 @@ const userUpdateValidationRules = () => {
         check("email").optional().trim().isEmail().normalizeEmail(),
         isSMUserIDBody("userID", "User ID should be in the format SM-xxxxx (where x are digits)"),
         check("fullName").optional().trim().isLength({ min: 3, max: 50 }),
-        isValidUsernameBody("username", "Invalid username format"),
+        isValidUsernameBody("username", "Invalid username format").optional(),
         isValidPassword("password", "Invalid password format"),
         isValidRole("role", ["SUPERADMIN", "ADMIN", "USER", "ORG"], "Invalid user role"),
         check("profilePicture").optional().trim().isLength({ max: 200 }),

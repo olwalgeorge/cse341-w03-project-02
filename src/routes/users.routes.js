@@ -67,6 +67,10 @@ router.get(
        description: 'Not authenticated',
        schema: { success: false, message: 'Not authenticated' }
      }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: { success: false, message: 'Failed to retrieve user profile' }
+     }
   */
   getUserProfile
 );
@@ -119,6 +123,35 @@ router.put(
          }
        }
      }
+     #swagger.responses[200] = {
+       description: 'User profile updated successfully',
+       schema: {
+         success: true,
+         message: 'User profile updated successfully',
+         data: {
+           _id: { type: 'string', example: '507f1f77bcf86cd799439011' },
+           userID: { type: 'string', example: 'SM-00001' },
+           username: { type: 'string', example: 'john_doe_2024' },
+           email: { type: 'string', example: 'john.doe@example.com' },
+           fullName: { type: 'string', example: 'John Robert Doe' },
+           bio: { type: 'string', example: 'Software developer with 5 years of experience in IoT' },
+           website: { type: 'string', example: 'https://johndoe.com' },
+           location: { type: 'string', example: 'New York, USA' }
+         }
+       }
+     }
+     #swagger.responses[400] = {
+       description: 'Validation error',
+       schema: { success: false, message: 'Validation error' }
+     }
+     #swagger.responses[401] = {
+       description: 'Not authenticated',
+       schema: { success: false, message: 'Not authenticated' }
+     }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: { success: false, message: 'Failed to update user profile' }
+     }
   */
   updateUserProfile
 );
@@ -137,6 +170,34 @@ router.get(
        required: true,
        type: 'string',
        example: 'SM-00001'
+     }
+     #swagger.responses[200] = {
+       description: 'User retrieved successfully',
+       schema: {
+         success: true,
+         message: 'User retrieved successfully',
+         data: {
+           _id: { type: 'string', example: '507f1f77bcf86cd799439011' },
+           userID: { type: 'string', example: 'SM-00001' },
+           username: { type: 'string', example: 'john_doe' },
+           email: { type: 'string', example: 'john.doe@example.com' },
+           fullName: { type: 'string', example: 'John Doe' },
+           role: { type: 'string', example: 'USER' },
+           isVerified: { type: 'boolean', example: true }
+         }
+       }
+     }
+     #swagger.responses[401] = {
+       description: 'Not authenticated',
+       schema: { success: false, message: 'Not authenticated' }
+     }
+     #swagger.responses[404] = {
+       description: 'User not found',
+       schema: { success: false, message: 'User not found' }
+     }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: { success: false, message: 'Failed to retrieve user' }
      }
   */
   getUserById
@@ -163,6 +224,22 @@ router.delete(
          success: true,
          message: 'User deleted successfully'
        }
+     }
+     #swagger.responses[401] = {
+       description: 'Not authenticated',
+       schema: { success: false, message: 'Not authenticated' }
+     }
+     #swagger.responses[404] = {
+       description: 'User not found',
+       schema: { success: false, message: 'User not found' }
+     }
+     #swagger.responses[400] = {
+       description: 'Invalid user ID format',
+       schema: { success: false, message: 'Invalid user ID format' }
+     }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: { success: false, message: 'Failed to delete user' }
      }
   */
   deleteUserById
@@ -191,6 +268,14 @@ router.get(
          }]
        }
      }
+     #swagger.responses[401] = {
+       description: 'Not authenticated',
+       schema: { success: false, message: 'Not authenticated' }
+     }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: { success: false, message: 'Failed to retrieve users' }
+     }
   */
   getAllUsers
 );
@@ -216,6 +301,7 @@ router.get(
          success: true,
          message: 'User retrieved successfully',
          data: {
+           _id: { type: 'string', example: '507f1f77bcf86cd799439011' },
            userID: 'SM-00001',
            username: 'john_doe',
            email: 'john@example.com',
@@ -223,6 +309,18 @@ router.get(
            role: 'USER'
          }
        }
+     }
+     #swagger.responses[401] = {
+       description: 'Not authenticated',
+       schema: { success: false, message: 'Not authenticated' }
+     }
+     #swagger.responses[404] = {
+       description: 'User not found',
+       schema: { success: false, message: 'User not found' }
+     }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: { success: false, message: 'Failed to retrieve user' }
      }
   */
   getUserByUsername
@@ -249,12 +347,25 @@ router.get(
          success: true,
          message: 'User retrieved successfully',
          data: {
+           _id: { type: 'string', example: '507f1f77bcf86cd799439011' },
            userID: 'SM-00001',
            username: 'john_doe',
            email: 'john@example.com',
            fullName: 'John Doe'
          }
        }
+     }
+     #swagger.responses[401] = {
+       description: 'Not authenticated',
+       schema: { success: false, message: 'Not authenticated' }
+     }
+     #swagger.responses[404] = {
+       description: 'User not found',
+       schema: { success: false, message: 'User not found' }
+     }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: { success: false, message: 'Failed to retrieve user' }
      }
   */
   getUserByEmail
@@ -281,6 +392,7 @@ router.get(
          success: true,
          message: 'Users retrieved successfully',
          data: [{
+           _id: { type: 'string', example: '507f1f77bcf86cd799439011' },
            userID: 'SM-00001',
            username: 'john_doe',
            email: 'john@example.com',
@@ -288,6 +400,18 @@ router.get(
            role: 'USER'
          }]
        }
+     }
+     #swagger.responses[401] = {
+       description: 'Not authenticated',
+       schema: { success: false, message: 'Not authenticated' }
+     }
+     #swagger.responses[404] = {
+       description: 'Users not found',
+       schema: { success: false, message: 'Users not found' }
+     }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: { success: false, message: 'Failed to retrieve users' }
      }
   */
   getUsersByRole
@@ -310,6 +434,14 @@ router.delete(
            deletedCount: 10
          }
        }
+     }
+     #swagger.responses[401] = {
+       description: 'Not authenticated',
+       schema: { success: false, message: 'Not authenticated' }
+     }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: { success: false, message: 'Failed to delete all users' }
      }
   */
   deleteAllUsers
@@ -350,6 +482,7 @@ router.put(
          success: true,
          message: 'User updated successfully',
          data: {
+           _id: { type: 'string', example: '507f1f77bcf86cd799439011' },
            userID: 'SM-00001',
            username: 'john_doe_updated',
            email: 'john.updated@example.com',
@@ -357,6 +490,22 @@ router.put(
            role: 'USER'
          }
        }
+     }
+     #swagger.responses[400] = {
+       description: 'Validation error',
+       schema: { success: false, message: 'Validation error' }
+     }
+     #swagger.responses[401] = {
+       description: 'Not authenticated',
+       schema: { success: false, message: 'Not authenticated' }
+     }
+     #swagger.responses[404] = {
+       description: 'User not found',
+       schema: { success: false, message: 'User not found' }
+     }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: { success: false, message: 'Failed to update user' }
      }
   */
   updateUserById

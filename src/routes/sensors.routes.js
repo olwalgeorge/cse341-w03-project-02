@@ -48,6 +48,14 @@ router.get(
          }]
        }
      }
+     #swagger.responses[401] = {
+       description: 'Not authenticated',
+       schema: { success: false, message: 'Not authenticated' }
+     }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: { success: false, message: 'Failed to retrieve sensors' }
+     }
   */
   getSensors
 );
@@ -80,6 +88,22 @@ router.get(
            location: 'Greenhouse Zone A'
          }
        }
+     }
+     #swagger.responses[401] = {
+       description: 'Not authenticated',
+       schema: { success: false, message: 'Not authenticated' }
+     }
+     #swagger.responses[404] = {
+       description: 'Sensor not found',
+       schema: { success: false, message: 'Sensor not found' }
+     }
+     #swagger.responses[400] = {
+       description: 'Invalid sensor ID format',
+       schema: { success: false, message: 'Invalid sensor ID format' }
+     }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: { success: false, message: 'Failed to retrieve sensor' }
      }
   */
   getSensorById
@@ -125,6 +149,36 @@ router.post(
          }
        }
      }
+     #swagger.responses[201] = {
+       description: 'Sensor created successfully',
+       schema: {
+         success: true,
+         message: 'Sensor created successfully',
+         data: {
+           sensor_id: 'sen_0001',
+           sensor_name: 'Greenhouse Temperature',
+           sensor_type: 'temperature',
+           unit: '°C',
+           location: 'Greenhouse Zone A'
+         }
+       }
+     }
+     #swagger.responses[400] = {
+       description: 'Validation error',
+       schema: { success: false, message: 'Validation error' }
+     }
+     #swagger.responses[401] = {
+       description: 'Not authenticated',
+       schema: { success: false, message: 'Not authenticated' }
+     }
+     #swagger.responses[409] = {
+       description: 'Duplicate sensor ID',
+       schema: { success: false, message: 'Duplicate sensor ID' }
+     }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: { success: false, message: 'Failed to create sensor' }
+     }
   */
   createSensor
 );
@@ -166,6 +220,41 @@ router.put(
          }
        }
      }
+     #swagger.responses[200] = {
+       description: 'Sensor updated successfully',
+       schema: {
+         success: true,
+         message: 'Sensor updated successfully',
+         data: {
+           _id: { type: 'string', example: '507f1f77bcf86cd799439011' },
+           sensor_id: 'sen_0001',
+           sensor_name: 'Updated Temperature Sensor',
+           sensor_type: 'temperature',
+           unit: '°F',
+           location: 'Greenhouse Zone B'
+         }
+       }
+     }
+     #swagger.responses[400] = {
+       description: 'Validation error',
+       schema: { success: false, message: 'Validation error' }
+     }
+     #swagger.responses[401] = {
+       description: 'Not authenticated',
+       schema: { success: false, message: 'Not authenticated' }
+     }
+     #swagger.responses[404] = {
+       description: 'Sensor not found',
+       schema: { success: false, message: 'Sensor not found' }
+     }
+     #swagger.responses[409] = {
+       description: 'Duplicate sensor ID',
+       schema: { success: false, message: 'Duplicate sensor ID' }
+     }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: { success: false, message: 'Failed to update sensor' }
+     }
   */
   updateSensor
 );
@@ -191,6 +280,22 @@ router.delete(
          success: true,
          message: 'Sensor deleted successfully'
        }
+     }
+     #swagger.responses[401] = {
+       description: 'Not authenticated',
+       schema: { success: false, message: 'Not authenticated' }
+     }
+     #swagger.responses[404] = {
+       description: 'Sensor not found',
+       schema: { success: false, message: 'Sensor not found' }
+     }
+     #swagger.responses[400] = {
+       description: 'Invalid sensor ID format',
+       schema: { success: false, message: 'Invalid sensor ID format' }
+     }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: { success: false, message: 'Failed to delete sensor' }
      }
   */
   deleteSensor
@@ -224,6 +329,18 @@ router.get(
            location: 'Greenhouse Zone A'
          }]
        }
+     }
+     #swagger.responses[401] = {
+       description: 'Not authenticated',
+       schema: { success: false, message: 'Not authenticated' }
+     }
+     #swagger.responses[404] = {
+       description: 'No sensors found with type ${sensor_type}',
+       schema: { success: false, message: 'No sensors found with type ${sensor_type}' }
+     }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: { success: false, message: 'Error retrieving sensors' }
      }
   */
   getSensorsByType

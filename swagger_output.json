@@ -2,25 +2,11 @@
   "swagger": "2.0",
   "info": {
     "title": "Smart Farm API",
-    "description": "API for a smart farm application",
+    "description": "API documentation for the Smart Farm project",
     "version": "1.0.0"
   },
   "host": "localhost:3000",
   "basePath": "/",
-  "tags": [
-    {
-      "name": "Users",
-      "description": "Endpoints related to user management"
-    },
-    {
-      "name": "Sensors",
-      "description": "Endpoints related to sensor management"
-    },
-    {
-      "name": "Authentication",
-      "description": "Endpoints related to user authentication"
-    }
-  ],
   "schemes": [
     "http"
   ],
@@ -587,273 +573,18 @@
         }
       }
     },
-    "/users/profile": {
-      "get": {
+    "/users/register": {
+      "post": {
         "tags": [
-          "Users"
+          "Authentication"
         ],
-        "summary": "Get current user profile",
-        "description": "Retrieves the complete profile of the currently authenticated user",
-        "responses": {
-          "200": {
-            "description": "User profile retrieved successfully",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "object"
-                },
-                "properties": {
-                  "type": "object",
-                  "properties": {
-                    "success": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "boolean"
-                        },
-                        "example": {
-                          "type": "boolean",
-                          "example": true
-                        }
-                      }
-                    },
-                    "message": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "User profile retrieved successfully"
-                        }
-                      }
-                    },
-                    "data": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "object"
-                        },
-                        "properties": {
-                          "type": "object",
-                          "properties": {
-                            "_id": {
-                              "type": "object",
-                              "properties": {
-                                "type": {
-                                  "type": "string",
-                                  "example": "string"
-                                },
-                                "example": {
-                                  "type": "string",
-                                  "example": "507f1f77bcf86cd799439011"
-                                }
-                              }
-                            },
-                            "userID": {
-                              "type": "object",
-                              "properties": {
-                                "type": {
-                                  "type": "string",
-                                  "example": "string"
-                                },
-                                "example": {
-                                  "type": "string",
-                                  "example": "SM-00001"
-                                }
-                              }
-                            },
-                            "username": {
-                              "type": "object",
-                              "properties": {
-                                "type": {
-                                  "type": "string",
-                                  "example": "string"
-                                },
-                                "example": {
-                                  "type": "string",
-                                  "example": "john_doe"
-                                }
-                              }
-                            },
-                            "email": {
-                              "type": "object",
-                              "properties": {
-                                "type": {
-                                  "type": "string",
-                                  "example": "string"
-                                },
-                                "example": {
-                                  "type": "string",
-                                  "example": "john.doe@example.com"
-                                }
-                              }
-                            },
-                            "fullName": {
-                              "type": "object",
-                              "properties": {
-                                "type": {
-                                  "type": "string",
-                                  "example": "string"
-                                },
-                                "example": {
-                                  "type": "string",
-                                  "example": "John Doe"
-                                }
-                              }
-                            },
-                            "role": {
-                              "type": "object",
-                              "properties": {
-                                "type": {
-                                  "type": "string",
-                                  "example": "string"
-                                },
-                                "example": {
-                                  "type": "string",
-                                  "example": "USER"
-                                }
-                              }
-                            },
-                            "isVerified": {
-                              "type": "object",
-                              "properties": {
-                                "type": {
-                                  "type": "string",
-                                  "example": "boolean"
-                                },
-                                "example": {
-                                  "type": "boolean",
-                                  "example": true
-                                }
-                              }
-                            },
-                            "bio": {
-                              "type": "object",
-                              "properties": {
-                                "type": {
-                                  "type": "string",
-                                  "example": "string"
-                                },
-                                "example": {
-                                  "type": "string",
-                                  "example": "Software developer passionate about IoT"
-                                }
-                              }
-                            },
-                            "location": {
-                              "type": "object",
-                              "properties": {
-                                "type": {
-                                  "type": "string",
-                                  "example": "string"
-                                },
-                                "example": {
-                                  "type": "string",
-                                  "example": "New York, USA"
-                                }
-                              }
-                            },
-                            "website": {
-                              "type": "object",
-                              "properties": {
-                                "type": {
-                                  "type": "string",
-                                  "example": "string"
-                                },
-                                "example": {
-                                  "type": "string",
-                                  "example": "https://johndoe.com"
-                                }
-                              }
-                            },
-                            "createdAt": {
-                              "type": "object",
-                              "properties": {
-                                "type": {
-                                  "type": "string",
-                                  "example": "string"
-                                },
-                                "example": {
-                                  "type": "string",
-                                  "example": "2024-01-20T12:00:00Z"
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "401": {
-            "description": "Not authenticated",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Not authenticated"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to retrieve user profile"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      },
-      "put": {
-        "tags": [
-          "Users"
-        ],
-        "summary": "Update current user profile",
-        "description": "Update the profile information of the currently authenticated user",
+        "summary": "Register new user",
+        "description": "Creates a new user account with email and password",
         "parameters": [
           {
             "name": "body",
             "in": "body",
-            "description": "User profile data to update",
+            "description": "User registration data",
             "required": true,
             "schema": {
               "type": "object",
@@ -862,26 +593,21 @@
                   "type": "string",
                   "example": "object"
                 },
+                "required": {
+                  "type": "array",
+                  "example": [
+                    "email",
+                    "password",
+                    "username",
+                    "fullName"
+                  ],
+                  "items": {
+                    "type": "string"
+                  }
+                },
                 "properties": {
                   "type": "object",
                   "properties": {
-                    "username": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "john_doe_2024"
-                        },
-                        "description": {
-                          "type": "string",
-                          "example": "New username (3-20 characters, alphanumeric and underscore)"
-                        }
-                      }
-                    },
                     "email": {
                       "type": "object",
                       "properties": {
@@ -895,11 +621,11 @@
                         },
                         "description": {
                           "type": "string",
-                          "example": "New email address"
+                          "example": "Valid email address"
                         }
                       }
                     },
-                    "fullName": {
+                    "password": {
                       "type": "object",
                       "properties": {
                         "type": {
@@ -908,322 +634,11 @@
                         },
                         "example": {
                           "type": "string",
-                          "example": "John Robert Doe"
+                          "example": "StrongP@ss123"
                         },
                         "description": {
                           "type": "string",
-                          "example": "Updated full name (3-50 characters)"
-                        }
-                      }
-                    },
-                    "bio": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "Software developer with 5 years of experience in IoT"
-                        },
-                        "description": {
-                          "type": "string",
-                          "example": "User biography"
-                        }
-                      }
-                    },
-                    "website": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "https://johndoe.com"
-                        },
-                        "description": {
-                          "type": "string",
-                          "example": "Personal or professional website"
-                        }
-                      }
-                    },
-                    "location": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "New York, USA"
-                        },
-                        "description": {
-                          "type": "string",
-                          "example": "User location"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "User profile updated successfully",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "User profile updated successfully"
-                },
-                "data": {
-                  "type": "object",
-                  "properties": {
-                    "_id": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "507f1f77bcf86cd799439011"
-                        }
-                      }
-                    },
-                    "userID": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "SM-00001"
-                        }
-                      }
-                    },
-                    "username": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "john_doe_2024"
-                        }
-                      }
-                    },
-                    "email": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "john.doe@example.com"
-                        }
-                      }
-                    },
-                    "fullName": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "John Robert Doe"
-                        }
-                      }
-                    },
-                    "bio": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "Software developer with 5 years of experience in IoT"
-                        }
-                      }
-                    },
-                    "website": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "https://johndoe.com"
-                        }
-                      }
-                    },
-                    "location": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "New York, USA"
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "400": {
-            "description": "Validation error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Validation error"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "401": {
-            "description": "Not authenticated",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Not authenticated"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to update user profile"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
-    "/users/{userID}": {
-      "get": {
-        "tags": [
-          "Users"
-        ],
-        "summary": "Get user by ID",
-        "description": "Retrieve a specific user by their SM-XXXXX format ID",
-        "parameters": [
-          {
-            "name": "userID",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "User ID in SM-XXXXX format",
-            "example": "SM-00001"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "User retrieved successfully",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "User retrieved successfully"
-                },
-                "data": {
-                  "type": "object",
-                  "properties": {
-                    "_id": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "507f1f77bcf86cd799439011"
-                        }
-                      }
-                    },
-                    "userID": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "SM-00001"
+                          "example": "Password (min 8 chars, 1 uppercase, 1 lowercase, 1 number, 1 special)"
                         }
                       }
                     },
@@ -1237,19 +652,10 @@
                         "example": {
                           "type": "string",
                           "example": "john_doe"
-                        }
-                      }
-                    },
-                    "email": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
                         },
-                        "example": {
+                        "description": {
                           "type": "string",
-                          "example": "john.doe@example.com"
+                          "example": "Username (3-20 chars, alphanumeric and underscore)"
                         }
                       }
                     },
@@ -1263,315 +669,10 @@
                         "example": {
                           "type": "string",
                           "example": "John Doe"
-                        }
-                      }
-                    },
-                    "role": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
                         },
-                        "example": {
+                        "description": {
                           "type": "string",
-                          "example": "USER"
-                        }
-                      }
-                    },
-                    "isVerified": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "boolean"
-                        },
-                        "example": {
-                          "type": "boolean",
-                          "example": true
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "401": {
-            "description": "Not authenticated",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Not authenticated"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "404": {
-            "description": "User not found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "User not found"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to retrieve user"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
-    "/users/{_id}": {
-      "delete": {
-        "tags": [
-          "Users"
-        ],
-        "summary": "Delete user by ID",
-        "description": "Permanently removes a user from the system by their MongoDB _id",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "MongoDB _id of the user",
-            "example": "507f1f77bcf86cd799439011"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "User deleted successfully",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "User deleted successfully"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "400": {
-            "description": "Invalid user ID format",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Invalid user ID format"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "401": {
-            "description": "Not authenticated",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Not authenticated"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "404": {
-            "description": "User not found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "User not found"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to delete user"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      },
-      "put": {
-        "tags": [
-          "Users"
-        ],
-        "summary": "Update user by ID",
-        "description": "Updates a user\\'s information by their MongoDB _id",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "MongoDB _id of the user",
-            "example": "507f1f77bcf86cd799439011"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "description": "Updated user information",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "object"
-                },
-                "properties": {
-                  "type": "object",
-                  "properties": {
-                    "username": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "john_doe_updated"
-                        }
-                      }
-                    },
-                    "email": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "john.updated@example.com"
-                        }
-                      }
-                    },
-                    "fullName": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "John Updated Doe"
-                        }
-                      }
-                    },
-                    "role": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "enum": {
-                          "type": "array",
-                          "example": [
-                            "SUPERADMIN",
-                            "ADMIN",
-                            "USER",
-                            "ORG"
-                          ],
-                          "items": {
-                            "type": "string"
-                          }
+                          "example": "Full name (3-50 characters)"
                         }
                       }
                     }
@@ -1582,8 +683,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "User updated successfully",
+          "201": {
+            "description": "User registered successfully",
             "schema": {
               "type": "object",
               "properties": {
@@ -1593,45 +694,7 @@
                 },
                 "message": {
                   "type": "string",
-                  "example": "User updated successfully"
-                },
-                "data": {
-                  "type": "object",
-                  "properties": {
-                    "_id": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "507f1f77bcf86cd799439011"
-                        }
-                      }
-                    },
-                    "userID": {
-                      "type": "string",
-                      "example": "SM-00001"
-                    },
-                    "username": {
-                      "type": "string",
-                      "example": "john_doe_updated"
-                    },
-                    "email": {
-                      "type": "string",
-                      "example": "john.updated@example.com"
-                    },
-                    "fullName": {
-                      "type": "string",
-                      "example": "John Updated Doe"
-                    },
-                    "role": {
-                      "type": "string",
-                      "example": "USER"
-                    }
-                  }
+                  "example": "Registration successful"
                 }
               },
               "xml": {
@@ -1651,133 +714,15 @@
                 "message": {
                   "type": "string",
                   "example": "Validation error"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "401": {
-            "description": "Not authenticated",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
                 },
-                "message": {
-                  "type": "string",
-                  "example": "Not authenticated"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "404": {
-            "description": "User not found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "User not found"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to update user"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
-    "/users/": {
-      "get": {
-        "tags": [
-          "Users"
-        ],
-        "summary": "Get all users",
-        "description": "Retrieves a list of all users in the system. Requires authentication.",
-        "responses": {
-          "200": {
-            "description": "Users retrieved successfully",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Users retrieved successfully"
-                },
-                "data": {
+                "error": {
                   "type": "array",
+                  "example": [
+                    "Email is required",
+                    "Password is too weak"
+                  ],
                   "items": {
-                    "type": "object",
-                    "properties": {
-                      "_id": {
-                        "type": "string",
-                        "example": "507f1f77bcf86cd799439011"
-                      },
-                      "userID": {
-                        "type": "string",
-                        "example": "SM-00001"
-                      },
-                      "username": {
-                        "type": "string",
-                        "example": "john_doe"
-                      },
-                      "email": {
-                        "type": "string",
-                        "example": "john@example.com"
-                      },
-                      "fullName": {
-                        "type": "string",
-                        "example": "John Doe"
-                      },
-                      "role": {
-                        "type": "string",
-                        "example": "USER"
-                      },
-                      "isVerified": {
-                        "type": "boolean",
-                        "example": true
-                      }
-                    }
+                    "type": "string"
                   }
                 }
               },
@@ -1786,8 +731,8 @@
               }
             }
           },
-          "401": {
-            "description": "Not authenticated",
+          "409": {
+            "description": "Duplicate entry error",
             "schema": {
               "type": "object",
               "properties": {
@@ -1797,7 +742,17 @@
                 },
                 "message": {
                   "type": "string",
-                  "example": "Not authenticated"
+                  "example": "Duplicate entry"
+                },
+                "error": {
+                  "type": "array",
+                  "example": [
+                    "Email already exists",
+                    "Username already taken"
+                  ],
+                  "items": {
+                    "type": "string"
+                  }
                 }
               },
               "xml": {
@@ -1816,7 +771,7 @@
                 },
                 "message": {
                   "type": "string",
-                  "example": "Failed to retrieve users"
+                  "example": "Failed to register user"
                 }
               },
               "xml": {
@@ -1824,129 +779,43 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      },
-      "delete": {
-        "tags": [
-          "Users"
-        ],
-        "summary": "Delete all users",
-        "description": "Permanently removes all users from the system. Use with caution!",
-        "responses": {
-          "200": {
-            "description": "All users deleted successfully",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "All users deleted successfully"
-                },
-                "data": {
-                  "type": "object",
-                  "properties": {
-                    "deletedCount": {
-                      "type": "number",
-                      "example": 10
-                    }
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "401": {
-            "description": "Not authenticated",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Not authenticated"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to delete all users"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
+        }
       }
     },
-    "/users/username/{username}": {
-      "get": {
+    "/users/login": {
+      "post": {
         "tags": [
-          "Users"
+          "Authentication"
         ],
-        "summary": "Get user by username",
-        "description": "Retrieves a user by their unique username",
+        "summary": "Login user",
+        "description": "Authenticates user with email and password",
         "parameters": [
           {
-            "name": "username",
-            "in": "path",
+            "name": "body",
+            "in": "body",
+            "description": "Login credentials",
             "required": true,
-            "type": "string",
-            "description": "Username to search for",
-            "example": "john_doe"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "User retrieved successfully",
             "schema": {
               "type": "object",
               "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
+                "type": {
                   "type": "string",
-                  "example": "User retrieved successfully"
+                  "example": "object"
                 },
-                "data": {
+                "required": {
+                  "type": "array",
+                  "example": [
+                    "email",
+                    "password"
+                  ],
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "properties": {
                   "type": "object",
                   "properties": {
-                    "_id": {
+                    "email": {
                       "type": "object",
                       "properties": {
                         "type": {
@@ -1955,31 +824,132 @@
                         },
                         "example": {
                           "type": "string",
-                          "example": "507f1f77bcf86cd799439011"
+                          "example": "john.doe@example.com"
                         }
                       }
                     },
-                    "userID": {
-                      "type": "string",
-                      "example": "SM-00001"
-                    },
-                    "username": {
-                      "type": "string",
-                      "example": "john_doe"
-                    },
-                    "email": {
-                      "type": "string",
-                      "example": "john@example.com"
-                    },
-                    "fullName": {
-                      "type": "string",
-                      "example": "John Doe"
-                    },
-                    "role": {
-                      "type": "string",
-                      "example": "USER"
+                    "password": {
+                      "type": "object",
+                      "properties": {
+                        "type": {
+                          "type": "string",
+                          "example": "string"
+                        },
+                        "example": {
+                          "type": "string",
+                          "example": "StrongP@ss123"
+                        }
+                      }
                     }
                   }
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Login successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean",
+                  "example": true
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Login successful"
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "user": {
+                      "type": "object",
+                      "properties": {
+                        "userID": {
+                          "type": "string",
+                          "example": "SM-00001"
+                        },
+                        "username": {
+                          "type": "string",
+                          "example": "john_doe"
+                        },
+                        "email": {
+                          "type": "string",
+                          "example": "john.doe@example.com"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized access",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Incorrect email or password"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Error during login"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/logout": {
+      "post": {
+        "tags": [
+          "Authentication"
+        ],
+        "summary": "Logout user",
+        "description": "Logs out the currently authenticated user and invalidates their session",
+        "responses": {
+          "200": {
+            "description": "Logout successful",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean",
+                  "example": true
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Logged out successfully"
                 }
               },
               "xml": {
@@ -2006,8 +976,8 @@
               }
             }
           },
-          "404": {
-            "description": "User not found",
+          "500": {
+            "description": "Internal server error",
             "schema": {
               "type": "object",
               "properties": {
@@ -2017,7 +987,59 @@
                 },
                 "message": {
                   "type": "string",
-                  "example": "User not found"
+                  "example": "Error during logout"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+      }
+    },
+    "/users/github": {
+      "get": {
+        "tags": [
+          "Authentication"
+        ],
+        "summary": "GitHub OAuth login",
+        "description": "Initiates GitHub OAuth authentication flow by redirecting to GitHub login page",
+        "responses": {
+          "302": {
+            "description": "Redirects to GitHub authorization page"
+          }
+        }
+      }
+    },
+    "/users/github/callback": {
+      "get": {
+        "tags": [
+          "Authentication"
+        ],
+        "summary": "GitHub OAuth callback",
+        "description": "Handles the callback from GitHub OAuth authentication",
+        "responses": {
+          "302": {
+            "description": "Redirects to dashboard on success, login page on failure"
+          },
+          "400": {
+            "description": "OAuth error",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "message": {
+                  "type": "string",
+                  "example": "GitHub authentication failed"
                 }
               },
               "xml": {
@@ -2036,7 +1058,7 @@
                 },
                 "message": {
                   "type": "string",
-                  "example": "Failed to retrieve user"
+                  "example": "Error during GitHub authentication"
                 }
               },
               "xml": {
@@ -2044,235 +1066,36 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
+        }
       }
     },
     "/users/google": {
       "get": {
         "tags": [
-          "Users"
+          "Authentication"
         ],
-        "summary": "Get user by email",
-        "description": "Retrieves a user by their email address",
-        "parameters": [
-          {
-            "name": "email",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "Email address to search for",
-            "example": "john@example.com"
-          }
-        ],
+        "summary": "Google OAuth login",
+        "description": "Initiates Google OAuth authentication flow by redirecting to Google login page",
         "responses": {
-          "200": {
-            "description": "User retrieved successfully",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "User retrieved successfully"
-                },
-                "data": {
-                  "type": "object",
-                  "properties": {
-                    "_id": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "507f1f77bcf86cd799439011"
-                        }
-                      }
-                    },
-                    "userID": {
-                      "type": "string",
-                      "example": "SM-00001"
-                    },
-                    "username": {
-                      "type": "string",
-                      "example": "john_doe"
-                    },
-                    "email": {
-                      "type": "string",
-                      "example": "john@example.com"
-                    },
-                    "fullName": {
-                      "type": "string",
-                      "example": "John Doe"
-                    }
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "401": {
-            "description": "Not authenticated",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Not authenticated"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "404": {
-            "description": "User not found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "User not found"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to retrieve user"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
+          "302": {
+            "description": "Redirects to Google authorization page"
           }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
+        }
       }
     },
-    "/users/role/{role}": {
+    "/users/google/callback": {
       "get": {
         "tags": [
-          "Users"
+          "Authentication"
         ],
-        "summary": "Get users by role",
-        "description": "Retrieves all users with a specific role (SUPERADMIN, ADMIN, USER, or ORG)",
-        "parameters": [
-          {
-            "name": "role",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "Role to filter users by",
-            "enum": [
-              "SUPERADMIN",
-              "ADMIN",
-              "USER",
-              "ORG"
-            ]
-          }
-        ],
+        "summary": "Google OAuth callback",
+        "description": "Handles the callback from Google OAuth authentication",
         "responses": {
-          "200": {
-            "description": "Users retrieved successfully",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Users retrieved successfully"
-                },
-                "data": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "_id": {
-                        "type": "object",
-                        "properties": {
-                          "type": {
-                            "type": "string",
-                            "example": "string"
-                          },
-                          "example": {
-                            "type": "string",
-                            "example": "507f1f77bcf86cd799439011"
-                          }
-                        }
-                      },
-                      "userID": {
-                        "type": "string",
-                        "example": "SM-00001"
-                      },
-                      "username": {
-                        "type": "string",
-                        "example": "john_doe"
-                      },
-                      "email": {
-                        "type": "string",
-                        "example": "john@example.com"
-                      },
-                      "fullName": {
-                        "type": "string",
-                        "example": "John Doe"
-                      },
-                      "role": {
-                        "type": "string",
-                        "example": "USER"
-                      }
-                    }
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
+          "302": {
+            "description": "Redirects to dashboard on success, login page on failure"
           },
-          "401": {
-            "description": "Not authenticated",
+          "400": {
+            "description": "OAuth error",
             "schema": {
               "type": "object",
               "properties": {
@@ -2282,26 +1105,7 @@
                 },
                 "message": {
                   "type": "string",
-                  "example": "Not authenticated"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "404": {
-            "description": "Users not found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Users not found"
+                  "example": "Google authentication failed"
                 }
               },
               "xml": {
@@ -2320,7 +1124,7 @@
                 },
                 "message": {
                   "type": "string",
-                  "example": "Failed to retrieve users"
+                  "example": "Error during Google authentication"
                 }
               },
               "xml": {
@@ -2328,12 +1132,7 @@
               }
             }
           }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
+        }
       }
     },
     "/sensors/": {

@@ -3874,3 +3874,60 @@ TypeError: req.flash is not a function
 2025-04-03 20:40:39 INFO [smart-farm-api]: MongoDB Connected... 
 2025-04-03 20:41:16 WARN [smart-farm-api]: Login failed: No account found for email - user@example.com 
 2025-04-03 20:41:16 ERROR [smart-farm-api]: No account found with this email - POST /auth/login 
+2025-04-03 20:53:01 WARN [smart-farm-api]: Validation failed 
+2025-04-03 20:54:02 ERROR [smart-farm-api]: Expected double-quoted property name in JSON at position 120 (line 6 column 1) - POST /auth/register 
+2025-04-03 20:54:13 INFO [smart-farm-api]: Register endpoint called 
+2025-04-03 20:54:13 DEBUG [smart-farm-api]: Request body: 
+2025-04-03 20:54:14 INFO [smart-farm-api]: User registered successfully: omond 
+2025-04-03 20:54:23 WARN [smart-farm-api]: Validation failed 
+2025-04-03 20:55:48 WARN [smart-farm-api]: Validation failed 
+2025-04-03 20:56:26 ERROR [smart-farm-api]: Unexpected non-whitespace character after JSON at position 115 (line 6 column 2) - POST /auth/login 
+2025-04-03 20:56:40 ERROR [smart-farm-api]: Unexpected non-whitespace character after JSON at position 115 (line 6 column 2) - POST /auth/login 
+2025-04-03 20:56:53 INFO [smart-farm-api]: User omond logged in successfully 
+2025-04-03 20:56:53 INFO [smart-farm-api]: User omond logged in successfully. 
+2025-04-03 20:57:41 WARN [smart-farm-api]: Login failed: Wrong password for email - omondi@example.com 
+2025-04-03 20:57:41 ERROR [smart-farm-api]: Incorrect password - POST /auth/login 
+2025-04-03 21:01:49 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-03 21:01:53 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-03 21:05:04 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-03 21:05:09 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-03 21:05:32 INFO [smart-farm-api]: User superadmin logged in successfully 
+2025-04-03 21:05:33 INFO [smart-farm-api]: User superadmin logged in successfully. 
+2025-04-03 21:05:54 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-03 21:05:55 INFO [smart-farm-api]: User logged out successfully. 
+2025-04-03 21:06:09 INFO [smart-farm-api]: User superadmin logged in successfully 
+2025-04-03 21:06:10 INFO [smart-farm-api]: User superadmin logged in successfully. 
+2025-04-03 21:07:20 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-03 21:07:20 INFO [smart-farm-api]: getSensors called 
+2025-04-03 21:07:32 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-03 21:07:32 INFO [smart-farm-api]: getSensorById called with ID sen_5678 
+2025-04-03 21:07:44 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-03 21:07:44 WARN [smart-farm-api]: Validation failed 
+2025-04-03 21:07:59 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-03 21:07:59 INFO [smart-farm-api]: getSensorById called with ID sen_1001 
+2025-04-03 21:23:54 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-03 21:23:58 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-03 21:24:04 INFO [smart-farm-api]: User superadmin is authenticated. 
+2025-04-03 21:24:04 INFO [smart-farm-api]: getAllUsers called 
+2025-04-03 21:26:31 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-03 21:26:36 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-03 21:28:45 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-03 21:28:50 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-03 21:34:57 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-03 21:35:01 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-03 21:36:28 INFO [smart-farm-api]: User omond is authenticated. 
+2025-04-03 21:36:28 INFO [smart-farm-api]: getUserProfile called for user ID: 67eecb454192d0f962248f15 
+2025-04-03 21:38:01 ERROR [smart-farm-api]: Expected double-quoted property name in JSON at position 26 (line 3 column 1) - PUT /users/profile 
+2025-04-03 21:38:14 INFO [smart-farm-api]: User omond is authenticated. 
+2025-04-03 21:38:14 INFO [smart-farm-api]: updateUserProfile called for user ID: 67eecb454192d0f962248f15 
+2025-04-03 21:38:14 DEBUG [smart-farm-api]: Request body: 
+2025-04-03 21:38:28 INFO [smart-farm-api]: User omond is authenticated. 
+2025-04-03 21:38:28 INFO [smart-farm-api]: updateUserProfile called for user ID: 67eecb454192d0f962248f15 
+2025-04-03 21:38:28 DEBUG [smart-farm-api]: Request body: 
+2025-04-03 21:41:09 INFO [smart-farm-api]: User omond is authenticated. 
+2025-04-03 21:41:09 INFO [smart-farm-api]: getUserById called with ID: SM-10001 
+2025-04-03 21:41:09 DEBUG [smart-farm-api]: Request body: 
+2025-04-03 21:41:09 ERROR [smart-farm-api]: User not found - GET /users/SM-10001 
+2025-04-03 21:41:50 INFO [smart-farm-api]: User omond is authenticated. 
+2025-04-03 21:41:50 INFO [smart-farm-api]: getUserById called with ID: SM-00001 
+2025-04-03 21:41:50 DEBUG [smart-farm-api]: Request body: 

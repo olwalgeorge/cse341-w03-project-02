@@ -35,5 +35,4 @@ const swaggerConfig = {
   }
 };
 
-
 module.exports = swaggerConfig;

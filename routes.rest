@@ -4,9 +4,9 @@ Content-Type: application/json
 
 {
   "fullName": "Omondi",
-  "username": "omondi",
+  "username": "omond",
   "password": "SuperAdmin1234!",
-  "email": "omondi"
+  "email": "omondi@example.com"
 }
 
 
@@ -82,7 +82,7 @@ GET http://localhost:3000/sensors
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Get Sensor By ID (Requires Authentication)
-GET http://localhost:3000/sensors/sen_5678
+GET http://localhost:3000/sensors/sen_1001
 Authorization: Bearer YOUR_ACCESS_TOKEN  # Replace YOUR_ACCESS_TOKEN
 
 ### Create New Sensor (Requires Authentication)

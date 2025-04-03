@@ -370,3 +370,4 @@ TypeError: req.flash is not a function
     at Strategy._verify (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\auth\local.auth.js:21:16)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
 2025-04-03 20:35:54 ERROR [smart-farm-api]: req.flash is not a function - POST /auth/login 
+2025-04-03 20:41:16 ERROR [smart-farm-api]: No account found with this email - POST /auth/login 

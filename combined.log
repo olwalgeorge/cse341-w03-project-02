@@ -3870,3 +3870,7 @@ TypeError: req.flash is not a function
     at Strategy._verify (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\auth\local.auth.js:21:16)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
 2025-04-03 20:35:54 ERROR [smart-farm-api]: req.flash is not a function - POST /auth/login 
+2025-04-03 20:40:33 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-03 20:40:39 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-03 20:41:16 WARN [smart-farm-api]: Login failed: No account found for email - user@example.com 
+2025-04-03 20:41:16 ERROR [smart-farm-api]: No account found with this email - POST /auth/login 

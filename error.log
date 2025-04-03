@@ -272,3 +272,101 @@ BadRequestError: Invalid user ID format
     at async C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\controllers\users.controller.js:231:33
 2025-04-03 12:23:11 ERROR [smart-farm-api]: undefined 
 2025-04-03 13:20:14 ERROR [smart-farm-api]: undefined 
+2025-04-03 19:12:47 ERROR [smart-farm-api]: Error during local authentication: req.flash is not a function req.flash is not a function 
+TypeError: req.flash is not a function
+    at allFailed (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:134:15)
+    at attempt (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at verified (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport-local\lib\strategy.js:82:30)
+    at Strategy._verify (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\auth\local.auth.js:21:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-03 19:12:47 ERROR [smart-farm-api]: Error: req.flash is not a function - Method: POST - URL: /auth/login - IP: ::1 - Source: Server - Type: InternalServer req.flash is not a function 
+TypeError: req.flash is not a function
+    at allFailed (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:134:15)
+    at attempt (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at verified (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport-local\lib\strategy.js:82:30)
+    at Strategy._verify (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\auth\local.auth.js:21:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-03 19:14:09 ERROR [smart-farm-api]: Error during local authentication: req.flash is not a function req.flash is not a function 
+TypeError: req.flash is not a function
+    at allFailed (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:134:15)
+    at attempt (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at verified (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport-local\lib\strategy.js:82:30)
+    at Strategy._verify (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\auth\local.auth.js:21:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-03 19:14:09 ERROR [smart-farm-api]: Error: req.flash is not a function - Method: POST - URL: /auth/login - IP: ::1 - User ID: 67eeaf9a89edaab3f038ca6e - Source: Server - Type: InternalServer req.flash is not a function 
+TypeError: req.flash is not a function
+    at allFailed (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:134:15)
+    at attempt (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at verified (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport-local\lib\strategy.js:82:30)
+    at Strategy._verify (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\auth\local.auth.js:21:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-03 19:21:11 ERROR [smart-farm-api]: Error during local authentication: req.flash is not a function req.flash is not a function 
+TypeError: req.flash is not a function
+    at allFailed (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:134:15)
+    at attempt (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at verified (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport-local\lib\strategy.js:82:30)
+    at Strategy._verify (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\auth\local.auth.js:21:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-03 19:21:11 ERROR [smart-farm-api]: Error: req.flash is not a function - Method: POST - URL: /auth/login - IP: ::1 - User ID: 67eeaf9a89edaab3f038ca6e - Source: Server - Type: InternalServer req.flash is not a function 
+TypeError: req.flash is not a function
+    at allFailed (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:134:15)
+    at attempt (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at verified (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport-local\lib\strategy.js:82:30)
+    at Strategy._verify (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\auth\local.auth.js:21:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-03 19:21:14 ERROR [smart-farm-api]: Error during local authentication: req.flash is not a function req.flash is not a function 
+TypeError: req.flash is not a function
+    at allFailed (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:134:15)
+    at attempt (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at verified (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport-local\lib\strategy.js:82:30)
+    at Strategy._verify (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\auth\local.auth.js:21:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-03 19:21:14 ERROR [smart-farm-api]: Error: req.flash is not a function - Method: POST - URL: /auth/login - IP: ::1 - User ID: 67eeaf9a89edaab3f038ca6e - Source: Server - Type: InternalServer req.flash is not a function 
+TypeError: req.flash is not a function
+    at allFailed (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:134:15)
+    at attempt (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at verified (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport-local\lib\strategy.js:82:30)
+    at Strategy._verify (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\auth\local.auth.js:21:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-03 20:32:32 ERROR [smart-farm-api]: Error during local authentication: req.flash is not a function req.flash is not a function 
+TypeError: req.flash is not a function
+    at allFailed (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:134:15)
+    at attempt (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at verified (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport-local\lib\strategy.js:82:30)
+    at Strategy._verify (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\auth\local.auth.js:21:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-03 20:32:32 ERROR [smart-farm-api]: Error: req.flash is not a function - Method: POST - URL: /auth/login - IP: ::1 - User ID: 67eeaf9a89edaab3f038ca6e - Source: Server - Type: InternalServer req.flash is not a function 
+TypeError: req.flash is not a function
+    at allFailed (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:134:15)
+    at attempt (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at verified (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport-local\lib\strategy.js:82:30)
+    at Strategy._verify (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\auth\local.auth.js:21:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-03 20:35:33 ERROR [smart-farm-api]: Error during local authentication: req.flash is not a function req.flash is not a function 
+TypeError: req.flash is not a function
+    at allFailed (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:134:15)
+    at attempt (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at verified (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport-local\lib\strategy.js:82:30)
+    at Strategy._verify (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\auth\local.auth.js:21:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-03 20:35:33 ERROR [smart-farm-api]: req.flash is not a function - POST /auth/login 
+2025-04-03 20:35:54 ERROR [smart-farm-api]: Error during local authentication: req.flash is not a function req.flash is not a function 
+TypeError: req.flash is not a function
+    at allFailed (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:134:15)
+    at attempt (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:183:28)
+    at strategy.fail (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport\lib\middleware\authenticate.js:314:9)
+    at verified (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\node_modules\passport-local\lib\strategy.js:82:30)
+    at Strategy._verify (C:\Users\PC\OneDrive\Documents\BYU\Pathway\cse341 classwork\week-03\cse341-w03-project-02\src\auth\local.auth.js:21:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2025-04-03 20:35:54 ERROR [smart-farm-api]: req.flash is not a function - POST /auth/login 

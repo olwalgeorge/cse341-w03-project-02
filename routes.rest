@@ -3,10 +3,10 @@ POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-  "fullName": "Super Admin",
-  "username": "superadm",
+  "fullName": "Omondi",
+  "username": "omondi",
   "password": "SuperAdmin1234!",
-  "email": "superadmin@example.com"
+  "email": "omondi"
 }
 
 

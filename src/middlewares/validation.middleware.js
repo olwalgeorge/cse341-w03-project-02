@@ -5,21 +5,32 @@ const sendResponse = require("../utils/response.js");
 const logger = require("../utils/logger.js");
 
 const validate = (validations) => {
-  return async (req, res, next) => {
-    logger.info("Request Body:", req.body);
-    logger.info("Validations:", validations);
-    await Promise.all(validations.map((validation) => validation.run(req)));
+    return async (req, res, next) => {
+        try {
+            // Run validations
+            await Promise.all(validations.map(v => v.run(req)));
+            
+            const errors = validationResult(req);
+            if (errors.isEmpty()) {
+                return next();
+            }
 
-    const errors = validationResult(req);
-    logger.info("Errors:", errors.array());
-    if (errors.isEmpty()) {
-      logger.info("Validation passed, calling next()");
-      return next();
-    }
+            // Get validation errors
+            const errorMessages = errors.array().map(err => ({
+                field: err.path,
+                message: err.msg
+            }));
 
-    logger.info("Validation failed, sending response");
-    return sendResponse(res, 400, "Validation error", null, errors.array());
-  };
+            logger.warn('Validation failed', { 
+                path: req.path, 
+                errors: errorMessages 
+            });
+
+            sendResponse(res, 400, "Validation failed", null, errorMessages);
+        } catch (err) {
+            next(err);
+        }
+    };
 };
 
 module.exports = validate;

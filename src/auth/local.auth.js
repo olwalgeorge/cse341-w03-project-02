@@ -1,39 +1,44 @@
 // src/config/passport.js
-// eslint-disable-next-line
 const passport = require("passport");
 const { Strategy: LocalStrategy } = require("passport-local");
 const User = require("../models/user.model.js");
-//eslint-disable-next-line no-unused-vars
-const bcrypt = require("bcryptjs");
-const logger = require('../utils/logger'); 
-const localStrategy = new LocalStrategy( 
-  {
-    usernameField: "email", 
-    passwordField: "password",
-  },
-  async (email, password, done) => {
-    logger.info(`Attempting local login for email: ${email}`);
-    try {
-      const user = await User.findOne({ email }).select('+password');
+const logger = require('../utils/logger');
+const AuthError = require('../utils/errors/AuthError');
 
-      if (!user) {
-        logger.warn(`Authentication failed: Incorrect email - ${email}`);
-        return done(null, false, { message: "Incorrect email." });
-      }
+const localStrategy = new LocalStrategy(
+    {
+        usernameField: "email",
+        passwordField: "password",
+        passReqToCallback: true
+    },
+    async (req, email, password, done) => {
+        try {
+            // Validate email format
+            if (!email || !email.includes('@')) {
+                logger.warn('Login failed: Invalid email format');
+                return done(AuthError.invalidCredentials('Please enter a valid email address'));
+            }
 
-      const isMatch = await user.isPasswordMatch(password);
-      if (!isMatch) {
-        logger.warn(`Authentication failed: Incorrect password for user - ${email}`);
-        return done(null, false, { message: "Incorrect password." });
-      }
+            const user = await User.findOne({ email: email.toLowerCase() }).select('+password');
 
-      logger.info(`User ${user.username} logged in successfully using local strategy.`);
-      return done(null, user);
-    } catch (error) {
-      logger.error(`Error during local authentication: ${error.message}`, error);
-      return done(error);
+            if (!user) {
+                logger.warn(`Login failed: No account found for email - ${email}`);
+                return done(AuthError.invalidCredentials('No account found with this email'));
+            }
+
+            const isMatch = await user.isPasswordMatch(password);
+            if (!isMatch) {
+                logger.warn(`Login failed: Wrong password for email - ${email}`);
+                return done(AuthError.invalidCredentials('Incorrect password'));
+            }
+
+            logger.info(`User ${user.username} logged in successfully`);
+            return done(null, user);
+        } catch (error) {
+            logger.error('Login error:', { error: error.message, email });
+            return done(AuthError.loginError());
+        }
     }
-  }
 );
 
 module.exports = localStrategy;

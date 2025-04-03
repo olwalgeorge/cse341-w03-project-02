@@ -375,3 +375,5 @@ TypeError: req.flash is not a function
 2025-04-03 20:56:26 ERROR [smart-farm-api]: Unexpected non-whitespace character after JSON at position 115 (line 6 column 2) - POST /auth/login 
 2025-04-03 20:56:40 ERROR [smart-farm-api]: Unexpected non-whitespace character after JSON at position 115 (line 6 column 2) - POST /auth/login 
 2025-04-03 20:57:41 ERROR [smart-farm-api]: Incorrect password - POST /auth/login 
+2025-04-03 21:38:01 ERROR [smart-farm-api]: Expected double-quoted property name in JSON at position 26 (line 3 column 1) - PUT /users/profile 
+2025-04-03 21:41:09 ERROR [smart-farm-api]: User not found - GET /users/SM-10001 

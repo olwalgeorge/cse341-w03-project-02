@@ -25,4 +25,5 @@ module.exports = {
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     callbackUrl: process.env.GOOGLE_CALLBACK_URL,
   },
+  renderUrl: process.env.RENDER_EXTERNAL_HOSTNAME,
 };

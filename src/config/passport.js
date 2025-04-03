@@ -1,5 +1,5 @@
 const passport = require('passport');
-const LocalStrategy = require('../auth/local.auth'); // Correct the import path
+const LocalStrategy = require('../auth/local.auth');
 const User = require('../models/user.model');
 
 passport.use(LocalStrategy);

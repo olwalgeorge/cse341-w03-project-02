@@ -7,8 +7,8 @@ const path = require('path');
 
 const router = express.Router();
 
-/* #swagger.tags = [''] */
-/* #swagger.description = 'Main  route' */
+/* #swagger.tags = ['Documentation'] */
+/* #swagger.description = 'Main route for accessing the application' */
 
 router.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html')); 

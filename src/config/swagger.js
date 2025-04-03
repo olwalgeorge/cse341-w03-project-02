@@ -1,32 +1,37 @@
 // src/config/swagger.js
-const swaggerAutogen = require("swagger-autogen");
-const config = require("./config");
-const logger = require("../utils/logger");
+const swaggerAutogen = require('swagger-autogen')();
+const config = require('./config');
+const logger = require('../utils/logger');
 
-const outputFile = "../../swagger_output.json";
-const endpointsFiles = ["../routes/index.js"];
-
-let host = "localhost:3000"; 
-let schemes = ["http"]; 
-
-if (config.env === "production") {
-  host = "https://cse341-w03-project-02.onrender.com";
-  schemes = ["https"];
-}
+const outputFile = '../../swagger_output.json'; 
+const endpointsFiles = ['./src/routes/index.js']; 
 
 const doc = {
   info: {
-    title: "Smart Farm API",
-    description: "API documentation for the Smart Farm project",
+    title: 'Smart Farm API',
+    description: 'API for a smart farm application',
   },
-  host: host,
-  schemes: schemes,
+  host: config.env === 'production' && config.renderUrl ? config.renderUrl : 'localhost:3000',
+  schemes: [config.env === 'production' ? 'https' : 'http'],
+  tags: [
+    {
+      name: 'Users',
+      description: 'Endpoints related to user management',
+    },
+    {
+      name: 'Sensors',
+      description: 'Endpoints related to sensor management',
+    },
+    {
+      name: 'Authentication',
+      description: 'Endpoints related to user authentication',
+    },
+  ],
 };
 
-// Generate Swagger file on startup then run server
-swaggerAutogen(outputFile, endpointsFiles, doc)
-  .then(() => logger.info("Swagger documentation generated"))
-  .catch((error) => {
-    logger.error("Error generating Swagger documentation:", error);
-  });
+swaggerAutogen(outputFile, endpointsFiles, doc).then(() => {
+  require('../server'); 
+}).catch((err) => {
+  logger.error(err);
+});
 

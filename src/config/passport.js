@@ -1,8 +1,14 @@
 const passport = require('passport');
 const LocalStrategy = require('../auth/local.auth');
+const GitHubStrategy = require('../auth/github');
+const GoogleStrategy = require('../auth/google');
 const User = require('../models/user.model');
+const logger = require('../utils/logger');
 
+// Strategies
 passport.use(LocalStrategy);
+passport.use(GitHubStrategy);
+passport.use(GoogleStrategy);
 
 passport.serializeUser((user, done) => {
   done(null, user.id);
@@ -13,6 +19,7 @@ passport.deserializeUser(async (id, done) => {
     const user = await User.findById(id);
     done(null, user);
   } catch (error) {
+    logger.error('Error deserializing user:', error);
     done(error);
   }
 });

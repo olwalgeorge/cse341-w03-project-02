@@ -64,13 +64,30 @@ router.post(
          error: ['Email is required', 'Password is too weak']
        }
      }
+     #swagger.responses[409] = {
+       description: 'Email already registered',
+       schema: {
+         success: false,
+         message: 'Email already registered'
+       }
+     }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: {
+         success: false,
+         message: 'Failed to register user'
+       }
+     }
   */
   localAuthController.register
 );
 
 router.post(
   '/login',
-  passport.authenticate('local'),
+  passport.authenticate('local', {
+    failureRedirect: '/login.html',
+    failureFlash: true
+  }),
   /* #swagger.tags = ['Authentication']
      #swagger.summary = 'Login user'
      #swagger.description = 'Authenticates user with email and password'
@@ -107,6 +124,20 @@ router.post(
          }
        }
      }
+     #swagger.responses[401] = {
+       description: 'Invalid credentials',
+       schema: {
+         success: false,
+         message: 'Invalid credentials'
+       }
+     }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: {
+         success: false,
+         message: 'Failed to login user'
+       }
+     }
   */
   localAuthController.loginSuccess
 );
@@ -132,6 +163,13 @@ router.post(
          message: 'Not authenticated'
        }
      }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: {
+         success: false,
+         message: 'Failed to logout user'
+       }
+     }
   */
   localAuthController.logout
 );
@@ -145,7 +183,7 @@ router.get('/github',
        description: 'Redirects to GitHub authorization page'
      }
   */
-  passport.authenticate('github', { scope: ['user:email'] }));
+  passport.authenticate('github', { scope: ['user:email'], failureRedirect: '/login.html' }));
 
 router.get(
   '/github/callback',
@@ -163,6 +201,13 @@ router.get(
          message: 'GitHub authentication failed'
        }
      }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: {
+         success: false,
+         message: 'Failed to authenticate user'
+       }
+     }
   */
   (req, res) => res.redirect('/dashboard.html')
 );
@@ -176,7 +221,7 @@ router.get('/google',
        description: 'Redirects to Google authorization page'
      }
   */
-  passport.authenticate('google', { scope: ['profile', 'email'] }));
+  passport.authenticate('google', { scope: ['profile', 'email'], failureRedirect: '/login.html' }));
 
 router.get(
   '/google/callback',
@@ -194,8 +239,16 @@ router.get(
          message: 'Google authentication failed'
        }
      }
+     #swagger.responses[500] = {
+       description: 'Internal server error',
+       schema: {
+         success: false,
+         message: 'Failed to authenticate user'
+       }
+     }
   */
   (req, res) => res.redirect('/dashboard.html')
 );
 
 module.exports = router;
+

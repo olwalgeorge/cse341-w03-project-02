@@ -178,6 +178,44 @@
                 "name": "main"
               }
             }
+          },
+          "409": {
+            "description": "Email already registered",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Email already registered"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Failed to register user"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
           }
         }
       }
@@ -288,6 +326,44 @@
                 "name": "main"
               }
             }
+          },
+          "401": {
+            "description": "Invalid credentials",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Invalid credentials"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Failed to login user"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
           }
         }
       }
@@ -331,6 +407,25 @@
                 "message": {
                   "type": "string",
                   "example": "Not authenticated"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Failed to logout user"
                 }
               },
               "xml": {
@@ -389,6 +484,25 @@
                 "name": "main"
               }
             }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Failed to authenticate user"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
           }
         }
       }
@@ -430,6 +544,25 @@
                 "message": {
                   "type": "string",
                   "example": "Google authentication failed"
+                }
+              },
+              "xml": {
+                "name": "main"
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "success": {
+                  "type": "boolean",
+                  "example": false
+                },
+                "message": {
+                  "type": "string",
+                  "example": "Failed to authenticate user"
                 }
               },
               "xml": {

@@ -4,8 +4,8 @@
   "description": "API for a smart farm application",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/config/swagger.js && node src/server.js",
-    "dev": "node src/config/swagger.js && nodemon src/server.js",
+    "start": "node src/config/swagger.js",
+    "dev": "node src/config/swagger.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write .",
@@ -36,7 +36,6 @@
     "express-validator": "^7.0.1",
     "mongodb": "^6.15.0",
     "mongoose": "^8.0.3",
-    "morgan": "^1.10.0",
     "passport": "^0.7.0",
     "passport-github2": "^0.1.12",
     "passport-google-oauth20": "^2.0.0",

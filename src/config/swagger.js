@@ -1,17 +1,18 @@
 // src/config/swagger.js
 const swaggerAutogen = require('swagger-autogen')();
+const config = require('./config');
+const logger = require('../utils/logger');
 
-const outputFile = './swagger.json';
-const endpointsFiles = ['./src/routes/index.js']; // Entry point to your routes
-// const endpointsFiles = ['./src/routes/users.routes.js', './src/routes/sensors.routes.js']; // previous
+const outputFile = '../../swagger_output.json'; 
+const endpointsFiles = ['./src/routes/index.js']; 
 
 const doc = {
   info: {
     title: 'Smart Farm API',
     description: 'API for a smart farm application',
   },
-  host: 'localhost:3000',
-  schemes: ['http'],
+  host: config.env === 'production' && config.renderUrl ? config.renderUrl : 'localhost:3000',
+  schemes: [config.env === 'production' ? 'https' : 'http'],
   tags: [
     {
       name: 'Users',
@@ -28,5 +29,9 @@ const doc = {
   ],
 };
 
-swaggerAutogen(outputFile, endpointsFiles, doc);
+swaggerAutogen(outputFile, endpointsFiles, doc).then(() => {
+  require('../server'); 
+}).catch((err) => {
+  logger.error(err);
+});
 

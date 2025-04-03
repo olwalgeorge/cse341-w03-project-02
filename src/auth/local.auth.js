@@ -5,11 +5,10 @@ const { Strategy: LocalStrategy } = require("passport-local");
 const User = require("../models/user.model.js");
 //eslint-disable-next-line no-unused-vars
 const bcrypt = require("bcryptjs");
-const logger = require('../utils/logger'); // Import logger
-
-const localStrategy = new LocalStrategy( // Assign the strategy to a variable
+const logger = require('../utils/logger'); 
+const localStrategy = new LocalStrategy( 
   {
-    usernameField: "email", // Use email as the username field
+    usernameField: "email", 
     passwordField: "password",
   },
   async (email, password, done) => {
@@ -37,4 +36,4 @@ const localStrategy = new LocalStrategy( // Assign the strategy to a variable
   }
 );
 
-module.exports = localStrategy; // Export the strategy
+module.exports = localStrategy;

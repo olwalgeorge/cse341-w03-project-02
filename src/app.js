@@ -1,7 +1,7 @@
 // src/app.js
 const express = require("express");
 const cors = require("cors");
-const morgan = require("morgan");
+
 const connectDB = require("./config/database.js");
 const routes = require("./routes/index.js");
 const errorMiddleware = require("./middlewares/error.middleware.js");
@@ -16,7 +16,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(morgan("dev"));
 
 // Database Connection
 connectDB();

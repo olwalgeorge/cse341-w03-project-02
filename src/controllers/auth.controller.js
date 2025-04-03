@@ -15,8 +15,16 @@ const register = asyncHandler(async (req, res, next) => {
     logger.debug("Request body:", req.body);
 
     try {
-        await authService.registerUser(req.body);
-        sendResponse(res, 201, "Registration successful");
+        const user = await authService.registerUser(req.body);
+        // Log in the user after registration
+        req.login(user, (err) => {
+            if (err) {
+                logger.error("Error logging in after registration:", err);
+                return next(createHttpError(500, "Registration successful but login failed"));
+            }
+            const transformedUser = transformUser(user);
+            sendResponse(res, 201, "Registration successful", { user: transformedUser });
+        });
     } catch (error) {
         logger.error("Error during registration:", error);
         if (error.name === "ValidationError") {
@@ -34,8 +42,7 @@ const register = asyncHandler(async (req, res, next) => {
  */
 const loginSuccess = (req, res) => {
     logger.info(`User ${req.user.username} logged in successfully.`);
-    const transformedUser = transformUser(req.user);
-    sendResponse(res, 200, "Login successful", { user: transformedUser });
+    res.redirect('/dashboard.html');
 };
 
 /**

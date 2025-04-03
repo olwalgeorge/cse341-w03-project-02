@@ -3933,3 +3933,14 @@ TypeError: req.flash is not a function
 2025-04-03 21:41:50 DEBUG [smart-farm-api]: Request body: 
 2025-04-04 01:23:13 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
 2025-04-04 01:23:17 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-04 02:03:43 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-04 02:03:46 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-04 02:07:54 INFO [smart-farm-api]: Register endpoint called 
+2025-04-04 02:07:54 DEBUG [smart-farm-api]: Request body: 
+2025-04-04 02:07:55 INFO [smart-farm-api]: User registered successfully: adongo 
+2025-04-04 02:21:30 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-04 02:21:34 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-04 02:22:16 WARN [smart-farm-api]: Login failed: No account found for email - ken@gmail.com 
+2025-04-04 02:22:16 ERROR [smart-farm-api]: No account found with this email - POST /auth/login 
+2025-04-04 02:22:21 WARN [smart-farm-api]: Login failed: No account found for email - ken@gmail.com 
+2025-04-04 02:22:21 ERROR [smart-farm-api]: No account found with this email - POST /auth/login 

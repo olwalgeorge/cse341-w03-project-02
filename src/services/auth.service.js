@@ -25,7 +25,7 @@ class AuthService {
 
         await user.save();
         logger.info(`User registered successfully: ${username}`);
-        return user;
+        return user; // Return the user object
     }
 }
 

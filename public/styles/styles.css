@@ -77,7 +77,7 @@ button[type="submit"]:hover {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.social-login a:hover {
+social-login a:hover {
   background-color: #eee;
 }
 
@@ -122,4 +122,60 @@ button[type="submit"]:hover {
   border: 1px solid #c3e6cb;
   padding: 15px;
   border-radius: 4px;
+}
+
+/* Index page specific styles */
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    max-width: 90%;
+}
+
+.container h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.container p {
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.links {
+    margin-top: 30px;
+}
+
+.links a {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.links a:hover {
+    background-color: #0056b3;
+}
+
+.docs-link {
+    margin-bottom: 20px;
+}
+
+.docs-link a {
+    color: #28a745;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.docs-link a:hover {
+    color: #1e7e34;
+    text-decoration: underline;
 }

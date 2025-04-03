@@ -4,75 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Farm Dashboard</title>
-    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/dashboard.css">
 </head>
 <body>
     <div class="dashboard-container">
         <header>
             <h1>Smart Farm Dashboard</h1>
-            <div class="user-info">
-                <span>Welcome, [User's Full Name]</span>
-                <form action="/auth/logout" method="POST" style="display: inline;">
-                    <button type="submit" class="logout-button">Logout</button>
-                </form>
+            <div class="user-controls">
+                <span class="user-name">Welcome, <span id="userName">User</span></span>
+                <button class="logout-button" onclick="location.href='/logout.html'">Logout</button>
             </div>
         </header>
 
-        <main>
-            <section class="users-section">
-                <h2>Users</h2>
-                <ul class="data-list">
-                    <li>
-                        <strong>Username:</strong> user123
-                        <span><strong>Full Name:</strong> John Doe</span>
-                    </li>
-                    <li>
-                        <strong>Username:</strong> farmAdmin
-                        <span><strong>Full Name:</strong> Alice Smith</span>
-                    </li>
-                    <li>
-                        <strong>Username:</strong> sensorGuy
-                        <span><strong>Full Name:</strong> Bob Johnson</span>
-                    </li>
-                    </ul>
-            </section>
+        <div class="dashboard-grid">
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3>Field Sensors</h3>
+                </div>
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">24°C</div>
+                        <div class="stat-label">Temperature</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">65%</div>
+                        <div class="stat-label">Humidity</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">6.8</div>
+                        <div class="stat-label">Soil pH</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">42%</div>
+                        <div class="stat-label">Soil Moisture</div>
+                    </div>
+                </div>
+            </div>
 
-            <section class="sensors-section">
-                <h2>Sensors</h2>
-                <ul class="data-list">
-                    <li>
-                        <strong>Sensor ID:</strong> SENSOR001
-                        <span><strong>Type:</strong> Temperature</span>
-                        <span><strong>Status:</strong> Active</span>
-                        <span><strong>Value:</strong> 25°C</span>
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3>Active Sensors</h3>
+                </div>
+                <ul class="sensor-list">
+                    <li class="sensor-item">
+                        <span>Temperature Sensor 1</span>
+                        <span class="sensor-status status-active">Active</span>
                     </li>
-                    <li>
-                        <strong>Sensor ID:</strong> SENSOR002
-                        <span><strong>Type:</strong> Humidity</span>
-                        <span><strong>Status:</strong> Active</span>
-                        <span><strong>Value:</strong> 60%</span>
+                    <li class="sensor-item">
+                        <span>Humidity Sensor 1</span>
+                        <span class="sensor-status status-active">Active</span>
                     </li>
-                    <li>
-                        <strong>Sensor ID:</strong> SENSOR003
-                        <span><strong>Type:</strong> Soil Moisture</span>
-                        <span><strong>Status:</strong> Inactive</span>
-                        <span><strong>Value:</strong> Low</span>
-                    </li>
-                    <li>
-                        <strong>Sensor ID:</strong> SENSOR004
-                        <span><strong>Type:</strong> Light Level</span>
-                        <span><strong>Status:</strong> Active</span>
-                        <span><strong>Value:</strong> 800 lux</span>
+                    <li class="sensor-item">
+                        <span>Soil Sensor 2</span>
+                        <span class="sensor-status status-inactive">Inactive</span>
                     </li>
                 </ul>
-            </section>
-        </main>
+            </div>
 
-        <footer>
-            <p>&copy; 2025 Smart Farm API</p>
-        </footer>
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h3>Irrigation Status</h3>
+                </div>
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">On</div>
+                        <div class="stat-label">System Status</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">15L/h</div>
+                        <div class="stat-label">Flow Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="Scripts/script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>

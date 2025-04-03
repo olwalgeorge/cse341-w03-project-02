@@ -1,221 +1,262 @@
 {
-  "swagger": "2.0",
+  "openapi": "3.0.0",
   "info": {
     "title": "Smart Farm API",
+    "version": "1.0.0",
     "description": "API documentation for the Smart Farm project",
-    "version": "1.0.0"
+    "contact": {
+      "name": "API Support",
+      "email": "support@smartfarm.com"
+    }
   },
-  "host": "localhost:3000",
-  "basePath": "/",
-  "schemes": [
-    "http"
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Development server"
+    }
   ],
-  "paths": {
-    "/": {
-      "get": {
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
+  "tags": [
+    {
+      "name": "Authentication",
+      "description": "Authentication endpoints"
+    },
+    {
+      "name": "Users",
+      "description": "User management endpoints"
+    },
+    {
+      "name": "Sensors",
+      "description": "Sensor management endpoints"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    },
+    "schemas": {
+      "Error": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": false
+          },
+          "message": {
+            "type": "string"
+          },
+          "error": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Success": {
+        "type": "object",
+        "properties": {
+          "success": {
+            "type": "boolean",
+            "example": true
+          },
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object"
+          }
+        }
+      },
+      "User": {
+        "type": "object",
+        "properties": {
+          "userID": {
+            "type": "string",
+            "pattern": "^SM-\\d{5}$",
+            "example": "SM-00001"
+          },
+          "username": {
+            "type": "string",
+            "example": "john_doe"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "example": "john.doe@example.com"
+          },
+          "fullName": {
+            "type": "string",
+            "example": "John Doe"
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "SUPERADMIN",
+              "ADMIN",
+              "USER",
+              "ORG"
+            ]
+          }
+        }
+      },
+      "Sensor": {
+        "type": "object",
+        "properties": {
+          "sensor_id": {
+            "type": "string",
+            "pattern": "^sen_\\d{4}$",
+            "example": "sen_0001"
+          },
+          "sensor_name": {
+            "type": "string",
+            "example": "Greenhouse Temperature"
+          },
+          "sensor_type": {
+            "type": "string",
+            "enum": [
+              "temperature",
+              "humidity",
+              "light",
+              "soil moisture"
+            ]
+          },
+          "unit": {
+            "type": "string",
+            "example": "°C"
+          },
+          "location": {
+            "type": "string",
+            "example": "Greenhouse Zone A"
           }
         }
       }
     },
+    "responses": {
+      "UnauthorizedError": {
+        "description": "Access token is missing or invalid",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "NotFoundError": {
+        "description": "The specified resource was not found",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "ValidationError": {
+        "description": "Validation error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      },
+      "ServerError": {
+        "description": "Internal Server Error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/Error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "paths": {
     "/auth/register": {
       "post": {
         "tags": [
           "Authentication"
         ],
         "summary": "Register new user",
-        "description": "Creates a new user account with email and password",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "description": "User registration data",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "object"
-                },
-                "required": {
-                  "type": "array",
-                  "example": [
-                    "email",
-                    "password",
-                    "username",
-                    "fullName"
-                  ],
-                  "items": {
-                    "type": "string"
-                  }
-                },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "email",
+                  "password",
+                  "username",
+                  "fullName"
+                ],
                 "properties": {
-                  "type": "object",
-                  "properties": {
-                    "email": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "john.doe@example.com"
-                        },
-                        "description": {
-                          "type": "string",
-                          "example": "Valid email address"
-                        }
-                      }
-                    },
-                    "password": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "StrongP@ss123"
-                        },
-                        "description": {
-                          "type": "string",
-                          "example": "Password (min 8 chars, 1 uppercase, 1 lowercase, 1 number, 1 special)"
-                        }
-                      }
-                    },
-                    "username": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "john_doe"
-                        },
-                        "description": {
-                          "type": "string",
-                          "example": "Username (3-20 chars, alphanumeric and underscore)"
-                        }
-                      }
-                    },
-                    "fullName": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "John Doe"
-                        },
-                        "description": {
-                          "type": "string",
-                          "example": "Full name (3-50 characters)"
-                        }
-                      }
-                    }
+                  "email": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "password": {
+                    "type": "string",
+                    "format": "password"
+                  },
+                  "username": {
+                    "type": "string"
+                  },
+                  "fullName": {
+                    "type": "string"
                   }
                 }
               }
             }
           }
-        ],
+        },
         "responses": {
           "201": {
             "description": "User registered successfully",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Registration successful"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success"
                 }
-              },
-              "xml": {
-                "name": "main"
               }
             }
           },
           "400": {
-            "description": "Validation error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Validation error"
-                },
-                "error": {
-                  "type": "array",
-                  "example": [
-                    "Email is required",
-                    "Password is too weak"
-                  ],
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
+            "$ref": "#/components/responses/ValidationError"
           },
           "409": {
-            "description": "Email already registered",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Email already registered"
+            "description": "Duplicate entry",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Error"
+                    },
+                    {
+                      "properties": {
+                        "error": {
+                          "example": [
+                            "Email already exists",
+                            "Username already taken"
+                          ]
+                        }
+                      }
+                    }
+                  ]
                 }
-              },
-              "xml": {
-                "name": "main"
               }
             }
           },
           "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to register user"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
+            "$ref": "#/components/responses/ServerError"
           }
         }
       }
@@ -226,144 +267,46 @@
           "Authentication"
         ],
         "summary": "Login user",
-        "description": "Authenticates user with email and password",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "description": "Login credentials",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "object"
-                },
-                "required": {
-                  "type": "array",
-                  "example": [
-                    "email",
-                    "password"
-                  ],
-                  "items": {
-                    "type": "string"
-                  }
-                },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "email",
+                  "password"
+                ],
                 "properties": {
-                  "type": "object",
-                  "properties": {
-                    "email": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "john.doe@example.com"
-                        }
-                      }
-                    },
-                    "password": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "StrongP@ss123"
-                        }
-                      }
-                    }
+                  "email": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "password": {
+                    "type": "string",
+                    "format": "password"
                   }
                 }
               }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "Login successful",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Login successful"
-                },
-                "data": {
-                  "type": "object",
-                  "properties": {
-                    "user": {
-                      "type": "object",
-                      "properties": {
-                        "userID": {
-                          "type": "string",
-                          "example": "SM-00001"
-                        },
-                        "username": {
-                          "type": "string",
-                          "example": "john_doe"
-                        },
-                        "email": {
-                          "type": "string",
-                          "example": "john.doe@example.com"
-                        }
-                      }
-                    }
-                  }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success"
                 }
-              },
-              "xml": {
-                "name": "main"
               }
             }
           },
           "401": {
-            "description": "Invalid credentials",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Invalid credentials"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
+            "$ref": "#/components/responses/UnauthorizedError"
           },
           "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to login user"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
+            "$ref": "#/components/responses/ServerError"
           }
         }
       }
@@ -374,71 +317,26 @@
           "Authentication"
         ],
         "summary": "Logout user",
-        "description": "Logs out the currently authenticated user and invalidates their session",
-        "responses": {
-          "200": {
-            "description": "Logout successful",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Logged out successfully"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "401": {
-            "description": "Not authenticated",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Not authenticated"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to logout user"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          }
-        },
         "security": [
           {
             "bearerAuth": []
           }
-        ]
+        ],
+        "responses": {
+          "200": {
+            "description": "Logged out successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          }
+        }
       }
     },
     "/auth/github": {
@@ -447,10 +345,10 @@
           "Authentication"
         ],
         "summary": "GitHub OAuth login",
-        "description": "Initiates GitHub OAuth authentication flow by redirecting to GitHub login page",
+        "description": "Initiates GitHub OAuth flow",
         "responses": {
           "302": {
-            "description": "Redirects to GitHub authorization page"
+            "description": "Redirects to GitHub authorization"
           }
         }
       }
@@ -461,48 +359,22 @@
           "Authentication"
         ],
         "summary": "GitHub OAuth callback",
-        "description": "Handles the callback from GitHub OAuth authentication",
         "responses": {
           "302": {
             "description": "Redirects to dashboard on success, login page on failure"
           },
           "400": {
             "description": "OAuth error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "GitHub authentication failed"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
                 }
-              },
-              "xml": {
-                "name": "main"
               }
             }
           },
           "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to authenticate user"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
+            "$ref": "#/components/responses/ServerError"
           }
         }
       }
@@ -513,10 +385,10 @@
           "Authentication"
         ],
         "summary": "Google OAuth login",
-        "description": "Initiates Google OAuth authentication flow by redirecting to Google login page",
+        "description": "Initiates Google OAuth flow",
         "responses": {
           "302": {
-            "description": "Redirects to Google authorization page"
+            "description": "Redirects to Google authorization"
           }
         }
       }
@@ -527,957 +399,383 @@
           "Authentication"
         ],
         "summary": "Google OAuth callback",
-        "description": "Handles the callback from Google OAuth authentication",
         "responses": {
           "302": {
             "description": "Redirects to dashboard on success, login page on failure"
           },
           "400": {
             "description": "OAuth error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Google authentication failed"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
                 }
-              },
-              "xml": {
-                "name": "main"
               }
             }
           },
           "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to authenticate user"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
+            "$ref": "#/components/responses/ServerError"
           }
         }
       }
     },
-    "/users/register": {
-      "post": {
+    "/users/profile": {
+      "get": {
         "tags": [
-          "Authentication"
+          "Users"
         ],
-        "summary": "Register new user",
-        "description": "Creates a new user account with email and password",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "description": "User registration data",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "object"
-                },
-                "required": {
-                  "type": "array",
-                  "example": [
-                    "email",
-                    "password",
-                    "username",
-                    "fullName"
-                  ],
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "properties": {
-                  "type": "object",
-                  "properties": {
-                    "email": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "john.doe@example.com"
-                        },
-                        "description": {
-                          "type": "string",
-                          "example": "Valid email address"
-                        }
-                      }
-                    },
-                    "password": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "StrongP@ss123"
-                        },
-                        "description": {
-                          "type": "string",
-                          "example": "Password (min 8 chars, 1 uppercase, 1 lowercase, 1 number, 1 special)"
-                        }
-                      }
-                    },
-                    "username": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "john_doe"
-                        },
-                        "description": {
-                          "type": "string",
-                          "example": "Username (3-20 chars, alphanumeric and underscore)"
-                        }
-                      }
-                    },
-                    "fullName": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "John Doe"
-                        },
-                        "description": {
-                          "type": "string",
-                          "example": "Full name (3-50 characters)"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "User registered successfully",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Registration successful"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "400": {
-            "description": "Validation error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Validation error"
-                },
-                "error": {
-                  "type": "array",
-                  "example": [
-                    "Email is required",
-                    "Password is too weak"
-                  ],
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "409": {
-            "description": "Duplicate entry error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Duplicate entry"
-                },
-                "error": {
-                  "type": "array",
-                  "example": [
-                    "Email already exists",
-                    "Username already taken"
-                  ],
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to register user"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/users/login": {
-      "post": {
-        "tags": [
-          "Authentication"
-        ],
-        "summary": "Login user",
-        "description": "Authenticates user with email and password",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "description": "Login credentials",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "object"
-                },
-                "required": {
-                  "type": "array",
-                  "example": [
-                    "email",
-                    "password"
-                  ],
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "properties": {
-                  "type": "object",
-                  "properties": {
-                    "email": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "john.doe@example.com"
-                        }
-                      }
-                    },
-                    "password": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "StrongP@ss123"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Login successful",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Login successful"
-                },
-                "data": {
-                  "type": "object",
-                  "properties": {
-                    "user": {
-                      "type": "object",
-                      "properties": {
-                        "userID": {
-                          "type": "string",
-                          "example": "SM-00001"
-                        },
-                        "username": {
-                          "type": "string",
-                          "example": "john_doe"
-                        },
-                        "email": {
-                          "type": "string",
-                          "example": "john.doe@example.com"
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "401": {
-            "description": "Unauthorized access",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Incorrect email or password"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Error during login"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/users/logout": {
-      "post": {
-        "tags": [
-          "Authentication"
-        ],
-        "summary": "Logout user",
-        "description": "Logs out the currently authenticated user and invalidates their session",
-        "responses": {
-          "200": {
-            "description": "Logout successful",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Logged out successfully"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "401": {
-            "description": "Not authenticated",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Not authenticated"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Error during logout"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          }
-        },
+        "summary": "Get current user profile",
         "security": [
           {
             "bearerAuth": []
           }
-        ]
-      }
-    },
-    "/users/github": {
-      "get": {
-        "tags": [
-          "Authentication"
         ],
-        "summary": "GitHub OAuth login",
-        "description": "Initiates GitHub OAuth authentication flow by redirecting to GitHub login page",
         "responses": {
-          "302": {
-            "description": "Redirects to GitHub authorization page"
+          "200": {
+            "description": "User profile retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          },
+          "500": {
+            "$ref": "#/components/responses/ServerError"
           }
         }
-      }
-    },
-    "/users/github/callback": {
-      "get": {
+      },
+      "put": {
         "tags": [
-          "Authentication"
+          "Users"
         ],
-        "summary": "GitHub OAuth callback",
-        "description": "Handles the callback from GitHub OAuth authentication",
+        "summary": "Update user profile",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/User"
+              }
+            }
+          }
+        },
         "responses": {
-          "302": {
-            "description": "Redirects to dashboard on success, login page on failure"
+          "200": {
+            "description": "Profile updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success"
+                }
+              }
+            }
           },
           "400": {
-            "description": "OAuth error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "GitHub authentication failed"
+            "$ref": "#/components/responses/ValidationError"
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          },
+          "409": {
+            "description": "Duplicate entry error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
                 }
-              },
-              "xml": {
-                "name": "main"
               }
             }
           },
           "500": {
-            "description": "Internal server error",
+            "$ref": "#/components/responses/ServerError"
+          }
+        }
+      }
+    },
+    "/users/{userID}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Get user by ID",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "userID",
+            "in": "path",
+            "required": true,
             "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Error during GitHub authentication"
+              "type": "string",
+              "pattern": "^SM-\\d{5}$"
+            },
+            "description": "User ID in SM-XXXXX format"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success"
                 }
-              },
-              "xml": {
-                "name": "main"
               }
             }
-          }
-        }
-      }
-    },
-    "/users/google": {
-      "get": {
-        "tags": [
-          "Authentication"
-        ],
-        "summary": "Google OAuth login",
-        "description": "Initiates Google OAuth authentication flow by redirecting to Google login page",
-        "responses": {
-          "302": {
-            "description": "Redirects to Google authorization page"
-          }
-        }
-      }
-    },
-    "/users/google/callback": {
-      "get": {
-        "tags": [
-          "Authentication"
-        ],
-        "summary": "Google OAuth callback",
-        "description": "Handles the callback from Google OAuth authentication",
-        "responses": {
-          "302": {
-            "description": "Redirects to dashboard on success, login page on failure"
           },
           "400": {
-            "description": "OAuth error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Google authentication failed"
+            "description": "Invalid user ID format",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
                 }
-              },
-              "xml": {
-                "name": "main"
               }
             }
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFoundError"
           },
           "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Error during Google authentication"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
+            "$ref": "#/components/responses/ServerError"
           }
         }
       }
     },
-    "/sensors/": {
+    "/users/email/{email}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Get user by email",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "email",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "email"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFoundError"
+          }
+        }
+      }
+    },
+    "/users/username/{username}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Get user by username",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "username",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9_]+$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFoundError"
+          }
+        }
+      }
+    },
+    "/users/role/{role}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Get users by role",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "role",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "SUPERADMIN",
+                "ADMIN",
+                "USER",
+                "ORG"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Users found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/User"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFoundError"
+          }
+        }
+      }
+    },
+    "/sensors": {
       "get": {
         "tags": [
           "Sensors"
         ],
         "summary": "Get all sensors",
-        "description": "Retrieves all sensors in the system",
-        "responses": {
-          "200": {
-            "description": "Sensors retrieved successfully",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Sensors retrieved successfully"
-                },
-                "data": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "sensor_id": {
-                        "type": "string",
-                        "example": "sen_0001"
-                      },
-                      "sensor_name": {
-                        "type": "string",
-                        "example": "Greenhouse Temperature"
-                      },
-                      "sensor_type": {
-                        "type": "string",
-                        "example": "temperature"
-                      },
-                      "unit": {
-                        "type": "string",
-                        "example": "°C"
-                      },
-                      "location": {
-                        "type": "string",
-                        "example": "Greenhouse Zone A"
-                      }
-                    }
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "401": {
-            "description": "Not authenticated",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Not authenticated"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to retrieve sensors"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          }
-        },
         "security": [
           {
             "bearerAuth": []
           }
-        ]
+        ],
+        "responses": {
+          "200": {
+            "description": "List of sensors retrieved successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Sensor"
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          },
+          "500": {
+            "$ref": "#/components/responses/ServerError"
+          }
+        }
       },
       "post": {
         "tags": [
           "Sensors"
         ],
         "summary": "Create new sensor",
-        "description": "Creates a new sensor in the system",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "description": "Sensor data",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "object"
-                },
-                "required": {
-                  "type": "array",
-                  "example": [
-                    "sensor_id",
-                    "sensor_name",
-                    "sensor_type"
-                  ],
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "properties": {
-                  "type": "object",
-                  "properties": {
-                    "sensor_id": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "sen_0001"
-                        },
-                        "description": {
-                          "type": "string",
-                          "example": "Unique sensor ID (format: sen_XXXX)"
-                        }
-                      }
-                    },
-                    "sensor_name": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "Greenhouse Temperature"
-                        }
-                      }
-                    },
-                    "sensor_type": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "enum": {
-                          "type": "array",
-                          "example": [
-                            "temperature",
-                            "humidity",
-                            "light",
-                            "soil moisture"
-                          ],
-                          "items": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "unit": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "°C"
-                        }
-                      }
-                    },
-                    "location": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "Greenhouse Zone A"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "Sensor created successfully",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Sensor created successfully"
-                },
-                "data": {
-                  "type": "object",
-                  "properties": {
-                    "sensor_id": {
-                      "type": "string",
-                      "example": "sen_0001"
-                    },
-                    "sensor_name": {
-                      "type": "string",
-                      "example": "Greenhouse Temperature"
-                    },
-                    "sensor_type": {
-                      "type": "string",
-                      "example": "temperature"
-                    },
-                    "unit": {
-                      "type": "string",
-                      "example": "°C"
-                    },
-                    "location": {
-                      "type": "string",
-                      "example": "Greenhouse Zone A"
-                    }
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "400": {
-            "description": "Validation error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Validation error"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "401": {
-            "description": "Not authenticated",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Not authenticated"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "409": {
-            "description": "Duplicate sensor ID",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Duplicate sensor ID"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to create sensor"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          }
-        },
         "security": [
           {
             "bearerAuth": []
           }
-        ]
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sensor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Sensor created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/ValidationError"
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          },
+          "409": {
+            "description": "Duplicate sensor ID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "$ref": "#/components/responses/ServerError"
+          }
+        }
       }
     },
     "/sensors/{sensor_id}": {
@@ -1486,500 +784,54 @@
           "Sensors"
         ],
         "summary": "Get sensor by ID",
-        "description": "Retrieves a specific sensor by its sen_XXXX format ID",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "parameters": [
           {
             "name": "sensor_id",
             "in": "path",
             "required": true,
-            "type": "string",
-            "description": "Sensor ID in sen_XXXX format",
-            "example": "sen_0001"
+            "schema": {
+              "type": "string",
+              "pattern": "^sen_\\d{4}$"
+            },
+            "description": "Sensor ID in sen_XXXX format"
           }
         ],
         "responses": {
           "200": {
             "description": "Sensor retrieved successfully",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Sensor retrieved successfully"
-                },
-                "data": {
-                  "type": "object",
-                  "properties": {
-                    "sensor_id": {
-                      "type": "string",
-                      "example": "sen_0001"
-                    },
-                    "sensor_name": {
-                      "type": "string",
-                      "example": "Greenhouse Temperature"
-                    },
-                    "sensor_type": {
-                      "type": "string",
-                      "example": "temperature"
-                    },
-                    "unit": {
-                      "type": "string",
-                      "example": "°C"
-                    },
-                    "location": {
-                      "type": "string",
-                      "example": "Greenhouse Zone A"
-                    }
-                  }
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success"
                 }
-              },
-              "xml": {
-                "name": "main"
               }
             }
           },
           "400": {
             "description": "Invalid sensor ID format",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Invalid sensor ID format"
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
                 }
-              },
-              "xml": {
-                "name": "main"
               }
             }
           },
           "401": {
-            "description": "Not authenticated",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Not authenticated"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
+            "$ref": "#/components/responses/UnauthorizedError"
           },
           "404": {
-            "description": "Sensor not found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Sensor not found"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
+            "$ref": "#/components/responses/NotFoundError"
           },
           "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to retrieve sensor"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
+            "$ref": "#/components/responses/ServerError"
           }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      }
-    },
-    "/sensors/{_id}": {
-      "put": {
-        "tags": [
-          "Sensors"
-        ],
-        "summary": "Update sensor",
-        "description": "Updates an existing sensor\\'s information by MongoDB _id",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "MongoDB _id of the sensor",
-            "example": "507f1f77bcf86cd799439011"
-          },
-          {
-            "name": "body",
-            "in": "body",
-            "description": "Updated sensor information",
-            "required": true,
-            "schema": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "type": "string",
-                  "example": "object"
-                },
-                "properties": {
-                  "type": "object",
-                  "properties": {
-                    "sensor_name": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "Updated Temperature Sensor"
-                        }
-                      }
-                    },
-                    "unit": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "°F"
-                        }
-                      }
-                    },
-                    "location": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "Greenhouse Zone B"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Sensor updated successfully",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Sensor updated successfully"
-                },
-                "data": {
-                  "type": "object",
-                  "properties": {
-                    "_id": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string",
-                          "example": "string"
-                        },
-                        "example": {
-                          "type": "string",
-                          "example": "507f1f77bcf86cd799439011"
-                        }
-                      }
-                    },
-                    "sensor_id": {
-                      "type": "string",
-                      "example": "sen_0001"
-                    },
-                    "sensor_name": {
-                      "type": "string",
-                      "example": "Updated Temperature Sensor"
-                    },
-                    "sensor_type": {
-                      "type": "string",
-                      "example": "temperature"
-                    },
-                    "unit": {
-                      "type": "string",
-                      "example": "°F"
-                    },
-                    "location": {
-                      "type": "string",
-                      "example": "Greenhouse Zone B"
-                    }
-                  }
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "400": {
-            "description": "Validation error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Validation error"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "401": {
-            "description": "Not authenticated",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Not authenticated"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "404": {
-            "description": "Sensor not found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Sensor not found"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "409": {
-            "description": "Duplicate sensor ID",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Duplicate sensor ID"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to update sensor"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
-      },
-      "delete": {
-        "tags": [
-          "Sensors"
-        ],
-        "summary": "Delete sensor",
-        "description": "Permanently removes a sensor from the system by MongoDB _id",
-        "parameters": [
-          {
-            "name": "_id",
-            "in": "path",
-            "required": true,
-            "type": "string",
-            "description": "MongoDB _id of the sensor to delete",
-            "example": "507f1f77bcf86cd799439011"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Sensor deleted successfully",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Sensor deleted successfully"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "400": {
-            "description": "Invalid sensor ID format",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Invalid sensor ID format"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "401": {
-            "description": "Not authenticated",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Not authenticated"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "404": {
-            "description": "Sensor not found",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Sensor not found"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Failed to delete sensor"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "bearerAuth": []
-          }
-        ]
+        }
       }
     },
     "/sensors/type/{sensor_type}": {
@@ -1988,133 +840,160 @@
           "Sensors"
         ],
         "summary": "Get sensors by type",
-        "description": "Retrieves all sensors of a specific type (temperature, humidity, light, or soil moisture)",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "parameters": [
           {
             "name": "sensor_type",
             "in": "path",
             "required": true,
-            "type": "string",
-            "description": "Type of sensor to filter by",
-            "enum": [
-              "temperature",
-              "humidity",
-              "light",
-              "soil moisture"
-            ]
+            "schema": {
+              "type": "string",
+              "enum": [
+                "temperature",
+                "humidity",
+                "light",
+                "soil moisture"
+              ]
+            },
+            "description": "Type of sensor"
           }
         ],
         "responses": {
           "200": {
             "description": "Sensors retrieved successfully",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": true
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Sensors retrieved successfully"
-                },
-                "data": {
+            "content": {
+              "application/json": {
+                "schema": {
                   "type": "array",
                   "items": {
-                    "type": "object",
-                    "properties": {
-                      "sensor_id": {
-                        "type": "string",
-                        "example": "sen_0001"
-                      },
-                      "sensor_name": {
-                        "type": "string",
-                        "example": "Greenhouse Temperature"
-                      },
-                      "sensor_type": {
-                        "type": "string",
-                        "example": "temperature"
-                      },
-                      "unit": {
-                        "type": "string",
-                        "example": "°C"
-                      },
-                      "location": {
-                        "type": "string",
-                        "example": "Greenhouse Zone A"
-                      }
-                    }
+                    "$ref": "#/components/schemas/Sensor"
                   }
                 }
-              },
-              "xml": {
-                "name": "main"
               }
             }
           },
           "401": {
-            "description": "Not authenticated",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Not authenticated"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
+            "$ref": "#/components/responses/UnauthorizedError"
           },
           "404": {
-            "description": "No sensors found with type ${sensor_type}",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "No sensors found with type ${sensor_type}"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
-          },
-          "500": {
-            "description": "Internal server error",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "success": {
-                  "type": "boolean",
-                  "example": false
-                },
-                "message": {
-                  "type": "string",
-                  "example": "Error retrieving sensors"
-                }
-              },
-              "xml": {
-                "name": "main"
-              }
-            }
+            "$ref": "#/components/responses/NotFoundError"
           }
-        },
+        }
+      }
+    },
+    "/sensors/{_id}": {
+      "put": {
+        "tags": [
+          "Sensors"
+        ],
+        "summary": "Update sensor",
         "security": [
           {
             "bearerAuth": []
           }
-        ]
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "MongoDB ID of the sensor"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Sensor"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sensor updated successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/ValidationError"
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFoundError"
+          },
+          "409": {
+            "description": "Duplicate sensor ID",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "$ref": "#/components/responses/ServerError"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Sensors"
+        ],
+        "summary": "Delete sensor",
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "name": "_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "MongoDB ID of the sensor"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Sensor deleted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Success"
+                }
+              }
+            }
+          },
+          "401": {
+            "$ref": "#/components/responses/UnauthorizedError"
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFoundError"
+          },
+          "500": {
+            "$ref": "#/components/responses/ServerError"
+          }
+        }
       }
     }
   }

@@ -1,31 +1,39 @@
 // src/config/swagger.js
-const swaggerAutogen = require("swagger-autogen");
 const config = require("./config");
-const logger = require("../utils/logger");
-const { env,renderUrl } = config;
+const authRoutes = require('../docs/auth.docs');
+const userRoutes = require('../docs/user.docs');
+const sensorRoutes = require('../docs/sensor.docs');
+const components = require('../docs/components');
 
-const outputFile = "../../swagger_output.json";
-const endpointsFiles = ["../routes/index.js"];
-
-
-let host = env === "production" ? renderUrl : "localhost:3000";
-let schemes = env === "production" ? ["https"] : ["http"];
-
-const doc = {
+const swaggerConfig = {
+  openapi: '3.0.0',
   info: {
-    title: "Smart Farm API",
-    description: "API documentation for the Smart Farm project",
+    title: 'Smart Farm API',
+    version: '1.0.0',
+    description: 'API documentation for the Smart Farm project',
+    contact: {
+      name: 'API Support',
+      email: 'support@smartfarm.com'
+    }
   },
-  host: host,
-  schemes: schemes,
+  servers: [
+    {
+      url: config.env === 'production' ? config.renderUrl : 'http://localhost:3000',
+      description: config.env === 'production' ? 'Production server' : 'Development server'
+    }
+  ],
+  tags: [
+    { name: 'Authentication', description: 'Authentication endpoints' },
+    { name: 'Users', description: 'User management endpoints' },
+    { name: 'Sensors', description: 'Sensor management endpoints' }
+  ],
+  components: components,
+  paths: {
+    ...authRoutes,
+    ...userRoutes,
+    ...sensorRoutes
+  }
 };
 
-// Generate Swagger file on startup then run server
-swaggerAutogen(outputFile, endpointsFiles, doc)
-  .then(() => {
-    logger.info("Swagger documentation generated");
-    require("../server");
-  })
-  .catch((error) => {
-    logger.error("Error generating Swagger documentation:", error);
-  });
+
+module.exports = swaggerConfig;

@@ -4,12 +4,13 @@
   "description": "API for a smart farm application",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/config/swagger.js",
+    "start": "node src/server.js",
     "dev": "node src/config/swagger.js",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "format": "prettier --write .",
-    "swagger-gen": "node src/config/swagger.js",
+    "swagger-gen": "node ./scripts/swagger.js",
+    "prestart": "npm run swagger-gen",
     "debug": "nodemon --inspect src/server.js"
   },
   "keywords": [

@@ -5,7 +5,7 @@ const connectDB = require("./config/database.js");
 const routes = require("./routes/index.js");
 const errorMiddleware = require("./middlewares/error.middleware.js");
 const swaggerUi = require("swagger-ui-express");
-const swaggerOutput = require("../swagger_output.json");
+const swaggerConfig = require("./config/swagger.js");
 const passport = require("./config/passport.js");
 const session = require("./config/session.js");
 
@@ -32,8 +32,12 @@ app.use(express.static("public"));
 // CHECK src/routes/index.js FOR MIDDLEWARE ERRORS
 app.use("/", routes);
 
-// Swagger Documentation
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerOutput));
+// Swagger Documentation with custom options
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerConfig, {
+  explorer: true,
+  customCss: '.swagger-ui .topbar { display: none }',
+  customSiteTitle: "Smart Farm API Documentation"
+}));
 
 // Error Handling Middleware
 app.use(errorMiddleware);

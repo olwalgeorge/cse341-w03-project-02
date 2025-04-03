@@ -7,12 +7,10 @@ const path = require('path');
 
 const router = express.Router();
 
-/* #swagger.tags = ['Documentation'] */
-/* #swagger.description = 'Main route for accessing the application' */
-
 router.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, '../public/index.html')); 
 });
+
 router.use("/auth", authRoutes);
 router.use("/users", userRoutes);
 router.use("/sensors", sensorRoutes);

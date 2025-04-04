@@ -12,9 +12,9 @@ router.post('/register', validate(userCreateValidationRules()), localAuthControl
 router.post('/login', 
   passport.authenticate('local', {
     failureRedirect: '/login.html',
-    failureFlash: true,
-    successRedirect: '/dashboard.html'
-  })
+    failureFlash: true
+  }),
+  localAuthController.loginSuccess
 );
 
 router.post('/logout', isAuthenticated, localAuthController.logout);

@@ -42,7 +42,8 @@ const register = asyncHandler(async (req, res, next) => {
  */
 const loginSuccess = (req, res) => {
     logger.info(`User ${req.user.username} logged in successfully.`);
-    res.redirect('/dashboard.html');
+    const transformedUser = transformUser(req.user);
+    sendResponse(res, 200, "Login successful", { user: transformedUser });
 };
 
 /**

@@ -63,10 +63,17 @@ const sensorUpdateValidationRules = () => {
   ];
 };
 
+const sensorDeleteValidationRules = () => {
+  return [
+    param("_id", "Invalid MongoDB ID format").isMongoId()
+  ];
+};
+
 module.exports = {
   sensorValidateIdRules,
   sensorValidateSensorIdRules,
   sensorCreateValidationRules,
   sensorUpdateValidationRules,
   sensorValidateSensorTypeRules,
+  sensorDeleteValidationRules,
 };

@@ -193,8 +193,11 @@ module.exports = {
           name: '_id',
           in: 'path',
           required: true,
-          schema: { type: 'string' },
-          description: 'MongoDB ID of the sensor'
+          schema: {
+            type: 'string',
+            pattern: '^[0-9a-fA-F]{24}$'
+          },
+          description: 'MongoDB ObjectId of the sensor'
         }
       ],
       responses: {

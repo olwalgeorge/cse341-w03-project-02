@@ -2,6 +2,7 @@ const Sensor = require("../models/sensor.model.js");
 const sendResponse = require("../utils/response.js");
 const asyncHandler = require("express-async-handler");
 const logger = require("../utils/logger.js");
+const { validationResult } = require("express-validator");
 
 /**
  * @desc    Get all sensors
@@ -122,19 +123,24 @@ const updateSensor = asyncHandler(async (req, res) => {
  * @access  Private
  */
 const deleteSensor = asyncHandler(async (req, res) => {
-  logger.info(`deleteSensor called with ID ${req.params.id}`);
+  logger.info(`deleteSensor called with ID ${req.params._id}`);
+  
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return sendResponse(res, 400, "Validation error", null, {
+      message: errors.array()[0].msg,
+    });
+  }
+
   try {
-    const sensor = await Sensor.findByIdAndDelete(req.params.id);
+    const sensor = await Sensor.findByIdAndDelete(req.params._id);
     if (sensor) {
       sendResponse(res, 200, "Sensor deleted successfully");
     } else {
       return sendResponse(res, 404, "Sensor not found");
     }
   } catch (error) {
-    logger.error(`Error deleting sensor with ID ${req.params.id}:`, error);
-    if (error.name === "CastError" && error.kind === "ObjectId") {
-      return sendResponse(res, 400, "Invalid sensor ID format");
-    }
+    logger.error(`Error deleting sensor with ID ${req.params._id}:`, error);
     sendResponse(res, 500, "Failed to delete sensor", null, {
       message: error.message,
     });

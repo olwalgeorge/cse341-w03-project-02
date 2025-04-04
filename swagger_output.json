@@ -1090,9 +1090,10 @@
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string"
+              "type": "string",
+              "pattern": "^[0-9a-fA-F]{24}$"
             },
-            "description": "MongoDB ID of the sensor"
+            "description": "MongoDB ObjectId of the sensor"
           }
         ],
         "responses": {

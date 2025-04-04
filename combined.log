@@ -4172,3 +4172,25 @@ TypeError: req.flash is not a function
 2025-04-04 06:52:35 DEBUG [smart-farm-api]: Session: 
 2025-04-04 06:52:36 INFO [smart-farm-api]: User superadmin logged in successfully 
 2025-04-04 06:52:36 INFO [smart-farm-api]: User superadmin logged in successfully. 
+2025-04-04 07:24:20 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-04 07:24:24 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-04 07:24:27 DEBUG [smart-farm-api]: Session: 
+2025-04-04 07:24:28 DEBUG [smart-farm-api]: Session: 
+2025-04-04 07:24:34 DEBUG [smart-farm-api]: Session: 
+2025-04-04 07:24:34 DEBUG [smart-farm-api]: Session: 
+2025-04-04 07:24:36 DEBUG [smart-farm-api]: Session: 
+2025-04-04 07:24:42 DEBUG [smart-farm-api]: Session: 
+2025-04-04 07:24:43 DEBUG [smart-farm-api]: Session: 
+2025-04-04 07:24:47 DEBUG [smart-farm-api]: Session: 
+2025-04-04 07:24:47 DEBUG [smart-farm-api]: Session: 
+2025-04-04 07:24:47 DEBUG [smart-farm-api]: Session: 
+2025-04-04 07:24:49 DEBUG [smart-farm-api]: Session: 
+2025-04-04 07:24:49 DEBUG [smart-farm-api]: Session: 
+2025-04-04 07:25:11 DEBUG [smart-farm-api]: Session: 
+2025-04-04 07:25:11 DEBUG [smart-farm-api]: Auth check: 
+2025-04-04 07:25:11 INFO [smart-farm-api]: User superadmin is authenticated 
+2025-04-04 07:25:11 INFO [smart-farm-api]: getSensors called 
+2025-04-04 07:25:56 DEBUG [smart-farm-api]: Session: 
+2025-04-04 07:25:56 DEBUG [smart-farm-api]: Auth check: 
+2025-04-04 07:25:56 INFO [smart-farm-api]: User superadmin is authenticated 
+2025-04-04 07:25:56 INFO [smart-farm-api]: deleteSensor called with ID 67e79e5366e9c9e24b3af116 

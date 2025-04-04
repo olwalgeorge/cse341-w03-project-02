@@ -28,14 +28,5 @@ router.get('/github/callback',
   (req, res) => res.redirect('/dashboard.html')
 );
 
-// Google authentication routes
-router.get('/google', 
-  passport.authenticate('google', { scope: ['profile', 'email'], failureRedirect: '/login.html' }));
-
-router.get('/google/callback',
-  passport.authenticate('google', { failureRedirect: '/login.html' }),
-  (req, res) => res.redirect('/dashboard.html')
-);
-
 module.exports = router;
 

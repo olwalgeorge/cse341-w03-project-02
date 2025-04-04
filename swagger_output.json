@@ -379,46 +379,6 @@
         }
       }
     },
-    "/auth/google": {
-      "get": {
-        "tags": [
-          "Authentication"
-        ],
-        "summary": "Google OAuth login",
-        "description": "Initiates Google OAuth flow",
-        "responses": {
-          "302": {
-            "description": "Redirects to Google authorization"
-          }
-        }
-      }
-    },
-    "/auth/google/callback": {
-      "get": {
-        "tags": [
-          "Authentication"
-        ],
-        "summary": "Google OAuth callback",
-        "responses": {
-          "302": {
-            "description": "Redirects to dashboard on success, login page on failure"
-          },
-          "400": {
-            "description": "OAuth error",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Error"
-                }
-              }
-            }
-          },
-          "500": {
-            "$ref": "#/components/responses/ServerError"
-          }
-        }
-      }
-    },
     "/users/profile": {
       "get": {
         "tags": [

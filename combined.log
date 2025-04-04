@@ -3959,3 +3959,216 @@ TypeError: req.flash is not a function
 2025-04-04 03:40:00 INFO [smart-farm-api]: MongoDB Connected... 
 2025-04-04 03:40:05 INFO [smart-farm-api]: User superadmin logged in successfully 
 2025-04-04 03:40:06 INFO [smart-farm-api]: User superadmin logged in successfully. 
+2025-04-04 06:21:08 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-04 06:21:12 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-04 06:21:16 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:21:20 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:21:23 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:21:24 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:21:26 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:21:29 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:21:29 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:21:30 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:21:30 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:21:30 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:21:31 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:21:31 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:21:31 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:21:31 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:21:32 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:21:32 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:21:32 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:22:37 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-04 06:22:41 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-04 06:22:48 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:22:49 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:22:56 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:22:57 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:22:58 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:23:01 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:23:02 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:23:02 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:23:03 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:23:04 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:23:04 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:23:05 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:23:06 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:23:06 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:24:12 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-04 06:24:15 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-04 06:24:18 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:24:19 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:24:21 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:24:22 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:24:23 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:24:26 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:24:26 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:24:27 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:24:29 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:24:29 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:24:30 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:24:32 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:24:32 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:24:33 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:24:34 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:24:35 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:24:35 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:24:35 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:24:36 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:24:37 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:26:18 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-04 06:26:22 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-04 06:26:27 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:26:28 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:26:33 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:26:33 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:26:35 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:26:38 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:26:39 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:26:39 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:26:40 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:31:15 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-04 06:31:19 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-04 06:31:37 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:31:38 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:31:51 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:31:52 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:31:53 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:31:56 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:31:57 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:31:57 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:31:58 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:33:39 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-04 06:33:43 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-04 06:33:48 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:33:49 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:33:52 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:33:52 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:33:54 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:33:56 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:33:57 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:33:57 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:33:58 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:33:58 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:33:58 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:33:59 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:33:59 DEBUG [smart-farm-api]: Auth check: 
+2025-04-04 06:33:59 INFO [smart-farm-api]: User olwel is authenticated 
+2025-04-04 06:33:59 INFO [smart-farm-api]: getUserProfile called for user ID: 67ef47cda88e7f6b7b40c6d3 
+2025-04-04 06:34:09 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:34:10 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:34:15 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:34:15 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:34:23 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:34:24 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:34:24 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:34:25 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:34:26 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:35:14 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:35:14 INFO [smart-farm-api]: User superadmin logged in successfully 
+2025-04-04 06:35:15 INFO [smart-farm-api]: User superadmin logged in successfully. 
+2025-04-04 06:37:31 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-04 06:37:34 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-04 06:37:47 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:37:48 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:37:57 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:37:57 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:37:59 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:38:01 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:38:01 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:38:02 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:38:03 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:38:03 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:38:03 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:38:05 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:38:05 DEBUG [smart-farm-api]: Auth check: 
+2025-04-04 06:38:05 INFO [smart-farm-api]: User olwel is authenticated 
+2025-04-04 06:38:05 INFO [smart-farm-api]: getUserProfile called for user ID: 67ef47cda88e7f6b7b40c6d3 
+2025-04-04 06:40:57 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-04 06:41:01 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-04 06:41:07 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:41:08 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:41:22 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:41:23 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:41:24 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:41:27 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:41:27 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:41:28 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:41:28 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:41:29 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:41:29 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:41:29 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:41:29 DEBUG [smart-farm-api]: Auth check: 
+2025-04-04 06:41:29 INFO [smart-farm-api]: User olwel is authenticated 
+2025-04-04 06:41:29 INFO [smart-farm-api]: getUserProfile called for user ID: 67ef47cda88e7f6b7b40c6d3 
+2025-04-04 06:41:48 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:41:49 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:41:55 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:41:56 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:43:31 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-04 06:43:34 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-04 06:43:45 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:43:46 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:43:48 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:43:49 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:43:50 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:43:52 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:43:53 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:43:53 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:43:54 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:43:54 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:43:54 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:43:55 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:43:55 DEBUG [smart-farm-api]: Auth check: 
+2025-04-04 06:43:55 INFO [smart-farm-api]: User olwel is authenticated 
+2025-04-04 06:43:55 INFO [smart-farm-api]: getUserProfile called for user ID: 67ef47cda88e7f6b7b40c6d3 
+2025-04-04 06:44:16 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:44:17 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:47:20 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-04 06:47:24 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-04 06:47:39 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:47:40 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:47:54 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:47:54 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:47:56 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:48:01 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:48:02 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:48:02 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:48:03 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:48:03 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:48:03 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:48:04 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:48:04 DEBUG [smart-farm-api]: Auth check: 
+2025-04-04 06:48:04 INFO [smart-farm-api]: User olwel is authenticated 
+2025-04-04 06:48:04 INFO [smart-farm-api]: getUserProfile called for user ID: 67ef47cda88e7f6b7b40c6d3 
+2025-04-04 06:50:43 INFO [smart-farm-api]: Server running on at http://localhost:3000 in development mode 
+2025-04-04 06:50:47 INFO [smart-farm-api]: MongoDB Connected... 
+2025-04-04 06:50:51 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:50:52 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:50:55 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:50:56 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:50:57 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:51:02 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:51:02 INFO [smart-farm-api]: User olwel logged in successfully 
+2025-04-04 06:51:03 INFO [smart-farm-api]: User olwel logged in successfully. 
+2025-04-04 06:51:03 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:51:04 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:51:04 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:51:05 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:51:05 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:51:06 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:51:06 DEBUG [smart-farm-api]: Auth check: 
+2025-04-04 06:51:06 INFO [smart-farm-api]: User olwel is authenticated 
+2025-04-04 06:51:06 INFO [smart-farm-api]: getUserProfile called for user ID: 67ef47cda88e7f6b7b40c6d3 
+2025-04-04 06:51:38 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:51:39 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:51:44 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:51:44 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:51:50 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:51:51 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:51:51 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:51:52 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:51:52 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:52:35 DEBUG [smart-farm-api]: Session: 
+2025-04-04 06:52:36 INFO [smart-farm-api]: User superadmin logged in successfully 
+2025-04-04 06:52:36 INFO [smart-farm-api]: User superadmin logged in successfully. 

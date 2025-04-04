@@ -8,7 +8,7 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerConfig = require("./config/swagger.js");
 const passport = require("./config/passport.js");
 const session = require("./config/session.js");
-const logger = require("./config/logger.js");
+const logger = require("./utils/logger.js");
 
 const app = express();
 
